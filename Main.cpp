@@ -16,15 +16,15 @@ void Initialize()
 	Textures::GetInstance()->LoadGLTextures();
 }
 
-Ball *newBall = new Ball();
 Camera *mainCamera = new Camera();
-Ball *newBall = new Ball(0.0, 0.0, 0.0, 0.3);
 Point3D point;
+Ball *newBall = new Ball(Point3D(0, 0, 1),-0.01, 0.3);
 
 void Draw()
 {
 	 glMatrixMode(GL_MODELVIEW);
 	 glLoadIdentity();
+
 	 mainCamera->Follow(*newBall);
 	 mainCamera->Perspective();
  
@@ -36,20 +36,13 @@ void specialKey(int key, int x, int y) {
 
 	switch(key) 
 	{
-	case GLUT_KEY_UP :
-		newBall->Rotate(Point3D(15, 0, 0));
-		newBall->Translate(Point3D(0, 0, -0.1));
-		break;
+		case GLUT_KEY_RIGHT :
+			newBall->MoveRight();
+			break;
 
-	case GLUT_KEY_RIGHT :
-		newBall->Rotate(Point3D(0, 0, 15));
-		newBall->Translate(Point3D(0.05, 0, 0));
-		break;
-
-	case GLUT_KEY_LEFT :
-		newBall->Rotate(Point3D(0, 0, -15));
-		newBall->Translate(Point3D(-0.05, 0, 0));
-		break;
+		case GLUT_KEY_LEFT :
+			newBall->MoveLeft();
+			break;
 	}
 
 	glutPostRedisplay();
@@ -57,8 +50,8 @@ void specialKey(int key, int x, int y) {
 
 void Timer(int value)
 {
-	newBall->Translate(point);
-	newBall->Rotate(Point3D(15, 0, 0));
+	newBall->MoveForward();
+	newBall->Rotate(Point3D(-15, 0, 0));
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
 }

@@ -4,12 +4,17 @@
 
 class Ball : public WorldObject
 {
+private:
 	GLUquadricObj *quadratic;
-
+	Point3D direction;
+	double speed;
 public:
-	Ball(GLfloat X, GLfloat Y, GLfloat Z, GLfloat radius);
+	Ball(Point3D initialDirection,double speed, GLfloat radius);
 	~Ball();
 	void DrawObject();
 
 	Point3D GetDirection();
+	void MoveLeft();
+	void MoveRight();
+	void MoveForward();
 };

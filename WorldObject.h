@@ -45,7 +45,7 @@ protected:
 	Point3D translate;
 	GLfloat width, height;
 public:
-	WorldObject(GLfloat X = 0.0, GLfloat Y = 0.0, GLfloat Z = 0.0, GLfloat W = 0.0, GLfloat H = 0.0);
+	WorldObject(GLfloat W = 0.0, GLfloat H = 0.0,GLfloat X = 0.0, GLfloat Y = 0.0, GLfloat Z = 0.0);
 	~WorldObject();
 
 	void Translate(Point3D);

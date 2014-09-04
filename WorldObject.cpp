@@ -1,6 +1,6 @@
 #include "WorldObject.h"
 
-WorldObject::WorldObject(GLfloat X, GLfloat Y, GLfloat Z, GLfloat W, GLfloat H)
+WorldObject::WorldObject(GLfloat W, GLfloat H,GLfloat X, GLfloat Y, GLfloat Z)
 {
     translate = Point3D(X, Y, Z);
     width = W;
