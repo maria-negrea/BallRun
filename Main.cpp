@@ -15,8 +15,7 @@ void Initialize()
  Textures::GetInstance()->LoadGLTextures();
 }
 
- Ball *newBall = new Ball();
- Point3D point;
+ Ball *newBall = new Ball(Point3D(0, 0, -0.01));
 
 void Draw()
 {
@@ -29,11 +28,11 @@ void specialKey(int key, int x, int y) {
 	switch(key) 
 	{
 	case GLUT_KEY_RIGHT :
-		point = Point3D(0.05, 0, 0);
+		newBall->MoveRight();
 		break;
 
 	case GLUT_KEY_LEFT :
-		point = Point3D(-0.05, 0, 0);
+		newBall->MoveLeft();
 		break;
 	}
 
@@ -42,8 +41,8 @@ void specialKey(int key, int x, int y) {
 
 void Timer(int value)
 {
-	newBall->Translate(point);
-	newBall->Rotate(Point3D(15, 0, 0));
+	newBall->MoveForward();
+	newBall->Rotate(Point3D(-15, 0, 0));
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
 }

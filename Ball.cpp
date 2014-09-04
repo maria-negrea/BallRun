@@ -1,6 +1,7 @@
 #include "Ball.h"
 
-Ball::Ball()
+Ball::Ball(Point3D initialDirection)
+:direction(initialDirection)
 {
 	quadratic = gluNewQuadric();
 	gluQuadricDrawStyle(quadratic, GLU_FILL);
@@ -22,4 +23,24 @@ void Ball::DrawObject()
 	gluSphere(quadratic,0.3f,100,100);
 
 	glFlush();
+}
+
+void Ball::MoveLeft()
+{
+	direction = Point3D(direction.z, 0, -direction.x);
+}
+
+void Ball::MoveRight()
+{
+	direction = Point3D(-direction.z, 0, direction.x);
+}
+
+Point3D Ball::GetDirection()
+{
+	return direction;
+}
+
+void Ball::MoveForward()
+{
+	Translate(direction);
 }
