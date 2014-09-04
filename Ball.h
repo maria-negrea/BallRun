@@ -10,4 +10,6 @@ public:
 	Ball();
 	~Ball();
 	void DrawObject();
+
+	Point3D GetDirection();
 };

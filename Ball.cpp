@@ -23,3 +23,8 @@ void Ball::DrawObject()
 
 	glFlush();
 }
+
+Point3D Ball::GetDirection()
+{
+	return Point3D(0,0,1);
+}

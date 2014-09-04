@@ -14,9 +14,19 @@ struct Point3D
 		return Point3D(x+point.x,y+point.y,z+point.z);
 	}
 
+	Point3D operator-(Point3D point)
+	{
+		return Point3D(x-point.x,y-point.y,z-point.z);
+	}
+
 	void operator +=(Point3D point)
 	{
 		*this = *this+point;
+	}
+
+	Point3D operator*(GLfloat value)
+	{
+		return Point3D(x*value,y*value,z*value);
 	}
 };
 
@@ -24,7 +34,9 @@ class WorldObject
 {
 protected:
 	virtual void DrawObject() = 0;
-private:
+	void ModifyPerspective();
+	void ModifyPerspectiveBack();
+
 	Point3D rotate;
 	Point3D translate;
 public:
@@ -35,4 +47,6 @@ public:
 	void Rotate(Point3D);
 
 	void Draw();
+
+	Point3D GetTranslate();
 };
