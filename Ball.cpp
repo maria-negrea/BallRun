@@ -18,11 +18,7 @@ Ball::~Ball(void)
 
 void Ball::DrawObject()
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	
 	gluSphere(quadratic,0.3f,100,100);
-
-	glFlush();
 }
 
 void Ball::MoveLeft()
@@ -43,4 +39,10 @@ Point3D Ball::GetDirection()
 void Ball::MoveForward()
 {
 	Translate(direction*speed);
+
+	Point3D rotate;
+	rotate.x = direction.z;
+	rotate.z = direction.x;
+
+	Rotate(rotate*(-15));
 }

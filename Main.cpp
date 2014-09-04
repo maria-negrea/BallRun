@@ -22,14 +22,18 @@ Ball *newBall = new Ball(Point3D(0, 0, 1),-0.01, 0.3);
 
 void Draw()
 {
-	 glMatrixMode(GL_MODELVIEW);
-	 glLoadIdentity();
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	 mainCamera->Follow(*newBall);
-	 mainCamera->Perspective();
- 
-	 newBall->Draw();
-	 glMatrixMode(GL_MODELVIEW);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
+	mainCamera->Follow(*newBall);
+	mainCamera->Perspective();
+
+	newBall->Draw();
+	glMatrixMode(GL_MODELVIEW);
+
+	glFlush();
 }
 
 void specialKey(int key, int x, int y) { 
@@ -51,7 +55,6 @@ void specialKey(int key, int x, int y) {
 void Timer(int value)
 {
 	newBall->MoveForward();
-	newBall->Rotate(Point3D(-15, 0, 0));
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
 }

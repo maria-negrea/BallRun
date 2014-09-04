@@ -1,9 +1,13 @@
 #pragma once
+#include <iostream>
 #ifdef __unix || __unix__
  #include <GL/glut.h>
 #else
  #include <glut.h>
 #endif
+#include <math.h>
+
+using namespace std;
 
 struct Point3D
 {
@@ -31,6 +35,32 @@ struct Point3D
 	Point3D operator*(GLfloat value)
 	{
 		return Point3D(x*value,y*value,z*value);
+	}
+
+	GLfloat operator*(Point3D point)
+	{
+		return x*point.x+y*point.y+z*point.z;
+	}
+
+	GLfloat Magnitude()
+	{
+		return sqrt(x*x+y*y+z*z);
+	}
+
+	GLfloat AngleBetween(Point3D point)
+	{
+		GLfloat PI = 3.14159265359;
+
+		GLfloat dotProduct = ((*this)*point);
+		if(dotProduct == 0)
+		{
+			if(point.x > 0)
+				return 270;
+			else
+				return 90;
+		}
+
+		return acos(Magnitude()*point.Magnitude()/dotProduct)*180/PI;
 	}
 };
 
