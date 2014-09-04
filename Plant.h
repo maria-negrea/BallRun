@@ -9,6 +9,8 @@ private:
 
 public:
 	Plant(void);
+	Plant(double width, double height, Point3D center);
+
 	~Plant(void);
 	void DrawObject();
 };
