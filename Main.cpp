@@ -20,7 +20,7 @@ void Initialize()
 Road *newRoad = new Road();
 Camera *mainCamera = new Camera();
 Point3D point;
-Ball *newBall = new Ball(Point3D(0, 0, 1),-0.01, 0.3);
+Ball *newBall = new Ball(Point3D(0, 0, 1),-0.1, 0.5);
 
 void Draw()
 {
@@ -32,11 +32,10 @@ void Draw()
 		newRoad->Draw();
 		newBall->Draw();
 	glFlush();
-	 
 }
 
-void specialKey(int key, int x, int y) { 
-
+void specialKey(int key, int x, int y)
+{ 
 	switch(key) 
 	{
 		case GLUT_KEY_RIGHT :
@@ -70,7 +69,6 @@ void reshape(int w, int h)
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
-	//textures.LoadGLTextures();
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(768, 768);
 	glutInitWindowPosition(200, 200);

@@ -184,6 +184,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Road.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Textures.cpp"
 				>
 			</File>
@@ -203,6 +207,10 @@
 			</File>
 			<File
 				RelativePath=".\Camera.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Road.h"
 				>
 			</File>
 			<File
