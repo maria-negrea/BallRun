@@ -2,8 +2,17 @@
 #include "Road.h"
 #include "Camera.h"
 
-Textures* Textures::instance = NULL;
+#include <vector>
+#include <iostream>
 
+using namespace std;
+
+Textures* Textures::instance = NULL;
+Camera *mainCamera = new Camera();
+Point3D point;
+Ball *newBall = new Ball(Point3D(0, 0, 1),-0.1, 0.5);
+vector<Road*> roads;
+int count = 0;
 void Initialize() 
 {
 	glEnable(GL_DEPTH_TEST);
@@ -13,14 +22,10 @@ void Initialize()
 	glLoadIdentity();
 	glEnable(GL_BLEND);
 	gluPerspective(60.0, (GLfloat) GLUT_WINDOW_WIDTH/(GLfloat) GLUT_WINDOW_HEIGHT, 1.0, 100.0);
-
+	roads.push_back(new Road(Point3D(0.0, 0.0, 1.0)));
 	Textures::GetInstance()->LoadGLTextures();
 }
 
-Road *newRoad = new Road();
-Camera *mainCamera = new Camera();
-Point3D point;
-Ball *newBall = new Ball(Point3D(0, 0, 1),-0.1, 0.5);
 
 void Draw()
 {
@@ -29,7 +34,23 @@ void Draw()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		mainCamera->Follow(*newBall);
 		mainCamera->Perspective();
-		newRoad->Draw();
+		for(int i=0; i < roads.size(); i++) {
+			roads[i]->Draw();
+		}
+		cout<<roads.size()<<" "<<newBall->GetTranslate().z<<" "<<roads[roads.size()-1]->GetTranslate().z - 5.0<<endl;
+		Point3D endRoad = roads[roads.size()-1].GetEndPoint();
+		//if(newBall->GetTranslate().z < (roads[roads.size()-1]->GetTranslate().z + 15.0) ) {
+		if((endRoad - newBall->GetTranslate()).Magnitude() < 15.0)
+			count ++;
+			roads.push_back(new Road(Point3D(0.0, 0.0, newBall->GetTranslate().z - 5.0)));
+			if(count % (rand() % 10+1) == 2) {
+				roads[roads.size()-1]->Rotate(Point3D(0.0, 90.0, 0.0));
+				roads[roads.size()-1]->Translate(Point3D(5.0, 0.0, 0.0));
+			}
+			if(roads.size() > 5) {
+				roads.erase (roads.begin()+2);
+			}
+		}
 		newBall->Draw();
 	glFlush();
 }

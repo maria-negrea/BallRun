@@ -13,7 +13,7 @@ Ball::Ball(Point3D initialDirection,double speed, GLfloat radius)
 
 Ball::~Ball(void)
 {
-	delete[] quadratic;
+	delete quadratic;
 }
 
 void Ball::DrawObject()
