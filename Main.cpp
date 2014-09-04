@@ -16,6 +16,7 @@ void Initialize()
 }
 
  Ball *newBall = new Ball();
+ Point3D point;
 
 void Draw()
 {
@@ -27,23 +28,32 @@ void specialKey(int key, int x, int y) {
 
 	switch(key) 
 	{
-	case GLUT_KEY_UP :
-		newBall->Rotate(Point3D(15, 0, 0));
-		newBall->Translate(Point3D(0, 0, 0.005));
-		break;
-
 	case GLUT_KEY_RIGHT :
-		newBall->Rotate(Point3D(0, 0, -15));
-		newBall->Translate(Point3D(0.05, 0, 0));
+		point = Point3D(0.05, 0, 0);
 		break;
 
 	case GLUT_KEY_LEFT :
-		newBall->Rotate(Point3D(0, 0, 15));
-		newBall->Translate(Point3D(-0.05, 0, 0));
+		point = Point3D(-0.05, 0, 0);
 		break;
 	}
 
 	glutPostRedisplay();
+}
+
+void Timer(int value)
+{
+	newBall->Translate(point);
+	newBall->Rotate(Point3D(15, 0, 0));
+    glutPostRedisplay();
+    glutTimerFunc(30, Timer, 0);
+}
+
+void reshape(int w, int h)
+{
+   glViewport(0, 0, (GLsizei) w, (GLsizei) h);
+   glMatrixMode(GL_PROJECTION);
+   glLoadIdentity();
+   gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 30.0);
 }
 
 void main()
@@ -55,5 +65,7 @@ void main()
 	Initialize();
 	glutDisplayFunc(Draw);
 	glutSpecialFunc(specialKey);
-	glutMainLoop(); 
+	glutTimerFunc(30, Timer, 0);
+	glutReshapeFunc(reshape);
+	glutMainLoop();
 }
