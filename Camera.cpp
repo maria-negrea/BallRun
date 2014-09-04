@@ -22,5 +22,5 @@ void Camera::Perspective()
 
 void Camera::Follow(Ball& ball)
 {
-	translate.z = ball.GetTranslate().z+ball.GetDirection().z*5;
+	translate = ball.GetTranslate()+ball.GetDirection()*5;
 }

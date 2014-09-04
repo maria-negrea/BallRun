@@ -1,14 +1,15 @@
 #include"Ball.h"
 #include"Plant.h"
 #include"Camera.h"
+#include "Road.h"
 
 Textures* Textures::instance = NULL;
 
 void Initialize() 
 {
-	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_DEPTH_TEST); 
 	glEnable(GL_TEXTURE_2D);
-	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glClearColor(1.0, 0.0, 0.0, 0.0);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glEnable(GL_BLEND);
@@ -17,22 +18,23 @@ void Initialize()
 	Textures::GetInstance()->LoadGLTextures();
 }
 
+Road *newRoad = new Road();
 Camera *mainCamera = new Camera();
-Point3D point;
 Ball *newBall = new Ball(Point3D(0, 0, 1),-0.01, 0.3);
 
 void Draw()
 {
-	 /*Plant *newPlant=new Plant();
-	 newPlant->Draw();*/
-	 glMatrixMode(GL_MODELVIEW);
-	 glLoadIdentity();
-
-	 mainCamera->Follow(*newBall);
-	 mainCamera->Perspective();
- 
-	 newBall->Draw();
-	 glMatrixMode(GL_MODELVIEW);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		mainCamera->Follow(*newBall);
+		mainCamera->Perspective();
+		newRoad->Draw();
+		newBall->Draw();
+		/*Plant *newPlant=new Plant(0.6, 0.6);
+		newPlant->Translate(Point3D(0.,0.,-2));
+		newPlant->Draw();*/
+	glFlush();
 }
 
 void specialKey(int key, int x, int y) { 

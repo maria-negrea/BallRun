@@ -5,9 +5,19 @@
 
 using namespace std;
 
-Plant::Plant(double width, double height, Point3D center)
+Plant::Plant()
 {
-	this->center=center;
+	center.x=0.0;
+	center.y=0.0;
+	center.z=0.0;
+}
+Plant::Plant(double width, double height)
+{
+	center.x=0.0;
+	center.y=0.0;
+	center.z=0.0;
+	this->width=width;
+	this->height=height;
 
 }
 
@@ -19,45 +29,65 @@ void Plant::DrawObject()
 	vector<Point3D>base; 
 	vector<Point3D>top;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	//glRotatef(0,1,0,0);
-	glColor3f(0,1,0);
-	//	glRotatef(90, 0, 1, 1);
+
+	GLfloat radius = (width >= height ? height : width)/6;
+
+	//glRotatef(20, 1, 0, 0);
+	for (double t = 0; t < 2 * PI; t = t + 0.001)
+		{
+			base.push_back(Point3D(center.x+radius*cos(t), 0.0,  center.z+radius*sin(t)));
+		}
+
+	double pass=radius/6, value=0.2;
+	
+	for(int i=0;i<5&&radius-pass>0;i++)
+	{
+		//glRotatef(20, 1, 0, 0);
 		for (double t = 0; t < 2 * PI; t = t + 0.001)
 		{
-			glBegin(GL_LINE_STRIP);
-			//glColor3f( 241/255.0 , 215/255.0, 166/255.0);
-			glVertex3f( center.x+0.2*cos(t), center.y+0.2*sin(t),  center.z+0.);
-			base.push_back(Point3D(center.x+0.2*cos(t), center.y+0.2*sin(t),  center.z+0.));			
-			glVertex3f(center.x+0.0, center.y+0.0,  center.z+0.0);
-			glEnd();
-
-			glBegin(GL_LINE_STRIP);
-			//glColor3f(255/255.0, 0/255.0, 0);
-			glVertex3f(center.x+0.2*cos(t), center.y+0.2*sin(t)+0.5,  center.z+0.);
-			top.push_back(Point3D(center.x+0.2*cos(t), center.y+0.2*sin(t)+0.5,  center.z+0.));
-			//glColor4f(1, 0.4, 0.1, 0.6);
-			glVertex3f(center.x+0.0, center.y+0.5,  center.z+0.0);
-			glEnd();
+			if(i%2==0)
+			{
+				top.push_back(Point3D(pass/4+center.x+(radius-pass)*cos(t), base[0].y+value,  center.z+(radius-pass)*sin(t)));
+			}
+			else
+			{
+				top.push_back(Point3D(-pass/4+center.x+(radius-pass)*cos(t), base[0].y+value,  center.z+(radius-pass)*sin(t)));
+			}
+			
 		}
+		
+		glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
 
-		//glColor3f(0,0,1);
-		for(int i=0;i<base.size()-1;i++)
+		double step=1.0/base.size();
+		int i;
+		double j=0.0;
+
+		for(i=0;i<base.size()-1;i++)
 		{
 			glBegin(GL_TRIANGLES);
-				glVertex3f(base[i].x, base[i].y, base[i].z);
-				glVertex3f(top[i].x, top[i].y, top[i].z);
-				glVertex3f(top[i+1].x, top[i+1].y, top[i+1].z);
+				glTexCoord2f(j, 0.0f); glVertex3f(base[i].x, base[i].y, base[i].z);				
+				glTexCoord2f(j, 1.0f); glVertex3f(top[i].x, top[i].y, top[i].z);
+				glTexCoord2f(j+step, 1.0f); glVertex3f(top[i+1].x, top[i+1].y, top[i+1].z);
 			glEnd();
 
 			glBegin(GL_TRIANGLES);
-				glVertex3f(top[i+1].x, top[i+1].y, top[i+1].z);
-				glVertex3f(base[i+1].x, base[i+1].y, base[i+1].z);
-				glVertex3f(base[i].x, base[i].y, base[i].z);
+				glTexCoord2f(j+step, 1.0f); glVertex3f(top[i+1].x, top[i+1].y, top[i+1].z);
+				glTexCoord2f(j+step, 0.0f);  glVertex3f(base[i+1].x, base[i+1].y, base[i+1].z);
+				glTexCoord2f(j, 0.0f); glVertex3f(base[i].x, base[i].y, base[i].z);
 			glEnd();
 
+			j+=step;
 
 		}
-	
+
+
+		base.clear();
+		base=top;
+		top.clear();
+		pass+=radius/6;
+	   value-=0.02;
+
+	}
 
 	glFlush();
 }

@@ -13,9 +13,6 @@ WorldObject::~WorldObject(void)
 
 void WorldObject::Draw()
 {
-	glLoadIdentity();
-	
-	glTranslatef(translate.x,translate.y,translate.z);
 	ModifyPerspective();
 
 	DrawObject();
