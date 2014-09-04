@@ -1,4 +1,3 @@
-//random comment
 #include"Ball.h"
 
 Textures* Textures::instance = NULL;
@@ -16,10 +15,35 @@ void Initialize()
  Textures::GetInstance()->LoadGLTextures();
 }
 
+ Ball *newBall = new Ball();
+
 void Draw()
 {
-	 Ball *newBall = new Ball();
+	 glMatrixMode(GL_MODELVIEW);
 	 newBall->Draw();
+}
+
+void specialKey(int key, int x, int y) { 
+
+	switch(key) 
+	{
+	case GLUT_KEY_UP :
+		newBall->Rotate(Point3D(15, 0, 0));
+		newBall->Translate(Point3D(0, 0, 0.005));
+		break;
+
+	case GLUT_KEY_RIGHT :
+		newBall->Rotate(Point3D(0, 0, -15));
+		newBall->Translate(Point3D(0.05, 0, 0));
+		break;
+
+	case GLUT_KEY_LEFT :
+		newBall->Rotate(Point3D(0, 0, 15));
+		newBall->Translate(Point3D(-0.05, 0, 0));
+		break;
+	}
+
+	glutPostRedisplay();
 }
 
 void main()
@@ -30,5 +54,6 @@ void main()
 	glutCreateWindow("BallRun");
 	Initialize();
 	glutDisplayFunc(Draw);
+	glutSpecialFunc(specialKey);
 	glutMainLoop(); 
 }
