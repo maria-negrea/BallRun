@@ -7,10 +7,7 @@ Ball::Ball(GLfloat X, GLfloat Y, GLfloat Z, GLfloat radius)
 	gluQuadricDrawStyle(quadratic, GLU_FILL);
 	gluQuadricNormals(quadratic, GLU_SMOOTH);
 
-	Textures q;
-	q.LoadGLTextures();
-
-	glBindTexture(GL_TEXTURE_2D, q.GetTextures()[0]);
+	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
 	gluQuadricTexture(quadratic, GL_TRUE);
 }
 
