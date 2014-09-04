@@ -1,4 +1,5 @@
-#include"Ball.h"
+#include "Ball.h"
+#include "Road.h"
 
 Textures* Textures::instance = NULL;
 
@@ -16,13 +17,16 @@ void Initialize()
 }
 
  Ball *newBall = new Ball(0.0, 0.0, 0.0, 0.3);
+ Road *newRoad = new Road();
  Point3D point;
 
 void Draw()
 {
-
-	 newBall->Draw();
-	 glMatrixMode(GL_MODELVIEW);
+	glMatrixMode(GL_MODELVIEW);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		newRoad->Draw();
+		newBall->Draw();
+	glFlush();
 }
 
 void specialKey(int key, int x, int y) { 
