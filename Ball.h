@@ -8,6 +8,7 @@ private:
 	GLUquadricObj *quadratic;
 	Point3D direction;
 	double speed;
+	GLfloat radius;
 public:
 	Ball(Point3D initialDirection,double speed, GLfloat radius);
 	~Ball();
