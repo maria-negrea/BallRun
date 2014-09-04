@@ -6,10 +6,13 @@
 class Textures
 {
 private:
+	static Textures *instance;
 	GLuint texture[1];
+	Textures();
 public:
-	Textures(void);
-	~Textures(void);
+	~Textures();
+
+	static Textures* GetInstance();
 
 	void LoadGLTextures();
 	GLuint* GetTextures();

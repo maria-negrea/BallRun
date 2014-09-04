@@ -22,3 +22,14 @@ void WorldObject::Draw()
 
 	glLoadIdentity();
 }
+
+
+void WorldObject::Translate(Point3D translation)
+{
+	translate += translation;
+}
+
+void WorldObject::Rotate(Point3D rotation)
+{
+	rotate += rotation;
+}

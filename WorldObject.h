@@ -5,9 +5,19 @@ struct Point3D
 {
 	GLfloat x,y,z;
 
-	Point3D():
-	x(0), y(0), z(0)
-	{}			
+	Point3D(GLfloat x=0,GLfloat y=0,GLfloat z=0):
+	x(x), y(y), z(z)
+	{}
+
+	Point3D operator+(Point3D point)
+	{
+		return Point3D(x+point.x,y+point.y,z+point.z);
+	}
+
+	void operator +=(Point3D point)
+	{
+		*this = *this+point;
+	}
 };
 
 class WorldObject
@@ -20,6 +30,9 @@ private:
 public:
 	WorldObject();
 	~WorldObject();
+
+	void Translate(Point3D);
+	void Rotate(Point3D);
 
 	void Draw();
 };
