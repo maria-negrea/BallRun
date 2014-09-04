@@ -2,9 +2,12 @@
 #include<vector>
 #include<math.h>
 #define PI 3.14
+
 using namespace std;
+
 Plant::Plant(double width, double height, Point3D center)
 {
+	this->center=center;
 
 }
 
@@ -12,8 +15,9 @@ Plant::~Plant(void)
 {
 }
 void Plant::DrawObject()
-{vector<Point3D>base; 
-vector<Point3D>top;
+{
+	vector<Point3D>base; 
+	vector<Point3D>top;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	//glRotatef(0,1,0,0);
 	glColor3f(0,1,0);
@@ -22,17 +26,17 @@ vector<Point3D>top;
 		{
 			glBegin(GL_LINE_STRIP);
 			//glColor3f( 241/255.0 , 215/255.0, 166/255.0);
-			glVertex3f( 0.2*cos(t), 0.2*sin(t),  0.);
-			base.push_back(Point3D(0.2*cos(t), 0.2*sin(t), 0.));			
-			glVertex3f(0., 0.,  0.);
+			glVertex3f( center.x+0.2*cos(t), center.y+0.2*sin(t),  center.z+0.);
+			base.push_back(Point3D(center.x+0.2*cos(t), center.y+0.2*sin(t),  center.z+0.));			
+			glVertex3f(center.x+0.0, center.y+0.0,  center.z+0.0);
 			glEnd();
 
 			glBegin(GL_LINE_STRIP);
 			//glColor3f(255/255.0, 0/255.0, 0);
-			glVertex3f(0.2*cos(t), 0.2*sin(t)+0.5,  0.);
-			top.push_back(Point3D(0.2*cos(t), 0.2*sin(t)+0.5,  0.));
+			glVertex3f(center.x+0.2*cos(t), center.y+0.2*sin(t)+0.5,  center.z+0.);
+			top.push_back(Point3D(center.x+0.2*cos(t), center.y+0.2*sin(t)+0.5,  center.z+0.));
 			//glColor4f(1, 0.4, 0.1, 0.6);
-			glVertex3f(0., 0.5,  0.);
+			glVertex3f(center.x+0.0, center.y+0.5,  center.z+0.0);
 			glEnd();
 		}
 
