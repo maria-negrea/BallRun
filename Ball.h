@@ -7,7 +7,7 @@ class Ball : public WorldObject
 	GLUquadricObj *quadratic;
 
 public:
-	Ball();
+	Ball(GLfloat X, GLfloat Y, GLfloat Z, GLfloat radius);
 	~Ball();
 	void DrawObject();
 

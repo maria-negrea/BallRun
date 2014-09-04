@@ -18,6 +18,8 @@ void Initialize()
 
 Ball *newBall = new Ball();
 Camera *mainCamera = new Camera();
+Ball *newBall = new Ball(0.0, 0.0, 0.0, 0.3);
+Point3D point;
 
 void Draw()
 {
@@ -25,7 +27,9 @@ void Draw()
 	 glLoadIdentity();
 	 mainCamera->Follow(*newBall);
 	 mainCamera->Perspective();
+ 
 	 newBall->Draw();
+	 glMatrixMode(GL_MODELVIEW);
 }
 
 void specialKey(int key, int x, int y) { 
@@ -51,14 +55,37 @@ void specialKey(int key, int x, int y) {
 	glutPostRedisplay();
 }
 
-void main()
+void Timer(int value)
 {
+	newBall->Translate(point);
+	newBall->Rotate(Point3D(15, 0, 0));
+    glutPostRedisplay();
+    glutTimerFunc(30, Timer, 0);
+}
+
+void reshape(int w, int h)
+{
+   glViewport(0, 0, (GLsizei) w, (GLsizei) h);
+   glMatrixMode(GL_PROJECTION);
+   glLoadIdentity();
+   gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 30.0);
+}
+
+int main(int argc, char** argv)
+{
+    glutInit(&argc, argv);
+	//textures.LoadGLTextures();
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(768, 768);
 	glutInitWindowPosition(200, 200);
 	glutCreateWindow("BallRun");
 	Initialize();
 	glutDisplayFunc(Draw);
+
 	glutSpecialFunc(specialKey);
-	glutMainLoop(); 
+	glutTimerFunc(30, Timer, 0);
+	glutReshapeFunc(reshape);
+	glutMainLoop();
+
+	return 0;
 }

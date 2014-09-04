@@ -1,5 +1,9 @@
 #pragma once
-#include <glut.h>
+#ifdef __unix || __unix__
+ #include <GL/glut.h>
+#else
+ #include <glut.h>
+#endif
 
 struct Point3D
 {
@@ -39,8 +43,9 @@ protected:
 
 	Point3D rotate;
 	Point3D translate;
+	GLfloat width, height;
 public:
-	WorldObject();
+	WorldObject(GLfloat X = 0.0, GLfloat Y = 0.0, GLfloat Z = 0.0, GLfloat W = 0.0, GLfloat H = 0.0);
 	~WorldObject();
 
 	void Translate(Point3D);
