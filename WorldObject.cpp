@@ -12,7 +12,7 @@ void WorldObject::Draw()
 {
 	glLoadIdentity();
 	
-	glTranslatef(translate.x,translate.y,translate.z);
+	glTranslatef(translate.x,translate.y,translate.z-2);
 	
 	glRotatef(rotate.x,1,0,0);
 	glRotatef(rotate.y,0,1,0);

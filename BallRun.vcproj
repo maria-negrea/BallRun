@@ -180,6 +180,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Plant.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Textures.cpp"
 				>
 			</File>
@@ -195,6 +199,10 @@
 			>
 			<File
 				RelativePath=".\Ball.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Plant.h"
 				>
 			</File>
 			<File

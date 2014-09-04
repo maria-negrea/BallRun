@@ -1,6 +1,6 @@
 //random comment
 #include"Ball.h"
-
+#include"Plant.h"
 Textures textures;
 
 void Initialize() 
@@ -11,14 +11,17 @@ void Initialize()
  glMatrixMode(GL_PROJECTION);
  glLoadIdentity();
  glEnable(GL_BLEND);
- glOrtho(0.0, 1.0, 0.0, 1.0, -5.0, 5.0);
  gluPerspective(60.0, (GLfloat) GLUT_WINDOW_WIDTH/(GLfloat) GLUT_WINDOW_HEIGHT, 1.0, 30.0);
 }
 
 void Draw()
 {
+	glMatrixMode(GL_MODELVIEW);
+	/*
 	 Ball *newBall = new Ball();
-	 newBall->Draw();
+	 newBall->Draw(); */ 
+	 Plant *newPlant=new Plant();
+	 newPlant->Draw();
 }
 
 void main()
