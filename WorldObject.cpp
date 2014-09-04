@@ -12,7 +12,7 @@ void WorldObject::Draw()
 {
 	glLoadIdentity();
 	
-	glTranslatef(translate.x,translate.y,translate.z-2);
+	glTranslatef(translate.x,translate.y,translate.z);
 	
 	glRotatef(rotate.x,1,0,0);
 	glRotatef(rotate.y,0,1,0);
@@ -21,4 +21,15 @@ void WorldObject::Draw()
 	DrawObject();
 
 	glLoadIdentity();
+}
+
+
+void WorldObject::Translate(Point3D translation)
+{
+	translate += translation;
+}
+
+void WorldObject::Rotate(Point3D rotation)
+{
+	rotate += rotation;
 }

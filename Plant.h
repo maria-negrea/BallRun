@@ -5,7 +5,7 @@
 class Plant:public WorldObject
 {
 private:
-GLUquadricObj *quadratic;
+	Point3D center;
 
 public:
 	Plant(void);

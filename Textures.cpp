@@ -1,12 +1,19 @@
 #include "Textures.h"
 
-
-Textures::Textures(void)
+Textures::Textures()
 {
 }
 
-Textures::~Textures(void)
+Textures::~Textures()
 {
+}
+
+Textures* Textures::GetInstance()
+{
+	if(instance == NULL)
+		instance = new Textures();
+
+	return instance;
 }
 
 void Textures::LoadGLTextures()
