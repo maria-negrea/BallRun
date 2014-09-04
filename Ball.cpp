@@ -15,7 +15,7 @@ Ball::Ball()
 
 Ball::~Ball(void)
 {
-	delete[] quadratic;
+	//delete[] quadratic;
 }
 
 void Ball::DrawObject()

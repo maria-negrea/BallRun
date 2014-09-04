@@ -1,7 +1,11 @@
 #pragma once
 #include<iostream>
 #include"SOIL.h"
-#include"glut.h"
+#ifdef __unix || __unix__
+ #include <GL/glut.h>
+#else
+ #include <glut.h>
+#endif
 
 class Textures
 {

@@ -21,8 +21,9 @@ void Draw()
 	 newBall->Draw();
 }
 
-void main()
+int main(int argc, char** argv)
 {
+    glutInit(&argc, argv);
 	//textures.LoadGLTextures();
 
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
@@ -32,4 +33,6 @@ void main()
 	Initialize();
 	glutDisplayFunc(Draw);
 	glutMainLoop(); 
+
+	return 0;
 }
