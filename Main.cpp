@@ -17,7 +17,7 @@ void Initialize()
 
 void Draw()
 {
-	 Ball *newBall = new Ball();
+	 Ball *newBall = new Ball(0.0, 0.0, 0.0, 0.3);
 	 newBall->Draw();
 }
 

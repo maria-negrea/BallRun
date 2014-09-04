@@ -1,6 +1,7 @@
 #include "Ball.h"
 
-Ball::Ball()
+Ball::Ball(GLfloat X, GLfloat Y, GLfloat Z, GLfloat radius) 
+	:WorldObject(X,Y,Z,radius*2,radius*2)
 {
 	quadratic = gluNewQuadric();
 	gluQuadricDrawStyle(quadratic, GLU_FILL);
