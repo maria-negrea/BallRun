@@ -41,10 +41,10 @@ void Textures::LoadGLTextures()
 
 		GLuint newTexture = SOIL_load_OGL_texture
         (
-			"Assets/building.bmp",
-			SOIL_LOAD_AUTO,
-			SOIL_CREATE_NEW_ID,
-			SOIL_FLAG_INVERT_Y
+        "Assets/cactus2.bmp",
+        SOIL_LOAD_AUTO,
+        SOIL_CREATE_NEW_ID,
+        SOIL_FLAG_INVERT_Y
         );
 
 		texture.insert (std::pair<string,GLuint>(name,newTexture));		
