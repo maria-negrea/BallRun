@@ -8,7 +8,6 @@ Ball::Ball(Point3D initialDirection,double speed, GLfloat radius)
 	gluQuadricDrawStyle(quadratic, GLU_FILL);
 	gluQuadricNormals(quadratic, GLU_SMOOTH);
 
-	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTexture("building"));
 	gluQuadricTexture(quadratic, GL_TRUE);
 }
 
@@ -19,6 +18,7 @@ Ball::~Ball(void)
 
 void Ball::DrawObject()
 {
+	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
 	gluSphere(quadratic,radius,100,100);
 }
 

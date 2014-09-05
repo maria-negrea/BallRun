@@ -15,11 +15,10 @@ Earth *newEarth = new Earth();
 vector<Road*> roads;
 int count = 0;
 Point3D point;
-Plant *newPlant=new Plant(0.6, 0.6);
 
 void Initialize() 
 {
-	glEnable(GL_DEPTH_TEST); 
+	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glMatrixMode(GL_PROJECTION);
@@ -27,22 +26,22 @@ void Initialize()
 	glEnable(GL_BLEND);
 	gluPerspective(60.0, (GLfloat) GLUT_WINDOW_WIDTH/(GLfloat) GLUT_WINDOW_HEIGHT, 1.0, 100.0);
 	roads.push_back(new Road(Point3D(0.0, 0.0, 1.0)));
+
 	Textures::GetInstance()->LoadGLTextures();
-	newPlant->Translate(Point3D(0.,-0.3,-2));
 	mainCamera->Follow(newBall);
 }
 
 void Draw()
 {
+	 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	 glMatrixMode(GL_MODELVIEW);
 	 glLoadIdentity();
-	 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	 mainCamera->Perspective();
 	 newEarth->Draw();
 
 	  for(int i=0; i < roads.size(); i++) 
 	  {
-	   glColor4f( 0.0 , 1.0 , 1.0, 1.0);
+	   glColor4f(1.0 , 1.0 , 1.0, 1.0);
 	   roads[i]->Draw();
 	  }
 
@@ -57,26 +56,14 @@ void Draw()
 		   if(random == 0) 
 		   {
 			roads[roads.size()-1]->Rotate(Point3D(0.0, 90.0, 0.0));
-			roads[roads.size()-1]->Translate(roads[roads.size()-2]->GetForward()*(-4)+roads[roads.size()-2]->GetRight()*4);
+			roads[roads.size()-1]->Translate(roads[roads.size()-2]->GetForward()*(-2)+roads[roads.size()-2]->GetRight()*3);
 		   }
 
 		   else if(random == 1) 
 		   {
 			roads[roads.size()-1]->Rotate(Point3D(0.0, -90.0, 0.0));
-			roads[roads.size()-1]->Translate(roads[roads.size()-2]->GetForward()*(-4)-roads[roads.size()-2]->GetRight()*4);
+			roads[roads.size()-1]->Translate(roads[roads.size()-2]->GetForward()*(-2)-roads[roads.size()-2]->GetRight()*3);
 		   }
-
-		  /* if(random == 2)
-		   {
-			roads.push_back(new Road(endRoad+roads[roads.size()-2]->GetForward()*4));
-			roads[roads.size()-1]->Rotate(roads[roads.size()-3]->GetRotate());
-
-			roads[roads.size()-1]->Rotate(Point3D(0.0, -90.0, 0.0));
-			roads[roads.size()-1]->Translate(roads[roads.size()-3]->GetForward()*(-4)-roads[roads.size()-3]->GetRight()*4);
-
-			roads[roads.size()-2]->Rotate(Point3D(0.0, 90.0, 0.0));
-			roads[roads.size()-2]->Translate(roads[roads.size()-3]->GetForward()*(-4)+roads[roads.size()-3]->GetRight()*4);
-		   }*/
 		   
 	   int nr = roads.size() - 15;
 	   for(int i = 0; i < nr; i++)
@@ -106,7 +93,6 @@ void specialKey(int key, int x, int y)
 void Timer(int value)
 {
 	newBall->MoveForward();
-	newPlant->Rotate(Point3D(0.0, 10.0, 0.0));
 	mainCamera->Update();
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);

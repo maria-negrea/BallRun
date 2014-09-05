@@ -4,12 +4,13 @@
 
 void Road::DrawObject()
 {
-    glColor4f( 0.0 , 1.0 , 1.0, 1.0);
+	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[1]);
+
     glBegin(GL_QUADS);
-        glVertex3f(-1, 0.0,  5.0);
-        glVertex3f( 1, 0.0,  5.0);
-        glVertex3f( 1, 0.0, -5.0);
-        glVertex3f(-1, 0.0, -5.0);
+	   glTexCoord2f(0, 0);glVertex3f(-2, 0.0,  5.0);
+       glTexCoord2f(1, 0); glVertex3f( 2, 0.0,  5.0);
+       glTexCoord2f(1, 1); glVertex3f( 2, 0.0, -5.0);
+       glTexCoord2f(0, 1); glVertex3f(-2, 0.0, -5.0);
     glEnd();
 }
 

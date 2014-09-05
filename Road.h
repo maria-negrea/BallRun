@@ -1,6 +1,7 @@
 #pragma once
 
 #include "WorldObject.h"
+#include "Textures.h"
 
 class Road : public WorldObject
 {
