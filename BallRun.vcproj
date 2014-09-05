@@ -180,7 +180,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Earth.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Plant.cpp"
 				>
 			</File>
 			<File
@@ -206,7 +214,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Camera.h"
+				RelativePath=".\Earth.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Plant.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Road.h"
 				>
 			</File>
 			<File

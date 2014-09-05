@@ -1,7 +1,8 @@
 #include "Ball.h"
-#include "Road.h"
+#include "Plant.h"
 #include "Camera.h"
-
+#include "Road.h"
+#include "Earth.h"
 #include <vector>
 #include <iostream>
 
@@ -9,20 +10,25 @@ using namespace std;
 
 Textures* Textures::instance = NULL;
 Camera *mainCamera = new Camera();
-Ball *newBall = new Ball(Point3D(0, 0, 1),-0.4, 0.5);
+Ball *newBall = new Ball(Point3D(0, 0, 1),-0.1, 0.5);
+Earth *newEarth = new Earth();
 vector<Road*> roads;
+int count = 0;
+Point3D point;
+Plant *newPlant=new Plant(0.6, 0.6);
 
 void Initialize() 
 {
-	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_DEPTH_TEST); 
 	glEnable(GL_TEXTURE_2D);
-	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glClearColor(1.0, 0.0, 0.0, 0.0);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glEnable(GL_BLEND);
 	gluPerspective(60.0, (GLfloat) GLUT_WINDOW_WIDTH/(GLfloat) GLUT_WINDOW_HEIGHT, 1.0, 100.0);
 	roads.push_back(new Road(Point3D(0.0, 0.0, 1.0)));
 	Textures::GetInstance()->LoadGLTextures();
+	newPlant->Translate(Point3D(0.,-0.3,-2));
 	mainCamera->Follow(newBall);
 }
 
@@ -99,6 +105,7 @@ void specialKey(int key, int x, int y)
 void Timer(int value)
 {
 	newBall->MoveForward();
+	newPlant->Rotate(Point3D(0.0, 10.0, 0.0));
 	mainCamera->Update();
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
