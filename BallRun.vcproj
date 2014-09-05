@@ -184,6 +184,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Plant.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Road.cpp"
 				>
 			</File>
@@ -206,7 +210,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Camera.h"
+				RelativePath=".\Plant.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Road.h"
 				>
 			</File>
 			<File

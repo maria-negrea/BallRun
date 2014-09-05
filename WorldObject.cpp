@@ -12,7 +12,7 @@ WorldObject::~WorldObject(void)
 }
 
 void WorldObject::Draw()
-{	
+{
 	ModifyPerspective();
 
 	DrawObject();
