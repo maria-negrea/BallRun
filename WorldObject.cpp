@@ -24,8 +24,8 @@ void WorldObject::ModifyPerspective()
 {
 	glTranslatef(translate.x,translate.y,translate.z);
 
-	glRotatef(rotate.x,1,0,0);
 	glRotatef(rotate.y,0,1,0);
+	glRotatef(rotate.x,1,0,0);
 	glRotatef(rotate.z,0,0,1);
 }
 
@@ -33,8 +33,8 @@ void WorldObject::ModifyPerspective()
 void WorldObject::ModifyPerspectiveBack()
 {
 	glRotatef(-rotate.z,0,0,1);
-	glRotatef(-rotate.y,0,1,0);
 	glRotatef(-rotate.x,1,0,0);
+	glRotatef(-rotate.y,0,1,0);
 
 	glTranslatef(-translate.x,-translate.y,-translate.z);
 }

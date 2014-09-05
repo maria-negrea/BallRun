@@ -9,10 +9,12 @@ using namespace std;
 
 Textures* Textures::instance = NULL;
 Camera *mainCamera = new Camera();
-Point3D point;
 Ball *newBall = new Ball(Point3D(0, 0, 1),-0.1, 0.5);
 vector<Road*> roads;
 int count = 0;
+
+
+
 void Initialize() 
 {
 	glEnable(GL_DEPTH_TEST);
@@ -24,15 +26,14 @@ void Initialize()
 	gluPerspective(60.0, (GLfloat) GLUT_WINDOW_WIDTH/(GLfloat) GLUT_WINDOW_HEIGHT, 1.0, 100.0);
 	roads.push_back(new Road(Point3D(0.0, 0.0, 1.0)));
 	Textures::GetInstance()->LoadGLTextures();
+	mainCamera->Follow(newBall);
 }
-
 
 void Draw()
 {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		mainCamera->Follow(*newBall);
 		mainCamera->Perspective();
 		for(int i=0; i < roads.size(); i++) {
 			glColor4f( 0.0 , 1.0 , 1.0, 1.0);
@@ -76,6 +77,7 @@ void specialKey(int key, int x, int y)
 void Timer(int value)
 {
 	newBall->MoveForward();
+	mainCamera->Update();
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
 }
