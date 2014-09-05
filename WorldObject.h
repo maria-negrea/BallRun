@@ -6,6 +6,7 @@
  #include <glut.h>
 #endif
 #include <math.h>
+#include <vector>
 
 using namespace std;
 
@@ -37,6 +38,11 @@ struct Point3D
 		return Point3D(x*value,y*value,z*value);
 	}
 
+	Point3D operator/(GLfloat value)
+	{
+		return Point3D(x/value,y/value,z/value);
+	}	
+
 	GLfloat operator*(Point3D point)
 	{
 		return x*point.x+y*point.y+z*point.z;
@@ -47,20 +53,21 @@ struct Point3D
 		return sqrt(x*x+y*y+z*z);
 	}
 
+	Point3D Normalize()
+	{
+		GLfloat magnitude = Magnitude();
+		if(magnitude == 0)
+			return Point3D(0,0,0);
+		return (*this)/magnitude;
+	}
+
 	GLfloat AngleBetween(Point3D point)
 	{
 		GLfloat PI = 3.14159265359;
 
 		GLfloat dotProduct = ((*this)*point);
-		if(dotProduct == 0)
-		{
-			if(point.x > 0)
-				return 270;
-			else
-				return 90;
-		}
-
-		return acos(Magnitude()*point.Magnitude()/dotProduct)*180/PI;
+		
+		return acos(dotProduct/1.0)*180/PI;
 	}
 };
 
@@ -73,6 +80,7 @@ protected:
 
 	Point3D rotate;
 	Point3D translate;
+//	vector<*WorldObject> children;
 	GLfloat width, height;
 public:
 	WorldObject(GLfloat W = 0.0, GLfloat H = 0.0,GLfloat X = 0.0, GLfloat Y = 0.0, GLfloat Z = 0.0);

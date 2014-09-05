@@ -23,10 +23,24 @@ void Camera::Perspective()
 }
 
 
-void Camera::Follow(Ball& ball)
+void Camera::Follow(Ball* ball)
 {
-	translate = ball.GetTranslate()+ball.GetDirection()*5;
-	rotate.y = 360-Point3D(0,0,1).AngleBetween(ball.GetDirection());
+	this->ball = ball;
+	direction = ball->GetDirection();
+}
+
+void Camera::Update()
+{
+	Point3D gap = ball->GetDirection()-direction;
+
+	direction = direction+gap*0.25;
+	direction = direction.Normalize();
+
+	translate = ball->GetTranslate()+direction*5;
+
+	rotate.y = Point3D(0,0,1).AngleBetween(direction);
+	if(direction.x < 0)
+		rotate.y = 360-rotate.y;
 
 	translate.y = 1.5;
 }
