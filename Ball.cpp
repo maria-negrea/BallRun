@@ -8,10 +8,8 @@ Ball::Ball(Point3D initialDirection,double speed, GLfloat radius)
 	gluQuadricDrawStyle(quadratic, GLU_FILL);
 	gluQuadricNormals(quadratic, GLU_SMOOTH);
 
-	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
+	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTexture("building"));
 	gluQuadricTexture(quadratic, GL_TRUE);
-
-	//Rotate(Point3D(0,30,0));
 }
 
 Ball::~Ball(void)

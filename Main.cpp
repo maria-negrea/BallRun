@@ -40,7 +40,7 @@ void Draw()
 			roads[i]->Draw();
 		}
 		Point3D endRoad = roads[roads.size()-1]->GetEndPoint();
-		if((endRoad - newBall->GetTranslate()).Magnitude() < 15.0) 
+		if((endRoad - newBall->GetTranslate()).Magnitude() < 30.0)
 		{
 			count ++;
 			roads.push_back(new Road(endRoad+roads[roads.size()-1]->GetForward()*5));
@@ -48,12 +48,12 @@ void Draw()
 			
 			if(count % (rand() % 5 + 3) == 2) 
 			{
-				roads[roads.size()-1]->Rotate(Point3D(0.0, -90.0, 0.0));
-				roads[roads.size()-1]->Translate(roads[roads.size()-2]->GetForward()*-4.5+roads[roads.size()-2]->GetRight()*4.5);
+				roads[roads.size()-1]->Rotate(Point3D(0.0, 90.0, 0.0));
+				roads[roads.size()-1]->Translate(roads[roads.size()-2]->GetForward()*-5);
 			}
 			
 			cout<<roads[roads.size()-1]->GetForward().x<<" "<<roads[roads.size()-1]->GetForward().z<<endl;
-			if(roads.size() > 10) {
+			if(roads.size() > 30) {
 				roads.erase (roads.begin()+2);
 			}
 		}
