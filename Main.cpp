@@ -1,7 +1,7 @@
 #include "Ball.h"
 #include "Road.h"
 #include "Camera.h"
-
+#include "Earth.h"
 #include <vector>
 #include <iostream>
 
@@ -10,6 +10,7 @@ using namespace std;
 Textures* Textures::instance = NULL;
 Camera *mainCamera = new Camera();
 Ball *newBall = new Ball(Point3D(0, 0, 1),-0.1, 0.5);
+Earth *newEarth = new Earth();
 vector<Road*> roads;
 int count = 0;
 
@@ -34,9 +35,9 @@ void Draw()
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		newEarth->Draw();
 		mainCamera->Perspective();
 		for(int i=0; i < roads.size(); i++) {
-			glColor4f( 0.0 , 1.0 , 1.0, 1.0);
 			roads[i]->Draw();
 		}
 		Point3D endRoad = roads[roads.size()-1]->GetEndPoint();
