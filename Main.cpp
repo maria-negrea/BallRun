@@ -5,6 +5,12 @@
 
 Textures* Textures::instance = NULL;
 
+Road *newRoad = new Road();
+Camera *mainCamera = new Camera();
+Point3D point;
+Ball *newBall = new Ball(Point3D(0, 0, 1),-0.1, 0.5);
+Plant *newPlant=new Plant(0.6, 0.6);
+
 void Initialize() 
 {
 	glEnable(GL_DEPTH_TEST); 
@@ -16,29 +22,26 @@ void Initialize()
 	gluPerspective(60.0, (GLfloat) GLUT_WINDOW_WIDTH/(GLfloat) GLUT_WINDOW_HEIGHT, 1.0, 100.0);
 
 	Textures::GetInstance()->LoadGLTextures();
+	newPlant->Translate(Point3D(0.,-0.3,-2));
 }
-
-Road *newRoad = new Road();
-Camera *mainCamera = new Camera();
-Ball *newBall = new Ball(Point3D(0, 0, 1),-0.01, 0.3);
 
 void Draw()
 {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		mainCamera->Follow(*newBall);
+		/*mainCamera->Follow(*newBall);
 		mainCamera->Perspective();
 		newRoad->Draw();
-		newBall->Draw();
-		/*Plant *newPlant=new Plant(0.6, 0.6);
-		newPlant->Translate(Point3D(0.,0.,-2));
-		newPlant->Draw();*/
+		newBall->Draw();*/
+		
+		
+		newPlant->Draw();
 	glFlush();
 }
 
-void specialKey(int key, int x, int y) { 
-
+void specialKey(int key, int x, int y)
+{ 
 	switch(key) 
 	{
 		case GLUT_KEY_RIGHT :
@@ -56,7 +59,7 @@ void specialKey(int key, int x, int y) {
 void Timer(int value)
 {
 	newBall->MoveForward();
-	newBall->Rotate(Point3D(-15, 0, 0));
+	newPlant->Rotate(Point3D(0.0, 10.0, 0.0));
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
 }
@@ -72,7 +75,6 @@ void reshape(int w, int h)
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
-	//textures.LoadGLTextures();
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(768, 768);
 	glutInitWindowPosition(200, 200);

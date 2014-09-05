@@ -1,7 +1,7 @@
 #include "Ball.h"
 
 Ball::Ball(Point3D initialDirection,double speed, GLfloat radius)
-:direction(initialDirection),speed(speed),WorldObject(radius*2,radius*2)
+:direction(initialDirection),speed(speed),radius(radius),WorldObject(radius*2,radius*2)
 {
 	quadratic = gluNewQuadric();
 	gluQuadricDrawStyle(quadratic, GLU_FILL);
@@ -13,14 +13,12 @@ Ball::Ball(Point3D initialDirection,double speed, GLfloat radius)
 
 Ball::~Ball(void)
 {
-	//delete[] quadratic;
+	delete[] quadratic;
 }
 
 void Ball::DrawObject()
 {
-	// glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	
-	gluSphere(quadratic,0.3f,100,100);
+	gluSphere(quadratic,radius,100,100);
 }
 
 void Ball::MoveLeft()
@@ -41,4 +39,10 @@ Point3D Ball::GetDirection()
 void Ball::MoveForward()
 {
 	Translate(direction*speed);
+
+	//Point3D rotate;
+	//rotate.x = direction.z;
+	//rotate.z = direction.x;
+
+	Rotate(Point3D(-15,0,0));
 }
