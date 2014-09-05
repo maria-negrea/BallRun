@@ -9,11 +9,8 @@ using namespace std;
 
 Textures* Textures::instance = NULL;
 Camera *mainCamera = new Camera();
-Ball *newBall = new Ball(Point3D(0, 0, 1),-0.1, 0.5);
+Ball *newBall = new Ball(Point3D(0, 0, 1),-0.4, 0.5);
 vector<Road*> roads;
-int count = 0;
-
-
 
 void Initialize() 
 {
@@ -31,31 +28,56 @@ void Initialize()
 
 void Draw()
 {
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		mainCamera->Perspective();
-		for(int i=0; i < roads.size(); i++) {
-			glColor4f( 0.0 , 1.0 , 1.0, 1.0);
-			roads[i]->Draw();
-		}
-		Point3D endRoad = roads[roads.size()-1]->GetEndPoint();
-		//if(newBall->GetTranslate().z < (roads[roads.size()-1]->GetTranslate().z + 15.0) ) {
-		if((endRoad - newBall->GetTranslate()).Magnitude() < 15.0) {
-			count ++;
-			roads.push_back(new Road(endRoad));
-			roads[roads.size()-1]->Rotate(roads[roads.size()-2]->GetRotate());
-			if(count % (rand() % 5 + 3) == 2) {
-				roads[roads.size()-1]->Rotate(Point3D(0.0, 90.0, 0.0));
-				roads[roads.size()-1]->Translate(roads[roads.size()-1]->GetRight()*10);
-			}
-			cout<<roads[roads.size()-1]->GetForward().x<<" "<<roads[roads.size()-1]->GetForward().z<<endl;
-			if(roads.size() > 10) {
-				roads.erase (roads.begin()+2);
-			}
-		}
-		newBall->Draw();
-	glFlush();
+	 glMatrixMode(GL_MODELVIEW);
+	 glLoadIdentity();
+	 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	 mainCamera->Perspective();
+
+	  for(int i=0; i < roads.size(); i++) 
+	  {
+	   glColor4f( 0.0 , 1.0 , 1.0, 1.0);
+	   roads[i]->Draw();
+	  }
+
+	  Point3D endRoad = roads[roads.size()-1]->GetEndPoint();
+	  if((endRoad - newBall->GetTranslate()).Magnitude() < 30.0)
+	  {
+	   roads.push_back(new Road(endRoad+roads[roads.size()-1]->GetForward()*4));
+	   roads[roads.size()-1]->Rotate(roads[roads.size()-2]->GetRotate());
+	   
+	   int random = rand() % 17;
+			
+		   if(random == 0) 
+		   {
+			roads[roads.size()-1]->Rotate(Point3D(0.0, 90.0, 0.0));
+			roads[roads.size()-1]->Translate(roads[roads.size()-2]->GetForward()*(-4)+roads[roads.size()-2]->GetRight()*4);
+		   }
+
+		   else if(random == 1) 
+		   {
+			roads[roads.size()-1]->Rotate(Point3D(0.0, -90.0, 0.0));
+			roads[roads.size()-1]->Translate(roads[roads.size()-2]->GetForward()*(-4)-roads[roads.size()-2]->GetRight()*4);
+		   }
+
+		  /* if(random == 2)
+		   {
+			roads.push_back(new Road(endRoad+roads[roads.size()-2]->GetForward()*4));
+			roads[roads.size()-1]->Rotate(roads[roads.size()-3]->GetRotate());
+
+			roads[roads.size()-1]->Rotate(Point3D(0.0, -90.0, 0.0));
+			roads[roads.size()-1]->Translate(roads[roads.size()-3]->GetForward()*(-4)-roads[roads.size()-3]->GetRight()*4);
+
+			roads[roads.size()-2]->Rotate(Point3D(0.0, 90.0, 0.0));
+			roads[roads.size()-2]->Translate(roads[roads.size()-3]->GetForward()*(-4)+roads[roads.size()-3]->GetRight()*4);
+		   }*/
+		   
+	   int nr = roads.size() - 15;
+	   for(int i = 0; i < nr; i++)
+		   roads.erase(roads.begin());
+	  }
+
+	 newBall->Draw();
+	 glFlush();
 }
 
 void specialKey(int key, int x, int y)
