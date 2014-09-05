@@ -30,7 +30,7 @@ void Plant:: DrawBranch(vector<Point3D> base, GLfloat radius, int level)
 	
 	for(int i=0;i<5&&radius-pass>0;i++)
 	{	
-		for (double t = 0; t < 2 * PI; t = t + 0.001)
+		for (double t = 0; t < 2 * PI; t = t + 0.1)
 		{
 			if(i%2==0)
 			{
@@ -92,7 +92,7 @@ void Plant::DrawObject()
 {
 	vector<Point3D>base; 
 	GLfloat radius = (width >= height ? height : width)/6;
-	for (double t = 0; t < 2 * PI; t = t + 0.001)
+	for (double t = 0; t < 2 * PI; t = t + 0.1)
 		{
 			base.push_back(Point3D(radius*cos(t), 0.0,  radius*sin(t)));
 		}

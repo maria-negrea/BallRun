@@ -6,11 +6,15 @@
 class Camera : public WorldObject
 {
 protected:
+	Point3D direction;
 	void DrawObject();
+	Ball *ball;
 public:
 	Camera();
 	~Camera();
 
 	void Perspective();
-	void Follow(Ball& ball);
+	void Follow(Ball *ball);
+
+	void Update();
 };
