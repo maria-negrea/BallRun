@@ -35,19 +35,21 @@ void Draw()
 		mainCamera->Follow(*newBall);
 		mainCamera->Perspective();
 		for(int i=0; i < roads.size(); i++) {
+			glColor4f( 0.0 , 1.0 , 1.0, 1.0);
 			roads[i]->Draw();
 		}
-		cout<<roads.size()<<" "<<newBall->GetTranslate().z<<" "<<roads[roads.size()-1]->GetTranslate().z - 5.0<<endl;
-		Point3D endRoad = roads[roads.size()-1].GetEndPoint();
+		Point3D endRoad = roads[roads.size()-1]->GetEndPoint();
 		//if(newBall->GetTranslate().z < (roads[roads.size()-1]->GetTranslate().z + 15.0) ) {
-		if((endRoad - newBall->GetTranslate()).Magnitude() < 15.0)
+		if((endRoad - newBall->GetTranslate()).Magnitude() < 15.0) {
 			count ++;
-			roads.push_back(new Road(Point3D(0.0, 0.0, newBall->GetTranslate().z - 5.0)));
-			if(count % (rand() % 10+1) == 2) {
+			roads.push_back(new Road(endRoad));
+			roads[roads.size()-1]->Rotate(roads[roads.size()-2]->GetRotate());
+			if(count % (rand() % 5 + 3) == 2) {
 				roads[roads.size()-1]->Rotate(Point3D(0.0, 90.0, 0.0));
-				roads[roads.size()-1]->Translate(Point3D(5.0, 0.0, 0.0));
+				roads[roads.size()-1]->Translate(roads[roads.size()-1]->GetRight()*10);
 			}
-			if(roads.size() > 5) {
+			cout<<roads[roads.size()-1]->GetForward().x<<" "<<roads[roads.size()-1]->GetForward().z<<endl;
+			if(roads.size() > 10) {
 				roads.erase (roads.begin()+2);
 			}
 		}

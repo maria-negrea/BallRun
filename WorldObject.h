@@ -47,6 +47,12 @@ struct Point3D
 		return sqrt(x*x+y*y+z*z);
 	}
 
+	Point3D rotateY(GLfloat angle)
+	{
+		GLfloat PI = 3.14159265359;
+		return Point3D(x*cos(angle*PI/180) - z*sin(angle*PI/180), 0.0, x*sin(angle*PI/180) + z*cos(angle*PI/180));
+	}
+
 	GLfloat AngleBetween(Point3D point)
 	{
 		GLfloat PI = 3.14159265359;
@@ -83,5 +89,11 @@ public:
 
 	void Draw();
 
+	Point3D GetForward();
+
 	Point3D GetTranslate();
+
+	Point3D GetRight();
+
+	Point3D GetRotate();
 };

@@ -54,3 +54,15 @@ Point3D WorldObject::GetTranslate()
 {
 	return translate;
 }
+
+Point3D WorldObject::GetForward() {
+	return Point3D(0.0, 0.0, -1.0).rotateY(rotate.y);
+}
+
+Point3D WorldObject::GetRight() {
+	return Point3D(1.0, 0.0, 0.0).rotateY(rotate.y);	
+}
+
+Point3D WorldObject::GetRotate() {
+	return rotate;
+}

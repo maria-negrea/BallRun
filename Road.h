@@ -10,5 +10,5 @@ public:
     }
     ~Road() {}
     void DrawObject();
-    void GetEndPoint();
+    Point3D GetEndPoint();
 };
