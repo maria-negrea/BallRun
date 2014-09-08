@@ -5,6 +5,7 @@
 #include "Earth.h"
 #include <vector>
 #include <iostream>
+#include<time.h>
 
 using namespace std;
 
@@ -29,6 +30,8 @@ void Initialize()
 
 	Textures::GetInstance()->LoadGLTextures();
 	mainCamera->Follow(newBall);
+
+	srand(time(NULL));
 }
 
 void Draw()
