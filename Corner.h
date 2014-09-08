@@ -8,7 +8,7 @@ class Corner
 	Point3D point;
 	GLfloat radius;
 public:
-	Corner(Point3D point, bool left, bool right, GLfloat radius = 7.0);
+	Corner(Point3D point, bool left, bool right, GLfloat radius = 10.0);
 	~Corner();
 
 	bool CanMoveLeft(Ball* ball);

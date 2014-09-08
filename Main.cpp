@@ -4,6 +4,7 @@
 #include "Road.h"
 #include "Earth.h"
 #include "Corner.h"
+#include "Curve.h"
 #include <time.h>
 #include <vector>
 #include <iostream>
@@ -13,7 +14,7 @@ using namespace std;
 
 Textures* Textures::instance = NULL;
 Camera *mainCamera = new Camera();
-Ball *newBall = new Ball(Point3D(0, 0, 1),-1, 0.5);
+Ball *newBall = new Ball(Point3D(0, 0, 1),-0.6, 0.5);
 Earth *newEarth = new Earth();
 vector<Road*> roads;
 int count = 0;
@@ -22,6 +23,7 @@ Point3D point;
 Road* lastRoad;
 Road *leftRoad,*rightRoad;
 Corner* nextCorner;
+Curve *newCurve = new Curve(2);
 
 void Initialize() 
 {
@@ -102,8 +104,8 @@ void Draw()
 	}
 
 	newEarth->Draw();
-
 	newBall->Draw();
+	newCurve->Draw();
 	glFlush();
 }
 
@@ -140,21 +142,28 @@ void Timer(int value)
 	else
 	{
 		Point3D endRoad = lastRoad->GetEndPoint();
-		if((endRoad - newBall->GetTranslate()).Magnitude() < 30.0)
+		if((endRoad - newBall->GetTranslate()).Magnitude() < 15.0)
 		{
 			Road *newRoad = new Road(lastRoad->GetTranslate());
 			roads.push_back(newRoad);
 			newRoad->Rotate(lastRoad->GetRotate());
 
-			int random = rand() % 7;
+			int random = rand() % 3;
 			
-		   if(random == 0) 
+		   if(random == 0) // right turn
 		   {
 				newRoad->Rotate(Point3D(0.0, 90.0, 0.0));
 				newRoad->Translate(lastRoad->GetForward()*22+lastRoad->GetRight()*22);
 
 				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,false,true);
+				delete newCurve;
+				newCurve = new Curve(0);
+				newCurve->Translate(lastRoad->GetTranslate()+lastRoad->GetForward()*22);
+				//newCurve->Translate(lastRoad->GetRight()*(2));
+				newCurve->Rotate(newRoad->GetRotate()*-1+Point3D(0,180,0));
+				//newCurve->Rotate(Point3D(0.0, -180.0, 0.0));
 				lastRoad = newRoad;
+				cout<<"Right turn"<<endl;
 		   }
 		   else if(random == 1) 
 		   {
@@ -162,7 +171,14 @@ void Timer(int value)
 				newRoad->Translate(lastRoad->GetForward()*22-lastRoad->GetRight()*22);
 
 				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,true,false);
+				delete newCurve;
+				newCurve = new Curve(1);
+				newCurve->Translate(lastRoad->GetTranslate()+lastRoad->GetForward()*18);
+				//newCurve->Translate(lastRoad->GetRight()*(-2));
+				newCurve->Rotate(newRoad->GetRotate()*-1+Point3D(0,180,0));
+				//newCurve->Rotate(Point3D(0.0, 90.0, 0.0));
 				lastRoad = newRoad;
+				cout<<"Left turn"<<endl;
 		   }
 		   else if(random == 2)
 		   {
@@ -175,11 +191,15 @@ void Timer(int value)
 
 				newRoad->Rotate(Point3D(0.0, 90.0, 0.0));
 				newRoad->Translate(lastRoad->GetForward()*22+lastRoad->GetRight()*22);
-
+				delete newCurve;
+				newCurve = new Curve(2);
+				newCurve->Translate(lastRoad->GetTranslate()+lastRoad->GetForward()*22);
 				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,true,true);
+				newCurve->Rotate(otherRoad->GetRotate()*(-1) + Point3D(0.0, -90.0, 0.0));
 				lastRoad = NULL;
 				leftRoad = newRoad;
 				rightRoad = otherRoad;
+				cout<<"Both turn"<<endl;
 		   }
 		   else
 		   {
@@ -188,7 +208,7 @@ void Timer(int value)
 		   }
 			int nr = roads.size() - 15;
 			for(int i = 0; i < nr; i++)
-				roads.erase(roads.begin());
+				roads.erase(roads.begin() + 15);
 		}
 	}
 }
