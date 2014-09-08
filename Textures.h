@@ -16,7 +16,7 @@ class Textures
 {
 private:
 	static Textures *instance;
-    GLuint textures[5];
+    GLuint textures[4];
 	Textures();
 public:
 	~Textures();

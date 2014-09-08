@@ -238,18 +238,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Cactus.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Corner.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Curve.h"
-				>
-			</File>
-			<File
 				RelativePath=".\Earth.h"
 				>
 			</File>

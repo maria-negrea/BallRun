@@ -9,7 +9,7 @@ Plant::Plant(double width, double height, int numberOfBranches)
 	this->height=height;
 	this->numberOfBranches=numberOfBranches;
 	this->maxHeight=GetRandomGLfloat(6, 8);
-	
+
 	double minDimension=width >= height ? height : width;	
 	this->radius = GetRandomGLfloat(minDimension/8, minDimension/4);
 	for(int i=0;i<numberOfBranches;i++)
@@ -70,7 +70,8 @@ void Plant::DrawObject()
 {
 	vector<Point3D>base; 
 	
-	for (double t = 0; t < 2 * PI; t = t + 0.5)
+
+	for (double t = 0; t < 2 * PI; t = t + 0.1)
 		{
 			base.push_back(Point3D(radius*cos(t), 0.0,  radius*sin(t)));
 		}

@@ -1,13 +1,12 @@
 #include "Ball.h"
 #include "Camera.h"
 #include "Road.h"
+#include "Tree.h"
+#include "Cactus.h"
 #include "Earth.h"
 #include "Corner.h"
-#include "Tree.h"
 #include "Mountain.h"
-#include "Cactus.h"
 #include "Sky.h"
-#include <time.h>
 #include <vector>
 #include <iostream>
 #include <time.h>
@@ -16,7 +15,6 @@ using namespace std;
 
 Textures* Textures::instance = NULL;
 Camera *mainCamera = new Camera();
-Ball *newBall = new Ball(Point3D(0, 0, 1),-1, 0.5);
 Earth *newEarth = new Earth();
 Sky* sky = new Sky(30);
 
@@ -26,17 +24,24 @@ vector<Plant*> plants;
 
 int count = 0;
 Point3D point;
-
+Ball *newBall = new Ball(Point3D(0, 0, 1),-0.5, 0.5);
+Plant *newPlant;
+Tree *newTree;
 Road* lastRoad;
 Road *leftRoad,*rightRoad;
 Corner* nextCorner;
 
+
 void Initialize() 
 {
-	srand(time(NULL));
-	glEnable(GL_DEPTH_TEST);
+	srand(time(0));
+	newPlant=new Cactus(0.3, 0.3, 10);
+	newTree=new Tree(0.3, 0.3, 5);
+
+	glEnable(GL_DEPTH_TEST); 
 	glEnable(GL_TEXTURE_2D);
 	glClearColor(0.0, 0.0, 0.0, 0.0);
+
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glEnable(GL_BLEND);
@@ -112,13 +117,13 @@ void Draw()
 	}
 
 	newEarth->Draw();
-
 	newBall->Draw();
 
 	for(int i=0; i < mountains.size(); i++) 
 	{
 		mountains[i]->Draw();
 	}
+
 
 	glFlush();
 }
@@ -145,6 +150,8 @@ void specialKey(int key, int x, int y)
 void Timer(int value)
 {
 	newBall->MoveForward();
+	newPlant->Rotate(Point3D(0.0, 5.0, 0.0));
+	newTree->Rotate(Point3D(0.0, 5.0, 0.0));
 	mainCamera->Update();
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);

@@ -13,7 +13,8 @@ void Cactus:: SetBranchTop(vector<Point3D> base, vector<Point3D>& top, int level
 	{
 		xDir+=0.2;
 	}
-	for (double t = 0; t < 2 * PI; t = t + 0.5)
+
+	for (double t = 0; t < 2 * PI; t = t + 0.1)
 	{
 		switch(directions[index])
 		{

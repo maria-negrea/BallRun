@@ -14,9 +14,10 @@ Tree::~Tree(void)
 
 void Tree:: SetBranchTop(vector<Point3D> base, vector<Point3D>& top, int level, GLfloat radius, GLfloat pass, GLfloat index)
 {
-	double value=heights[index]/numberOfBranches;
+
+	double value=0.2/level;
 	int randomValue=directions[index];
-		for (double t = 0; t < 2 * PI; t = t + 0.5)
+		for (double t = 0; t < 2 * PI; t = t + 0.1)
 		{
 			
 			switch(randomValue)
