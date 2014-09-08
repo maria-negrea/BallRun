@@ -20,7 +20,7 @@ void Textures::LoadGLTextures()
 {
 	texture[0] = SOIL_load_OGL_texture
         (
-        "Assets/cactus2.bmp",
+        "Assets/tree.bmp",
         SOIL_LOAD_AUTO,
         SOIL_CREATE_NEW_ID,
         SOIL_FLAG_INVERT_Y

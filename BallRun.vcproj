@@ -176,6 +176,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Cactus.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Camera.cpp"
 				>
 			</File>
@@ -196,6 +200,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Tree.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\WorldObject.cpp"
 				>
 			</File>
@@ -207,6 +215,10 @@
 			>
 			<File
 				RelativePath=".\Ball.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Cactus.h"
 				>
 			</File>
 			<File
@@ -223,6 +235,10 @@
 			</File>
 			<File
 				RelativePath=".\Textures.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Tree.h"
 				>
 			</File>
 			<File
