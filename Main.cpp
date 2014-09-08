@@ -7,6 +7,7 @@
 #include <time.h>
 #include <vector>
 #include <iostream>
+#include<time.h>
 
 using namespace std;
 
@@ -17,7 +18,6 @@ Earth *newEarth = new Earth();
 vector<Road*> roads;
 int count = 0;
 Point3D point;
-Plant *newPlant=new Plant(0.6, 0.6);
 
 Road* lastRoad;
 Road *leftRoad,*rightRoad;
@@ -26,19 +26,17 @@ Corner* nextCorner;
 void Initialize() 
 {
 	srand(time(NULL));
-	glEnable(GL_DEPTH_TEST); 
+	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glEnable(GL_BLEND);
 	gluPerspective(60.0, (GLfloat) GLUT_WINDOW_WIDTH/(GLfloat) GLUT_WINDOW_HEIGHT, 1.0, 100.0);
-
 	lastRoad = new Road(Point3D(0.0, 0.0, 1.0));
 	roads.push_back(lastRoad);
 	nextCorner = NULL;
 	
-	newPlant->Translate(Point3D(0.,-0.3,-2));
 	mainCamera->Follow(newBall);
 
 
@@ -100,7 +98,6 @@ void Draw()
 
 	for(int i=0; i < roads.size(); i++) 
 	{
-		glColor4f( 1.0 , 1.0, i/(1.0*roads.size()), 1.0);
 		roads[i]->Draw();
 	}
 
@@ -132,7 +129,6 @@ void specialKey(int key, int x, int y)
 void Timer(int value)
 {
 	newBall->MoveForward();
-	newPlant->Rotate(Point3D(0.0, 10.0, 0.0));
 	mainCamera->Update();
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
@@ -144,7 +140,7 @@ void Timer(int value)
 	else
 	{
 		Point3D endRoad = lastRoad->GetEndPoint();
-		if((endRoad - newBall->GetTranslate()).Magnitude() < 5.0)
+		if((endRoad - newBall->GetTranslate()).Magnitude() < 30.0)
 		{
 			Road *newRoad = new Road(lastRoad->GetTranslate());
 			roads.push_back(newRoad);
@@ -168,7 +164,7 @@ void Timer(int value)
 				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,true,false);
 				lastRoad = newRoad;
 		   }
-		   else if(random == 2 || random == 4 || random == 5)
+		   else if(random == 2)
 		   {
 				Road *otherRoad = new Road(lastRoad->GetTranslate());
 				roads.push_back(otherRoad);
@@ -190,7 +186,7 @@ void Timer(int value)
 				newRoad->Translate(lastRoad->GetForward()*40);
 				lastRoad = newRoad;
 		   }
-			int nr = roads.size() - 4;
+			int nr = roads.size() - 15;
 			for(int i = 0; i < nr; i++)
 				roads.erase(roads.begin());
 		}

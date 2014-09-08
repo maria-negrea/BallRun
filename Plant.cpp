@@ -42,9 +42,7 @@ void Plant:: DrawBranch(vector<Point3D> base, GLfloat radius, int level)
 			}
 			
 		}
-		
-		glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTexture()[0]);
-
+		glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
 		double step=1.0/base.size();
 		int k;
 		double j=0.0;

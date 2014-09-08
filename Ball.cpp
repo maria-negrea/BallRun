@@ -19,8 +19,7 @@ Ball::~Ball(void)
 
 void Ball::DrawObject()
 {
-	glColor4f(1.0,1.0,1.0,1.0);
-	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTexture()[0]);
+	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
 	gluSphere(quadratic,radius,100,100);
 }
 

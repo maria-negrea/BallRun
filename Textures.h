@@ -12,29 +12,15 @@
 
 using namespace std;
 
-struct String
-{
-	string value;
-
-	String(string value)
-		:value(value)
-	{
-	}
-
-	friend bool operator<(String const& s1, String const& s2);
-};
-
 class Textures
 {
 private:
 	static Textures *instance;
-	GLuint texture[1];
+    GLuint textures[3];
 	Textures();
 public:
 	~Textures();
-
+	GLuint* GetTextures();
 	static Textures* GetInstance();
-
 	void LoadGLTextures();
-	GLuint* GetTexture();
 };
