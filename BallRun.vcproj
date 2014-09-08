@@ -176,6 +176,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Cactus.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Camera.cpp"
 				>
 			</File>
@@ -196,6 +200,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Mountain.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Plant.cpp"
 				>
 			</File>
@@ -204,7 +212,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Sky.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Textures.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Tree.cpp"
 				>
 			</File>
 			<File
@@ -222,15 +238,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Corner.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Curve.h"
-				>
-			</File>
-			<File
 				RelativePath=".\Earth.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Mountain.h"
 				>
 			</File>
 			<File
@@ -242,7 +254,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Sky.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Textures.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Tree.h"
 				>
 			</File>
 			<File
