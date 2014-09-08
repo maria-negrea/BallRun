@@ -188,7 +188,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Digit.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Earth.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Highway.cpp"
 				>
 			</File>
 			<File
@@ -201,6 +209,14 @@
 			</File>
 			<File
 				RelativePath=".\Road.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Scene.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Sky.cpp"
 				>
 			</File>
 			<File
@@ -222,6 +238,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Camera.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Corner.h"
 				>
 			</File>
@@ -230,7 +250,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Digit.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Earth.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Highway.h"
 				>
 			</File>
 			<File
@@ -239,6 +267,14 @@
 			</File>
 			<File
 				RelativePath=".\Road.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Scene.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Sky.h"
 				>
 			</File>
 			<File

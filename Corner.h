@@ -15,4 +15,5 @@ public:
 	bool CanMoveRight(Ball* ball);
 
 	Point3D GetPoint();
+	GLfloat GetRadius();
 };

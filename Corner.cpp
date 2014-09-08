@@ -18,6 +18,7 @@ bool Corner::CanMoveLeft(Ball *ball)
 {
 	if(!left)
 		return false;
+	cout<<(point - ball->GetTranslate()).Magnitude()<<endl;
 	return (point - ball->GetTranslate()).Magnitude() < radius;
 }
 
@@ -25,10 +26,16 @@ bool Corner::CanMoveRight(Ball *ball)
 {
 	if(!right)
 		return false;
+	cout<<(point - ball->GetTranslate()).Magnitude()<<endl;
 	return (point - ball->GetTranslate()).Magnitude() < radius;
 }
 
 Point3D Corner::GetPoint()
 {
 	return point;
+}
+
+GLfloat Corner::GetRadius()
+{
+	return radius;
 }

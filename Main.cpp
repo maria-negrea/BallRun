@@ -4,6 +4,9 @@
 #include "Road.h"
 #include "Earth.h"
 #include "Corner.h"
+#include "Sky.h"
+#include "Scene.h"
+#include "Highway.h"
 #include <time.h>
 #include <vector>
 #include <iostream>
@@ -13,15 +16,14 @@ using namespace std;
 
 Textures* Textures::instance = NULL;
 Camera *mainCamera = new Camera();
-Ball *newBall = new Ball(Point3D(0, 0, 1),-1, 0.5);
+Ball *newBall = new Ball(Point3D(0, 0, 1),-0.9, 0.5);
 Earth *newEarth = new Earth();
-vector<Road*> roads;
 int count = 0;
 Point3D point;
 
-Road* lastRoad;
-Road *leftRoad,*rightRoad;
-Corner* nextCorner;
+Sky* sky = new Sky(30);
+Scene scene;
+Highway* highway = new Highway();
 
 void Initialize() 
 {
@@ -32,79 +34,23 @@ void Initialize()
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glEnable(GL_BLEND);
-	gluPerspective(60.0, (GLfloat) GLUT_WINDOW_WIDTH/(GLfloat) GLUT_WINDOW_HEIGHT, 1.0, 100.0);
-	lastRoad = new Road(Point3D(0.0, 0.0, 1.0));
-	roads.push_back(lastRoad);
-	nextCorner = NULL;
 	
 	mainCamera->Follow(newBall);
+	sky->Follow(newBall);
+	highway->Follow(newBall);
 
+	scene.SetMainCamera(mainCamera);
+	scene.AddObject(newBall);
+	scene.AddObject(highway);
+	scene.AddObject(newEarth);
+	scene.AddObject(sky);
 
 	Textures::GetInstance()->LoadGLTextures();	
 }
 
-void CheckPossibilities()
-{
-	if((leftRoad->GetTranslate() - newBall->GetTranslate()).Magnitude() < 2.0)
-	{
-		lastRoad = leftRoad;
-	}
-	if((rightRoad->GetTranslate() - newBall->GetTranslate()).Magnitude() < 2.0)
-	{
-		lastRoad = rightRoad;
-	}
-}
-
-bool CanMoveLeft ()
-{
-	if(nextCorner == NULL)
-		return false;
-	if(nextCorner->CanMoveLeft(newBall))
-	{
-		point = nextCorner->GetPoint();
-
-		nextCorner = NULL;
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
-bool CanMoveRight()
-{
-	if(nextCorner == NULL)
-		return 0;
-	if(nextCorner->CanMoveRight(newBall))
-	{
-		point = nextCorner->GetPoint();
-
-		nextCorner = NULL;
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
 void Draw()
 {
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	mainCamera->Perspective();
-
-	for(int i=0; i < roads.size(); i++) 
-	{
-		roads[i]->Draw();
-	}
-
-	newEarth->Draw();
-
-	newBall->Draw();
-	glFlush();
+	scene.Render();
 }
 
 void specialKey(int key, int x, int y)
@@ -113,12 +59,12 @@ void specialKey(int key, int x, int y)
 	switch(key) 
 	{
 		case GLUT_KEY_RIGHT :
-			if(CanMoveRight())
+			if(highway->CanMoveRight(point))
 				newBall->MoveRight(point+newBall->GetRight());
 			break;
 
 		case GLUT_KEY_LEFT :
-			if(CanMoveLeft())
+			if(highway->CanMoveLeft(point))
 				newBall->MoveLeft(point-newBall->GetRight());
 			break;
 	}
@@ -126,71 +72,31 @@ void specialKey(int key, int x, int y)
 	glutPostRedisplay();
 }
 
+void GameOver()
+{
+	mainCamera->UnFollow();
+	sky->UnFollow();
+}
+
+void CheckGameOver()
+{
+	if(highway->IsOffRoad())
+	{
+		GameOver();
+	}
+}
+
 void Timer(int value)
 {
 	newBall->MoveForward();
+	sky->Update();
 	mainCamera->Update();
+	highway->Update();
+
+	CheckGameOver();
+
     glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
-
-	if(lastRoad == NULL)
-	{
-		CheckPossibilities();
-	}
-	else
-	{
-		Point3D endRoad = lastRoad->GetEndPoint();
-		if((endRoad - newBall->GetTranslate()).Magnitude() < 30.0)
-		{
-			Road *newRoad = new Road(lastRoad->GetTranslate());
-			roads.push_back(newRoad);
-			newRoad->Rotate(lastRoad->GetRotate());
-
-			int random = rand() % 7;
-			
-		   if(random == 0) 
-		   {
-				newRoad->Rotate(Point3D(0.0, 90.0, 0.0));
-				newRoad->Translate(lastRoad->GetForward()*22+lastRoad->GetRight()*22);
-
-				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,false,true);
-				lastRoad = newRoad;
-		   }
-		   else if(random == 1) 
-		   {
-				newRoad->Rotate(Point3D(0.0, -90.0, 0.0));
-				newRoad->Translate(lastRoad->GetForward()*22-lastRoad->GetRight()*22);
-
-				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,true,false);
-				lastRoad = newRoad;
-		   }
-		   else if(random == 2)
-		   {
-				Road *otherRoad = new Road(lastRoad->GetTranslate());
-				roads.push_back(otherRoad);
-				otherRoad->Rotate(lastRoad->GetRotate());
-
-				otherRoad->Rotate(Point3D(0.0, -90.0, 0.0));
-				otherRoad->Translate(lastRoad->GetForward()*22-lastRoad->GetRight()*22);
-
-				newRoad->Rotate(Point3D(0.0, 90.0, 0.0));
-				newRoad->Translate(lastRoad->GetForward()*22+lastRoad->GetRight()*22);
-
-				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,true,true);
-				lastRoad = NULL;
-				leftRoad = newRoad;
-				rightRoad = otherRoad;
-		   }
-		   else
-		   {
-				newRoad->Translate(lastRoad->GetForward()*40);
-				lastRoad = newRoad;
-		   }
-			int nr = roads.size() - 15;
-			for(int i = 0; i < nr; i++)
-				roads.erase(roads.begin());
-		}
-	}
 }
 
 void reshape(int w, int h)
@@ -198,7 +104,7 @@ void reshape(int w, int h)
    glViewport(0, 0, (GLsizei) w, (GLsizei) h);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 30.0);
+   gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 100.0);
 }
 
 int main(int argc, char** argv)

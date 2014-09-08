@@ -14,7 +14,9 @@ public:
 	~Camera();
 
 	void Perspective();
+
 	void Follow(Ball *ball);
+	void UnFollow();
 
 	void Update();
 };

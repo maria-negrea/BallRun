@@ -31,16 +31,23 @@ void Camera::Follow(Ball* ball)
 
 void Camera::Update()
 {
-	Point3D gap = ball->GetDirection()-direction;
+	if(ball != NULL)
+	{
+		Point3D gap = ball->GetDirection()-direction;
 
-	direction = direction+gap*0.25;
-	direction = direction.Normalize();
+		direction = direction+gap*0.25;
+		direction = direction.Normalize();
 
-	translate = ball->GetTranslate()+direction*5;
+		translate = ball->GetTranslate()+direction*5;
 
-	rotate.y = Point3D(0,0,1).AngleBetween(direction);
-	if(direction.x < 0)
-		rotate.y = 360-rotate.y;
-
+		rotate.y = Point3D(0,0,1).AngleBetween(direction);
+		if(direction.x < 0)
+			rotate.y = 360-rotate.y;
+	}
 	translate.y = 1.5;
+}
+
+void Camera::UnFollow()
+{
+	ball = NULL;
 }
