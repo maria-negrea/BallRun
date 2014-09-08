@@ -8,6 +8,7 @@ private:
 	GLUquadricObj *quadratic;
 	Point3D direction;
 	double speed;
+	Point3D onTrack;
 	GLfloat radius;
 public:
 	Ball(Point3D initialDirection,double speed, GLfloat radius);
@@ -15,7 +16,7 @@ public:
 	void DrawObject();
 
 	Point3D GetDirection();
-	void MoveLeft();
-	void MoveRight();
+	void MoveLeft(Point3D onTrack);
+	void MoveRight(Point3D onTrack);
 	void MoveForward();
 };

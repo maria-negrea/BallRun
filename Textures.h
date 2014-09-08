@@ -28,7 +28,7 @@ class Textures
 {
 private:
 	static Textures *instance;
-	map<String,GLuint> texture;
+	GLuint texture[1];
 	Textures();
 public:
 	~Textures();
@@ -36,5 +36,5 @@ public:
 	static Textures* GetInstance();
 
 	void LoadGLTextures();
-	GLuint GetTexture(string name);
+	GLuint* GetTexture();
 };

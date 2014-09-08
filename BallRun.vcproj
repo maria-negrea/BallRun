@@ -180,6 +180,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Corner.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Curve.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Earth.cpp"
 				>
 			</File>
@@ -214,15 +222,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Corner.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Curve.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Earth.h"
 				>
 			</File>
 			<File
 				RelativePath=".\Plant.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Road.h"
 				>
 			</File>
 			<File
