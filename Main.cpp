@@ -8,6 +8,8 @@
 #include "Curve.h"
 #include "Mountain.h"
 #include "Sky.h"
+#include "EndScreen.h"
+
 #include <vector>
 #include <iostream>
 #include <time.h>
@@ -32,7 +34,7 @@ Road* lastRoad;
 Road *leftRoad,*rightRoad;
 Corner* nextCorner;
 Curve *newCurve = new Curve(2);
-
+EndScreen *screen = new EndScreen();
 
 void Initialize() 
 {
@@ -127,6 +129,8 @@ void Draw()
 		mountains[i]->Draw();
 	}
 
+	//screen->Draw();
+
 	glFlush();
 }
 
@@ -188,7 +192,6 @@ void Timer(int value)
 				newCurve->Rotate(newRoad->GetRotate()*-1+Point3D(0,180,0));
 				//newCurve->Rotate(Point3D(0.0, -180.0, 0.0));
 				lastRoad = newRoad;
-				cout<<"Right turn"<<endl;
 		   }
 		   else if(random == 1) 
 		   {
@@ -203,7 +206,6 @@ void Timer(int value)
 				newCurve->Rotate(newRoad->GetRotate()*-1+Point3D(0,180,0));
 				//newCurve->Rotate(Point3D(0.0, 90.0, 0.0));
 				lastRoad = newRoad;
-				cout<<"Left turn"<<endl;
 		   }
 		   else if(random == 2)
 		   {
@@ -224,7 +226,6 @@ void Timer(int value)
 				lastRoad = NULL;
 				leftRoad = newRoad;
 				rightRoad = otherRoad;
-				cout<<"Both turn"<<endl;
 		   }
 		   else
 		   {
@@ -267,6 +268,10 @@ void Timer(int value)
 				roads.erase(roads.begin());
 		}
 	}
+	screen->Translate(screen->GetTranslate()*(-1));
+	screen->Translate(newBall->GetTranslate());
+	screen->Rotate(screen->GetRotate()*(-1));
+	screen->Rotate(Point3D(0.0, newBall->GetRotate().y, 0.0));
 }
 
 void reshape(int w, int h)

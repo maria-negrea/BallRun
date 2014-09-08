@@ -196,6 +196,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\EndScreen.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Main.cpp"
 				>
 			</File>
@@ -238,7 +242,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Curve.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Earth.h"
+				>
+			</File>
+			<File
+				RelativePath=".\EndScreen.h"
 				>
 			</File>
 			<File
