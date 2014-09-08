@@ -38,6 +38,26 @@ void Textures::LoadGLTextures()
         SOIL_FLAG_INVERT_Y
         );
 
+	textures[3] = SOIL_load_OGL_texture
+        (
+        "Assets/mountain.bmp",
+        SOIL_LOAD_AUTO,
+        SOIL_CREATE_NEW_ID,
+        SOIL_FLAG_INVERT_Y
+        );
+
+	
+	textures[4] = SOIL_load_OGL_texture
+        (
+        "Assets/Skybox.bmp",
+        SOIL_LOAD_AUTO,
+        SOIL_CREATE_NEW_ID,
+        SOIL_FLAG_INVERT_Y
+        );
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
 	textures[2] = SOIL_load_OGL_texture
         (
         "Assets/earth.bmp",
@@ -45,6 +65,7 @@ void Textures::LoadGLTextures()
         SOIL_CREATE_NEW_ID,
         SOIL_FLAG_INVERT_Y
         );
+
     glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);

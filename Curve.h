@@ -2,10 +2,13 @@
 
 #include "WorldObject.h"
 
-class Curve
+class Curve : public WorldObject
 {
-	void Draw();
-public:
-	Curve();
-	~Curve();
+	private:
+		void DrawObject();
+		int turn;
+	public:
+		Curve(int TURN);
+		~Curve();
+		
 };

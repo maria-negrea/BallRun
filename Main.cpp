@@ -1,13 +1,16 @@
 #include "Ball.h"
-#include "Plant.h"
 #include "Camera.h"
 #include "Road.h"
 #include "Earth.h"
 #include "Corner.h"
+#include "Tree.h"
+#include "Mountain.h"
+#include "Cactus.h"
+#include "Sky.h"
 #include <time.h>
 #include <vector>
 #include <iostream>
-#include<time.h>
+#include <time.h>
 
 using namespace std;
 
@@ -15,7 +18,12 @@ Textures* Textures::instance = NULL;
 Camera *mainCamera = new Camera();
 Ball *newBall = new Ball(Point3D(0, 0, 1),-1, 0.5);
 Earth *newEarth = new Earth();
+Sky* sky = new Sky(30);
+
 vector<Road*> roads;
+vector<Mountain*> mountains;
+vector<Plant*> plants;
+
 int count = 0;
 Point3D point;
 
@@ -32,7 +40,6 @@ void Initialize()
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glEnable(GL_BLEND);
-	gluPerspective(60.0, (GLfloat) GLUT_WINDOW_WIDTH/(GLfloat) GLUT_WINDOW_HEIGHT, 1.0, 100.0);
 	lastRoad = new Road(Point3D(0.0, 0.0, 1.0));
 	roads.push_back(lastRoad);
 	nextCorner = NULL;
@@ -96,6 +103,9 @@ void Draw()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	mainCamera->Perspective();
 
+	sky->Translate(sky->GetTranslate()*-1+newBall->GetTranslate());
+	sky->Draw();
+
 	for(int i=0; i < roads.size(); i++) 
 	{
 		roads[i]->Draw();
@@ -104,6 +114,12 @@ void Draw()
 	newEarth->Draw();
 
 	newBall->Draw();
+
+	for(int i=0; i < mountains.size(); i++) 
+	{
+		mountains[i]->Draw();
+	}
+
 	glFlush();
 }
 
@@ -140,13 +156,15 @@ void Timer(int value)
 	else
 	{
 		Point3D endRoad = lastRoad->GetEndPoint();
-		if((endRoad - newBall->GetTranslate()).Magnitude() < 30.0)
+		if((endRoad - newBall->GetTranslate()).Magnitude() < 15.0)
 		{
 			Road *newRoad = new Road(lastRoad->GetTranslate());
+			
 			roads.push_back(newRoad);
+
 			newRoad->Rotate(lastRoad->GetRotate());
 
-			int random = rand() % 7;
+			int random = rand() % 5;
 			
 		   if(random == 0) 
 		   {
@@ -186,7 +204,38 @@ void Timer(int value)
 				newRoad->Translate(lastRoad->GetForward()*40);
 				lastRoad = newRoad;
 		   }
-			int nr = roads.size() - 15;
+
+		    int side = rand() % 2;
+			int dist = rand() % 10 + 20;
+
+		    Mountain *newMountain = new Mountain(rand() % 10 + 10, -rand() % 10 - 10, rand() % 10 + 10);
+
+			if(side == 0)
+				newMountain->Translate(newRoad->GetTranslate() + newRoad->GetRight() * dist);
+			else 
+				newMountain->Translate(newRoad->GetTranslate() - newRoad->GetRight() * dist);
+			newMountain->Rotate(Point3D(0, rand() % 360, 0));
+			mountains.push_back(newMountain);
+
+			/*Plant *newPlant;
+			int plantType = rand() % 2;
+			if(plantType == 0)
+				newPlant = new Cactus(1, 1, 10);
+			else 
+				newPlant = new Tree(1, 1, 5);
+
+			newPlant->Translate(newRoad->GetTranslate() + newRoad->GetRight() * 2);
+			plants.push_back(newPlant);*/
+
+			int nr = mountains.size() - 5;
+			for(int i = 0; i < nr; i++)
+				mountains.erase(mountains.begin());
+
+	/*		nr = plants.size() - 3;
+			for(int i = 0; i < nr; i++)
+				plants.erase(plants.begin());*/
+
+			nr = roads.size() - 4;
 			for(int i = 0; i < nr; i++)
 				roads.erase(roads.begin());
 		}
@@ -198,7 +247,7 @@ void reshape(int w, int h)
    glViewport(0, 0, (GLsizei) w, (GLsizei) h);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 30.0);
+   gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 100.0);
 }
 
 int main(int argc, char** argv)
