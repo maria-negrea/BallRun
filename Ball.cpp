@@ -8,10 +8,8 @@ Ball::Ball(Point3D initialDirection,double speed, GLfloat radius)
 	gluQuadricDrawStyle(quadratic, GLU_FILL);
 	gluQuadricNormals(quadratic, GLU_SMOOTH);
 
-	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
 	gluQuadricTexture(quadratic, GL_TRUE);
-
-	//Rotate(Point3D(0,30,0));
+	onTrack = Point3D(0,0,0);
 }
 
 Ball::~Ball(void)
@@ -21,19 +19,24 @@ Ball::~Ball(void)
 
 void Ball::DrawObject()
 {
+	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
 	gluSphere(quadratic,radius,100,100);
 }
 
-void Ball::MoveLeft()
+void Ball::MoveLeft(Point3D onTrack)
 {
 	direction = Point3D(direction.z, 0, -direction.x);
 	Rotate(Point3D(0,90,0));
+	this->onTrack = onTrack-translate;
+	this->onTrack.y = 0;
 }
 
-void Ball::MoveRight()
+void Ball::MoveRight(Point3D onTrack)
 {
 	direction = Point3D(-direction.z, 0, direction.x);
 	Rotate(Point3D(0,-90,0));
+	this->onTrack = onTrack-translate;
+	this->onTrack.y = 0;
 }
 
 Point3D Ball::GetDirection()
@@ -44,6 +47,9 @@ Point3D Ball::GetDirection()
 void Ball::MoveForward()
 {
 	Translate(direction*speed);
+	Translate(onTrack*0.5);
+
+	onTrack = onTrack*0.5;
 
 	Rotate(Point3D(-15,0,0));
 }

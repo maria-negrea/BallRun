@@ -28,7 +28,7 @@ Plant::~Plant(void)
 
 void Plant:: PutTextureOnCylinder(vector<Point3D> base, vector<Point3D> top)
 {
-	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
+	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[3]);
 
 	double step=1.0/base.size();
 	int k;

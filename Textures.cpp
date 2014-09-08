@@ -1,4 +1,7 @@
+#include <fstream>
 #include "Textures.h"
+
+using namespace std;
 
 Textures::Textures()
 {
@@ -16,21 +19,45 @@ Textures* Textures::GetInstance()
 	return instance;
 }
 
+
 void Textures::LoadGLTextures()
 {
-	texture[0] = SOIL_load_OGL_texture
+	textures[0] = SOIL_load_OGL_texture
+        (
+        "Assets/ball.bmp",
+        SOIL_LOAD_AUTO,
+        SOIL_CREATE_NEW_ID,
+        SOIL_FLAG_INVERT_Y
+        );
+
+	textures[1] = SOIL_load_OGL_texture
+        (
+        "Assets/road.bmp",
+        SOIL_LOAD_AUTO,
+        SOIL_CREATE_NEW_ID,
+        SOIL_FLAG_INVERT_Y
+        );
+	textures[2] = SOIL_load_OGL_texture
+        (
+        "Assets/earth.bmp",
+        SOIL_LOAD_AUTO,
+        SOIL_CREATE_NEW_ID,
+        SOIL_FLAG_INVERT_Y
+        );
+	textures[3] = SOIL_load_OGL_texture
         (
         "Assets/tree.bmp",
         SOIL_LOAD_AUTO,
         SOIL_CREATE_NEW_ID,
         SOIL_FLAG_INVERT_Y
         );
- 
     glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 }
 
 GLuint* Textures::GetTextures()
 {
-	return texture;
+	return textures;
 }

@@ -1,23 +1,26 @@
 #pragma once
 #include<iostream>
+#include<string>
+#include<map>
 #include"SOIL.h"
+
 #ifdef __unix || __unix__
  #include <GL/glut.h>
 #else
  #include <glut.h>
 #endif
 
+using namespace std;
+
 class Textures
 {
 private:
 	static Textures *instance;
-	GLuint texture[1];
+    GLuint textures[4];
 	Textures();
 public:
 	~Textures();
-
-	static Textures* GetInstance();
-
-	void LoadGLTextures();
 	GLuint* GetTextures();
+	static Textures* GetInstance();
+	void LoadGLTextures();
 };
