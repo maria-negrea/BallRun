@@ -12,7 +12,7 @@ Sky::~Sky(void)
 
 void Sky::DrawObject()
 {
-    glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[3]);
+    glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[4]);
     glBegin(GL_QUADS);
 		glTexCoord2f(0.5, 0); glVertex3f(-size, -size/1.0,  size);//1
         glTexCoord2f(0.5, 0.33); glVertex3f( size, -size/1.0,  size);
@@ -29,10 +29,10 @@ void Sky::DrawObject()
         glTexCoord2f(-0.0001, 0.66); glVertex3f( -size, size/1.0, -size);
         glTexCoord2f(0.25, 0.66); glVertex3f( size, size/1.0, -size);
 
-		glTexCoord2f(1.0001, 0.33); glVertex3f( -size, -size/1.0, -size);//4
+		glTexCoord2f(1.01, 0.33); glVertex3f( -size, -size/1.0, -size);//4
         glTexCoord2f(0.75, 0.33); glVertex3f( -size, -size/1.0,  size);
         glTexCoord2f(0.75, 0.66); glVertex3f( -size, size/1.0, size);
-        glTexCoord2f(1.0001, 0.66); glVertex3f(-size, size/1.0, -size);
+        glTexCoord2f(1.01, 0.66); glVertex3f(-size, size/1.0, -size);
 
 		glTexCoord2f(0.75, 0.33); glVertex3f( -size, -size/1.0, size);//5
         glTexCoord2f(0.5, 0.33); glVertex3f( size, -size/1.0,  size);

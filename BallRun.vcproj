@@ -176,6 +176,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Cactus.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Camera.cpp"
 				>
 			</File>
@@ -196,11 +200,23 @@
 				>
 			</File>
 			<File
+				RelativePath=".\EndScreen.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Highway.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\Main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Map.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Mountain.cpp"
 				>
 			</File>
 			<File
@@ -224,6 +240,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Tree.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\WorldObject.cpp"
 				>
 			</File>
@@ -235,6 +255,10 @@
 			>
 			<File
 				RelativePath=".\Ball.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Cactus.h"
 				>
 			</File>
 			<File
@@ -258,7 +282,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\EndScreen.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Highway.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Map.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Mountain.h"
 				>
 			</File>
 			<File
@@ -278,7 +314,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\SOIL.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Textures.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Tree.h"
 				>
 			</File>
 			<File

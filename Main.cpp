@@ -1,16 +1,20 @@
 #include "Ball.h"
-#include "Plant.h"
 #include "Camera.h"
 #include "Road.h"
+#include "Tree.h"
+#include "Cactus.h"
 #include "Earth.h"
 #include "Corner.h"
 #include "Sky.h"
 #include "Scene.h"
 #include "Highway.h"
-#include <time.h>
+#include "Curve.h"
+#include "Mountain.h"
+#include "EndScreen.h"
+
 #include <vector>
 #include <iostream>
-#include<time.h>
+#include <time.h>
 
 using namespace std;
 
@@ -22,15 +26,22 @@ int count = 0;
 Point3D point;
 
 Sky* sky = new Sky(30);
-Scene scene;
-Highway* highway = new Highway();
+Scene* scene;
+Highway* highway = new Highway(scene);
+
+EndScreen *screen = new EndScreen();
 
 void Initialize() 
 {
-	srand(time(NULL));
-	glEnable(GL_DEPTH_TEST);
+	srand(time(0));
+
+	scene = new Scene();
+	highway = new Highway(scene);
+
+	glEnable(GL_DEPTH_TEST); 
 	glEnable(GL_TEXTURE_2D);
 	glClearColor(0.0, 0.0, 0.0, 0.0);
+
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glEnable(GL_BLEND);
@@ -39,18 +50,18 @@ void Initialize()
 	sky->Follow(newBall);
 	highway->Follow(newBall);
 
-	scene.SetMainCamera(mainCamera);
-	scene.AddObject(newBall);
-	scene.AddObject(highway);
-	scene.AddObject(newEarth);
-	scene.AddObject(sky);
+	scene->SetMainCamera(mainCamera);
+	scene->AddObject(newBall);
+	scene->AddObject(highway);
+	scene->AddObject(newEarth);
+	scene->AddObject(sky);
 
 	Textures::GetInstance()->LoadGLTextures();	
 }
 
 void Draw()
 {
-	scene.Render();
+	scene->Render();
 }
 
 void specialKey(int key, int x, int y)
@@ -76,6 +87,12 @@ void GameOver()
 {
 	mainCamera->UnFollow();
 	sky->UnFollow();
+
+	scene->AddObject(screen);
+	screen->Translate(screen->GetTranslate()*(-1));
+	screen->Translate(newBall->GetTranslate());
+	screen->Rotate(screen->GetRotate()*(-1));
+	screen->Rotate(Point3D(0.0, newBall->GetRotate().y, 0.0));
 }
 
 void CheckGameOver()

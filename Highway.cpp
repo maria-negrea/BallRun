@@ -1,15 +1,18 @@
 #include "Highway.h"
 
-Highway::Highway(void)
+Highway::Highway(Scene* scene)
+	:scene(scene)
 {
 	lastRoad = new Road(Point3D(0.0, 0.0, 1.0));
 	roads.push_back(lastRoad);
 	nextCorner = NULL;
 
+	newCurve = new Curve(2);
 }
 
 Highway::~Highway(void)
 {
+
 }
 
 
@@ -102,6 +105,12 @@ void Highway::Update()
 				newRoad->Translate(lastRoad->GetForward()*22+lastRoad->GetRight()*22);
 
 				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,false,true);
+
+				delete newCurve;
+				newCurve = new Curve(0);
+				newCurve->Translate(lastRoad->GetTranslate()+lastRoad->GetForward()*22);
+				newCurve->Rotate(newRoad->GetRotate()*-1+Point3D(0,180,0));
+
 				lastRoad = newRoad;
 		   }
 		   else if(random == 1) 
@@ -110,6 +119,12 @@ void Highway::Update()
 				newRoad->Translate(lastRoad->GetForward()*22-lastRoad->GetRight()*22);
 
 				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,true,false);
+
+				delete newCurve;
+				newCurve = new Curve(1);
+				newCurve->Translate(lastRoad->GetTranslate()+lastRoad->GetForward()*18);
+				newCurve->Rotate(newRoad->GetRotate()*-1+Point3D(0,180,0));
+
 				lastRoad = newRoad;
 		   }
 		   else if(random == 2)
@@ -125,6 +140,12 @@ void Highway::Update()
 				newRoad->Translate(lastRoad->GetForward()*22+lastRoad->GetRight()*22);
 				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,true,true);
 
+				delete newCurve;
+				newCurve = new Curve(2);
+				newCurve->Translate(lastRoad->GetTranslate()+lastRoad->GetForward()*22);
+				nextCorner = new Corner(lastRoad->GetTranslate()+lastRoad->GetForward()*22,true,true);
+				newCurve->Rotate(otherRoad->GetRotate()*(-1) + Point3D(0.0, -90.0, 0.0));
+
 				lastRoad = NULL;
 				leftRoad = newRoad;
 				rightRoad = otherRoad;
@@ -135,7 +156,44 @@ void Highway::Update()
 				lastRoad = newRoad;
 		   }
 
-			int nr = roads.size() - 15;
+		    int side = rand() % 2;
+			int dist = rand() % 10 + 20;
+
+   		    Mountain *newMountain = new Mountain(rand() % 10 + 10, -rand() % 10 - 10, rand() % 10 + 10);
+
+			if(side == 0)
+				newMountain->Translate(newRoad->GetTranslate() + newRoad->GetRight() * dist);
+			else 
+				newMountain->Translate(newRoad->GetTranslate() - newRoad->GetRight() * dist);
+			newMountain->Rotate(Point3D(0, rand() % 360, 0));
+			mountains.push_back(newMountain);
+
+			side = rand() % 2;
+			Plant *newPlant;
+			int plantType = rand() % 2;
+			if(plantType == 0)
+				newPlant = new Cactus(1, 1, 2, 3);
+			else 
+				newPlant = new Tree(1, 1, 1, 4);
+
+			if(side == 0)
+				newPlant->Translate(newRoad->GetTranslate() + newRoad->GetRight() * 3);
+			if(side == 1)
+				newPlant->Translate(newRoad->GetTranslate() - newRoad->GetRight() * 3);
+
+			newPlant->Rotate(Point3D(0, rand()%360, 0));
+
+			plants.push_back(newPlant);
+
+			int nr = mountains.size() - 5;
+			for(int i = 0; i < nr; i++)
+				mountains.erase(mountains.begin());
+
+			nr = plants.size() - 3;
+			for(int i = 0; i < nr; i++)
+				plants.erase(plants.begin());
+
+			nr = roads.size() - 4;
 			for(int i = 0; i < nr; i++)
 			{
 				roads.erase(roads.begin());
@@ -150,4 +208,13 @@ void Highway::DrawObject()
 	{
 		roads[i]->Draw();
 	}
+	for(int i=0;i<mountains.size();i++)
+	{
+		mountains[i]->Draw();
+	}
+	for(int i=0;i<plants.size();i++)
+	{
+		plants[i]->Draw();
+	}
+	newCurve->Draw();
 }
