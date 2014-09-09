@@ -83,6 +83,27 @@ void Highway::Follow(Ball* ball)
 
 void Highway::Update()
 {
+	if(lastRoad && (lastRoad->GetEndPoint() - ball->GetTranslate() ).Magnitude() > 30.0)
+	{
+		if(rand() % 5 == 0)
+		{
+			Plant *newPlant;
+			if(rand() % 2 == 0)
+				newPlant = new Cactus(1, 1, 2, 3);
+			else 
+				newPlant = new Tree(1, 1, 1, 4);
+
+			if(rand() % 2 == 0)
+				newPlant->Translate(ball->GetTranslate() - ball->GetDirection() * (rand() % 6 + 12) + ball->GetDirection().rotateY(90) * (rand() % 3 + 4));
+			else
+				newPlant->Translate(ball->GetTranslate() - ball->GetDirection() * (rand() % 6 + 12) - ball->GetDirection().rotateY(90) * (rand() % 3 + 4));
+
+			newPlant->Rotate(Point3D(0, rand()%360, 0));
+
+			plants.push_back(newPlant);
+		}
+	}
+
 	if(lastRoad == NULL)
 	{
 		CheckPossibilities();
@@ -168,28 +189,11 @@ void Highway::Update()
 			newMountain->Rotate(Point3D(0, rand() % 360, 0));
 			mountains.push_back(newMountain);
 
-			side = rand() % 2;
-			Plant *newPlant;
-			int plantType = rand() % 2;
-			if(plantType == 0)
-				newPlant = new Cactus(1, 1, 2, 3);
-			else 
-				newPlant = new Tree(1, 1, 1, 4);
-
-			if(side == 0)
-				newPlant->Translate(newRoad->GetTranslate() + newRoad->GetRight() * 3);
-			if(side == 1)
-				newPlant->Translate(newRoad->GetTranslate() - newRoad->GetRight() * 3);
-
-			newPlant->Rotate(Point3D(0, rand()%360, 0));
-
-			plants.push_back(newPlant);
-
 			int nr = mountains.size() - 5;
 			for(int i = 0; i < nr; i++)
 				mountains.erase(mountains.begin());
 
-			nr = plants.size() - 3;
+			nr = plants.size() - 20;
 			for(int i = 0; i < nr; i++)
 				plants.erase(plants.begin());
 

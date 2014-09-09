@@ -11,6 +11,8 @@
 #include "Curve.h"
 #include "Mountain.h"
 #include "EndScreen.h"
+#include "Digit.h"
+#include "Stop.h"
 
 #include <vector>
 #include <iostream>
@@ -30,6 +32,14 @@ Scene* scene;
 Highway* highway = new Highway(scene);
 
 EndScreen *screen = new EndScreen();
+bool isGameOver = false;
+
+Digit *scoreDigit1 = new Digit(0);
+Digit *scoreDigit2 = new Digit(0);
+
+GLfloat score = 0;
+
+Stop *stop = new Stop();
 
 void Initialize() 
 {
@@ -50,11 +60,17 @@ void Initialize()
 	sky->Follow(newBall);
 	highway->Follow(newBall);
 
+	scoreDigit1->Follow(newBall,Point3D(9,5,3));
+	scoreDigit2->Follow(newBall,Point3D(9,5,1));
+
 	scene->SetMainCamera(mainCamera);
 	scene->AddObject(newBall);
-	scene->AddObject(highway);
 	scene->AddObject(newEarth);
+	scene->AddObject(highway);
 	scene->AddObject(sky);
+	scene->AddObject(scoreDigit1);
+	scene->AddObject(scoreDigit2);
+	//scene->AddObject(stop);
 
 	Textures::GetInstance()->LoadGLTextures();	
 }
@@ -93,11 +109,13 @@ void GameOver()
 	screen->Translate(newBall->GetTranslate());
 	screen->Rotate(screen->GetRotate()*(-1));
 	screen->Rotate(Point3D(0.0, newBall->GetRotate().y, 0.0));
+
+	isGameOver = true;
 }
 
 void CheckGameOver()
 {
-	if(highway->IsOffRoad())
+	if(!isGameOver && highway->IsOffRoad())
 	{
 		GameOver();
 	}
@@ -105,10 +123,27 @@ void CheckGameOver()
 
 void Timer(int value)
 {
+	Point3D lastBallPosition = newBall->GetTranslate();
 	newBall->MoveForward();
-	sky->Update();
-	mainCamera->Update();
-	highway->Update();
+
+	if(!isGameOver)
+	{
+		highway->Update();
+		sky->Update();
+		mainCamera->Update();
+		scoreDigit1->Update();
+		scoreDigit2->Update();
+
+		score += (newBall->GetTranslate()-lastBallPosition).Magnitude()/100*1.5;
+		scoreDigit1->SetDigit(score);
+		scoreDigit2->SetDigit(score/10);
+	}
+
+	stop->Translate(stop->GetTranslate()*(-1));
+	stop->Translate(newBall->GetTranslate());
+	stop->Translate(newBall->GetDirection().rotateY(90)*5);
+	stop->Rotate(stop->GetRotate()*(-1));
+	stop->Rotate(Point3D(0.0, newBall->GetRotate().y, 0.0));
 
 	CheckGameOver();
 

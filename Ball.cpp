@@ -22,6 +22,7 @@ void Ball::DrawObject()
 	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
 	gluSphere(quadratic,radius,100,100);
 
+	//glEnable(GL_BLEND);
 	//glBindTexture(GL_TEXTURE_2D,0);
 	//glColor4f(0.5,0.5,0.5,0.5);
 	//GLfloat PI = 3.141;
@@ -73,7 +74,7 @@ void Ball::MoveForward()
 
 	onTrack = onTrack*0.5;
 
-	Rotate(Point3D(-15,0,0));
+	Rotate(Point3D(15*speed,0,0));
 
 	speed -= 0.001;
 }

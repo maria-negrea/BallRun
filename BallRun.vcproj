@@ -236,6 +236,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Stop.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Textures.cpp"
 				>
 			</File>
@@ -302,6 +306,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Point2D.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Road.h"
 				>
 			</File>
@@ -315,6 +323,10 @@
 			</File>
 			<File
 				RelativePath=".\SOIL.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Stop.h"
 				>
 			</File>
 			<File
