@@ -12,7 +12,6 @@
 #include "Mountain.h"
 #include "EndScreen.h"
 #include "Digit.h"
-#include "Stop.h"
 
 #include <vector>
 #include <iostream>
@@ -38,8 +37,6 @@ Digit *scoreDigit1 = new Digit(0);
 Digit *scoreDigit2 = new Digit(0);
 
 GLfloat score = 0;
-
-Stop *stop = new Stop();
 
 void Initialize() 
 {
@@ -70,8 +67,6 @@ void Initialize()
 	scene->AddObject(sky);
 	scene->AddObject(scoreDigit1);
 	scene->AddObject(scoreDigit2);
-	//scene->AddObject(stop);
-
 	Textures::GetInstance()->LoadGLTextures();	
 }
 
@@ -138,12 +133,6 @@ void Timer(int value)
 		scoreDigit1->SetDigit(score);
 		scoreDigit2->SetDigit(score/10);
 	}
-
-	stop->Translate(stop->GetTranslate()*(-1));
-	stop->Translate(newBall->GetTranslate());
-	stop->Translate(newBall->GetDirection().rotateY(90)*5);
-	stop->Rotate(stop->GetRotate()*(-1));
-	stop->Rotate(Point3D(0.0, newBall->GetRotate().y, 0.0));
 
 	CheckGameOver();
 

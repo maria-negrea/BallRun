@@ -212,10 +212,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Map.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\Mountain.cpp"
 				>
 			</File>
@@ -233,10 +229,6 @@
 			</File>
 			<File
 				RelativePath=".\Sky.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Stop.cpp"
 				>
 			</File>
 			<File
@@ -294,19 +286,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Map.h"
-				>
-			</File>
-			<File
 				RelativePath=".\Mountain.h"
 				>
 			</File>
 			<File
 				RelativePath=".\Plant.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Point2D.h"
 				>
 			</File>
 			<File
@@ -323,10 +307,6 @@
 			</File>
 			<File
 				RelativePath=".\SOIL.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Stop.h"
 				>
 			</File>
 			<File
