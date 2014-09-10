@@ -1,6 +1,9 @@
 #include "Road.h"
 #include <time.h>
 
+/*!
+*	Draws a quad with the "road texture" 
+*/
 
 void Road::DrawObject()
 {
@@ -13,6 +16,10 @@ void Road::DrawObject()
        glTexCoord2f(0, 1); glVertex3f(-2, 0.0, -20.0);
     glEnd();
 }
+
+/*
+* Returns a Point3D right after the road
+*/
 
 Point3D Road::GetEndPoint() 
 {
