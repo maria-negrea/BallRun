@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,57 +71,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Curve.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Curve.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Textures.h&quot;</span></div>
+<a href="_curve_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_curve_8h.html">Curve.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_textures_8h.html">Textures.h</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;Curve::Curve(<span class="keywordtype">int</span> TURN) :turn(TURN)</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;Curve::~Curve()</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> Curve::DrawObject()</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">double</span> PI = 3.141;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">double</span> step = 0.01;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keywordflow">if</span>(turn == 0) { </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                        <span class="keywordflow">for</span>(<span class="keywordtype">double</span> t = 3*PI/2;t &lt; 2*PI;t += step)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                        {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()-&gt;GetTextures()[1]);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                glBegin(GL_TRIANGLES);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                        glTexCoord2f(1.0f, t*2/PI); glVertex3f(-2.0, 0.0, 2.0);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                        glTexCoord2f(0.0f, t*2/PI); glVertex3f(4*cos(t)-2.0, 0.0, 4*sin(t)+2.0);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                        glTexCoord2f(0.0f, (t+step)*2/PI); glVertex3f(4*cos(t+step)-2.0, 0.0, 4*sin(t+step)+2.0);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                glEnd();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                        }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(turn == 1) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        <span class="keywordflow">for</span>(<span class="keywordtype">double</span> t = PI;t &lt; 3*PI/2;t += step)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_curve.html#a25ea22fdfb1642309a758bf05829b77e">   11</a></span>&#160;<a class="code" href="class_curve.html#a25ea22fdfb1642309a758bf05829b77e">Curve::Curve</a>(<span class="keywordtype">int</span> TURN) :turn(TURN)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_curve.html#a7ce6ff79064e9795241423ed47166539">   15</a></span>&#160;<a class="code" href="class_curve.html#a7ce6ff79064e9795241423ed47166539">Curve::~Curve</a>()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_curve.html#a4ff6f61e972b5582439782860fa05339">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_curve.html#a4ff6f61e972b5582439782860fa05339">Curve::DrawObject</a>()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="_plant_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a> = 3.141;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">double</span> step = 0.01;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="class_curve.html#a0c89d305058a131a2d6c704e1af018e2">turn</a> == 0) { </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        <span class="keywordflow">for</span>(<span class="keywordtype">double</span> t = 3*PI/2;t &lt; 2*<a class="code" href="_plant_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>;t += step)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()-&gt;GetTextures()[1]);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                glBindTexture(GL_TEXTURE_2D, <a class="code" href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a>()-&gt;GetTextures()[1]);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                glBegin(GL_TRIANGLES);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                        glTexCoord2f(1.0f, t*2/PI); glVertex3f(-2.0, 0.0,+2.0);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                        glTexCoord2f(0.0f, t*2/PI); glVertex3f(4*cos(t)-2, 0.0, 4*sin(t)+2);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                        glTexCoord2f(0.0f, (t+step)*2/PI); glVertex3f(4*cos(t+step)-2, 0.0, 4*sin(t+step)+2);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                        glTexCoord2f(1.0f, t*2/PI); glVertex3f(-2.0, 0.0, 2.0);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                        glTexCoord2f(0.0f, t*2/PI); glVertex3f(4*cos(t)-2.0, 0.0, 4*sin(t)+2.0);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                        glTexCoord2f(0.0f, (t+step)*2/PI); glVertex3f(4*cos(t+step)-2.0, 0.0, 4*sin(t+step)+2.0);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                glEnd();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(turn == 2) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()-&gt;GetTextures()[5]);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        glBegin(GL_QUADS);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                glTexCoord2f(0, 0);glVertex3f(-2, 0.0,   2.0);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                glTexCoord2f(1, 0); glVertex3f( 2, 0.0,  2.0);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                glTexCoord2f(1, 1); glVertex3f( 2, 0.0, -2.0);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                glTexCoord2f(0, 1); glVertex3f(-2, 0.0, -2.0);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                        glEnd();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                }       </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="class_curve.html#a0c89d305058a131a2d6c704e1af018e2">turn</a> == 1) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        <span class="keywordflow">for</span>(<span class="keywordtype">double</span> t = PI;t &lt; 3*PI/2;t += step)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                glBindTexture(GL_TEXTURE_2D, <a class="code" href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a>()-&gt;GetTextures()[1]);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                glBegin(GL_TRIANGLES);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                        glTexCoord2f(1.0f, t*2/PI); glVertex3f(-2.0, 0.0,+2.0);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                        glTexCoord2f(0.0f, t*2/PI); glVertex3f(4*cos(t)-2, 0.0, 4*sin(t)+2);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                        glTexCoord2f(0.0f, (t+step)*2/PI); glVertex3f(4*cos(t+step)-2, 0.0, 4*sin(t+step)+2);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                glEnd();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="class_curve.html#a0c89d305058a131a2d6c704e1af018e2">turn</a> == 2) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                        glBindTexture(GL_TEXTURE_2D, <a class="code" href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a>()-&gt;GetTextures()[5]);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                        glBegin(GL_QUADS);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                glTexCoord2f(0, 0);glVertex3f(-2, 0.0,   2.0);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                glTexCoord2f(1, 0); glVertex3f( 2, 0.0,  2.0);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                glTexCoord2f(1, 1); glVertex3f( 2, 0.0, -2.0);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                glTexCoord2f(0, 1); glVertex3f(-2, 0.0, -2.0);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        glEnd();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }       </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="class_curve_html_a0c89d305058a131a2d6c704e1af018e2"><div class="ttname"><a href="class_curve.html#a0c89d305058a131a2d6c704e1af018e2">Curve::turn</a></div><div class="ttdeci">int turn</div><div class="ttdef"><b>Definition:</b> <a href="_curve_8h_source.html#l00013">Curve.h:13</a></div></div>
+<div class="ttc" id="_textures_8h_html"><div class="ttname"><a href="_textures_8h.html">Textures.h</a></div></div>
+<div class="ttc" id="class_textures_html_a3e5839f0cee717b4c7808a49ad9cf040"><div class="ttname"><a href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a></div><div class="ttdeci">static Textures * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_textures_8cpp_source.html#l00017">Textures.cpp:17</a></div></div>
+<div class="ttc" id="_plant_8h_html_a598a3330b3c21701223ee0ca14316eca"><div class="ttname"><a href="_plant_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a></div><div class="ttdeci">#define PI</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00007">Plant.h:7</a></div></div>
+<div class="ttc" id="class_curve_html_a4ff6f61e972b5582439782860fa05339"><div class="ttname"><a href="class_curve.html#a4ff6f61e972b5582439782860fa05339">Curve::DrawObject</a></div><div class="ttdeci">void DrawObject()</div><div class="ttdef"><b>Definition:</b> <a href="_curve_8cpp_source.html#l00022">Curve.cpp:22</a></div></div>
+<div class="ttc" id="class_curve_html_a7ce6ff79064e9795241423ed47166539"><div class="ttname"><a href="class_curve.html#a7ce6ff79064e9795241423ed47166539">Curve::~Curve</a></div><div class="ttdeci">~Curve()</div><div class="ttdef"><b>Definition:</b> <a href="_curve_8cpp_source.html#l00015">Curve.cpp:15</a></div></div>
+<div class="ttc" id="_curve_8h_html"><div class="ttname"><a href="_curve_8h.html">Curve.h</a></div></div>
+<div class="ttc" id="class_curve_html_a25ea22fdfb1642309a758bf05829b77e"><div class="ttname"><a href="class_curve.html#a25ea22fdfb1642309a758bf05829b77e">Curve::Curve</a></div><div class="ttdeci">Curve(int TURN)</div><div class="ttdef"><b>Definition:</b> <a href="_curve_8cpp_source.html#l00011">Curve.cpp:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:52:14 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 10:07:21 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

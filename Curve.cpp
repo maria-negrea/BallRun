@@ -1,6 +1,13 @@
 #include "Curve.h"
 #include "Textures.h"
 
+
+/*!
+* Takes as argument the turn id :
+* 0 -> right
+* 1 -> left
+* 2 -> both
+*/
 Curve::Curve(int TURN) :turn(TURN)
 {
 }
@@ -9,6 +16,9 @@ Curve::~Curve()
 {
 }
 
+/*!
+* draws a quadrant if the turn is 1 or two and a quad otherwise
+*/
 void Curve::DrawObject()
 {
 	double PI = 3.141;

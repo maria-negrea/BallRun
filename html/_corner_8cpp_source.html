@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,52 +71,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Corner.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include&lt;iostream&gt;</span></div>
+<a href="_corner_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include&lt;iostream&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Corner.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_corner_8h.html">Corner.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;Corner::Corner(<a class="code" href="struct_point3_d.html">Point3D</a> point, <span class="keywordtype">bool</span> left, <span class="keywordtype">bool</span> right, GLfloat radius)</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_corner.html#ab55d2cbce25b09663c8df9bb9ac2210f">    6</a></span>&#160;<a class="code" href="class_corner.html#ab55d2cbce25b09663c8df9bb9ac2210f">Corner::Corner</a>(<a class="code" href="struct_point3_d.html">Point3D</a> <a class="code" href="_main_8cpp.html#a9933aa50b0707f2f424f2fe8d40b08c1">point</a>, <span class="keywordtype">bool</span> left, <span class="keywordtype">bool</span> right, GLfloat radius)</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        :point(point),radius(radius),left(left),right(right)</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;Corner::~Corner()</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_corner.html#a9e740053202c0bcdb430d2baa6a7d2d5">   12</a></span>&#160;<a class="code" href="class_corner.html#a9e740053202c0bcdb430d2baa6a7d2d5">Corner::~Corner</a>()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">bool</span> Corner::CanMoveLeft(<a class="code" href="class_ball.html">Ball</a> *ball)</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_corner.html#a4148b59b83d2b9cad19ec13f234766a8">   17</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_corner.html#a4148b59b83d2b9cad19ec13f234766a8">Corner::CanMoveLeft</a>(<a class="code" href="class_ball.html">Ball</a> *ball)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span>(!left)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="class_corner.html#a98132e1b0163721af3c2b96f0df8c092">left</a>)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> (point - ball-&gt;GetTranslate()).Magnitude() &lt; radius;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="class_corner.html#a7dabdd209de72c45f52427b685cb4c48">point</a> - ball-&gt;<a class="code" href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">GetTranslate</a>()).Magnitude() &lt; <a class="code" href="class_corner.html#a5aa1ba52ef16deebf3206c2780d31850">radius</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">bool</span> Corner::CanMoveRight(<a class="code" href="class_ball.html">Ball</a> *ball)</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_corner.html#a533010b03b15b6c76ad0a9f534018a8c">   24</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_corner.html#a533010b03b15b6c76ad0a9f534018a8c">Corner::CanMoveRight</a>(<a class="code" href="class_ball.html">Ball</a> *ball)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span>(!right)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="class_corner.html#ab7855b833768777f60d2a099ad2e4a74">right</a>)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> (point - ball-&gt;GetTranslate()).Magnitude() &lt; radius;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="class_corner.html#a7dabdd209de72c45f52427b685cb4c48">point</a> - ball-&gt;<a class="code" href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">GetTranslate</a>()).Magnitude() &lt; <a class="code" href="class_corner.html#a5aa1ba52ef16deebf3206c2780d31850">radius</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> Corner::GetPoint()</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_corner.html#a615f08b3eb5490bdfedf5ca0c1a8f730">   31</a></span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> <a class="code" href="class_corner.html#a615f08b3eb5490bdfedf5ca0c1a8f730">Corner::GetPoint</a>()</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> point;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_corner.html#a7dabdd209de72c45f52427b685cb4c48">point</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;GLfloat Corner::GetRadius()</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_corner.html#a6fa76d41c90f1684f53e8ceee402ccdb">   36</a></span>&#160;GLfloat <a class="code" href="class_corner.html#a6fa76d41c90f1684f53e8ceee402ccdb">Corner::GetRadius</a>()</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> radius;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_corner.html#a5aa1ba52ef16deebf3206c2780d31850">radius</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00005">Ball.h:5</a></div></div>
+<div class="ttc" id="class_world_object_html_aff5a65911deeaedf114357217d16c66f"><div class="ttname"><a href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">WorldObject::GetTranslate</a></div><div class="ttdeci">Point3D GetTranslate()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00065">WorldObject.cpp:65</a></div></div>
+<div class="ttc" id="_corner_8h_html"><div class="ttname"><a href="_corner_8h.html">Corner.h</a></div></div>
+<div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdoc">The main ball of the game. </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00009">Ball.h:9</a></div></div>
+<div class="ttc" id="class_corner_html_a6fa76d41c90f1684f53e8ceee402ccdb"><div class="ttname"><a href="class_corner.html#a6fa76d41c90f1684f53e8ceee402ccdb">Corner::GetRadius</a></div><div class="ttdeci">GLfloat GetRadius()</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8cpp_source.html#l00036">Corner.cpp:36</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00013">WorldObject.h:13</a></div></div>
+<div class="ttc" id="class_corner_html_a4148b59b83d2b9cad19ec13f234766a8"><div class="ttname"><a href="class_corner.html#a4148b59b83d2b9cad19ec13f234766a8">Corner::CanMoveLeft</a></div><div class="ttdeci">bool CanMoveLeft(Ball *ball)</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8cpp_source.html#l00017">Corner.cpp:17</a></div></div>
+<div class="ttc" id="_main_8cpp_html_a9933aa50b0707f2f424f2fe8d40b08c1"><div class="ttname"><a href="_main_8cpp.html#a9933aa50b0707f2f424f2fe8d40b08c1">point</a></div><div class="ttdeci">Point3D point</div><div class="ttdef"><b>Definition:</b> <a href="_main_8cpp_source.html#l00033">Main.cpp:33</a></div></div>
+<div class="ttc" id="class_corner_html_a98132e1b0163721af3c2b96f0df8c092"><div class="ttname"><a href="class_corner.html#a98132e1b0163721af3c2b96f0df8c092">Corner::left</a></div><div class="ttdeci">bool left</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8h_source.html#l00010">Corner.h:10</a></div></div>
+<div class="ttc" id="class_corner_html_a5aa1ba52ef16deebf3206c2780d31850"><div class="ttname"><a href="class_corner.html#a5aa1ba52ef16deebf3206c2780d31850">Corner::radius</a></div><div class="ttdeci">GLfloat radius</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8h_source.html#l00013">Corner.h:13</a></div></div>
+<div class="ttc" id="class_corner_html_ab7855b833768777f60d2a099ad2e4a74"><div class="ttname"><a href="class_corner.html#ab7855b833768777f60d2a099ad2e4a74">Corner::right</a></div><div class="ttdeci">bool right</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8h_source.html#l00011">Corner.h:11</a></div></div>
+<div class="ttc" id="class_corner_html_a615f08b3eb5490bdfedf5ca0c1a8f730"><div class="ttname"><a href="class_corner.html#a615f08b3eb5490bdfedf5ca0c1a8f730">Corner::GetPoint</a></div><div class="ttdeci">Point3D GetPoint()</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8cpp_source.html#l00031">Corner.cpp:31</a></div></div>
+<div class="ttc" id="class_corner_html_ab55d2cbce25b09663c8df9bb9ac2210f"><div class="ttname"><a href="class_corner.html#ab55d2cbce25b09663c8df9bb9ac2210f">Corner::Corner</a></div><div class="ttdeci">Corner(Point3D point, bool left, bool right, GLfloat radius=8.0)</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8cpp_source.html#l00006">Corner.cpp:6</a></div></div>
+<div class="ttc" id="class_corner_html_a7dabdd209de72c45f52427b685cb4c48"><div class="ttname"><a href="class_corner.html#a7dabdd209de72c45f52427b685cb4c48">Corner::point</a></div><div class="ttdeci">Point3D point</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8h_source.html#l00012">Corner.h:12</a></div></div>
+<div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdoc">A 3D point. </div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00016">WorldObject.h:16</a></div></div>
+<div class="ttc" id="class_corner_html_a533010b03b15b6c76ad0a9f534018a8c"><div class="ttname"><a href="class_corner.html#a533010b03b15b6c76ad0a9f534018a8c">Corner::CanMoveRight</a></div><div class="ttdeci">bool CanMoveRight(Ball *ball)</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8cpp_source.html#l00024">Corner.cpp:24</a></div></div>
+<div class="ttc" id="class_corner_html_a9e740053202c0bcdb430d2baa6a7d2d5"><div class="ttname"><a href="class_corner.html#a9e740053202c0bcdb430d2baa6a7d2d5">Corner::~Corner</a></div><div class="ttdeci">~Corner()</div><div class="ttdef"><b>Definition:</b> <a href="_corner_8cpp_source.html#l00012">Corner.cpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:52:14 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 10:07:21 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

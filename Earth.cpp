@@ -1,5 +1,8 @@
 #include "Earth.h"
 
+/*!
+* Draw quad large enough to always seem like there is an earth below the road
+*/
 void Earth::DrawObject() {
 
     glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[2]);

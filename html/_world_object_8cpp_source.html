@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,79 +71,105 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">WorldObject.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;WorldObject.h&quot;</span></div>
+<a href="_world_object_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_world_object_8h.html">WorldObject.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;WorldObject::WorldObject(GLfloat W, GLfloat H,GLfloat X, GLfloat Y, GLfloat Z)</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_world_object.html#a464fd2e8938ae8ca4e778235819d616a">    3</a></span>&#160;<a class="code" href="class_world_object.html#a464fd2e8938ae8ca4e778235819d616a">WorldObject::WorldObject</a>(GLfloat W, GLfloat H,GLfloat X, GLfloat Y, GLfloat Z)</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    translate = <a class="code" href="struct_point3_d.html">Point3D</a>(X, Y, Z);</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    width = W;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    height = H;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a> = <a class="code" href="struct_point3_d.html">Point3D</a>(X, Y, Z);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a> = W;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_world_object.html#a0457012633125921dd5c43e8538e8674">height</a> = H;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;WorldObject::~WorldObject(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_world_object.html#a287e5b87a26133cd35f3015268d2a5a3">   10</a></span>&#160;<a class="code" href="class_world_object.html#a287e5b87a26133cd35f3015268d2a5a3">WorldObject::~WorldObject</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> WorldObject::Draw()</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_world_object.html#ae46caed8b37233c2b9e0383a26cb9f87">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_world_object.html#ae46caed8b37233c2b9e0383a26cb9f87">WorldObject::Draw</a>()</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        ModifyPerspective();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_world_object.html#a52db8a34a804e30a25043b8b118b3365">ModifyPerspective</a>();</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        DrawObject();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_world_object.html#a22d6db7c7f7ac55f873d55417417d29d">DrawObject</a>();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        ModifyPerspectiveBack();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_world_object.html#a4873b7b568e1ce3886092823834c16b3">ModifyPerspectiveBack</a>();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> WorldObject::ModifyPerspective()</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_world_object.html#a52db8a34a804e30a25043b8b118b3365">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_world_object.html#a52db8a34a804e30a25043b8b118b3365">WorldObject::ModifyPerspective</a>()</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        glTranslatef(translate.x,translate.y,translate.z);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        glTranslatef(<a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>.<a class="code" href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">x</a>,<a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a>,<a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>.<a class="code" href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">z</a>);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        glRotatef(rotate.y,0,1,0);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        glRotatef(rotate.x,1,0,0);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        glRotatef(rotate.z,0,0,1);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        glRotatef(<a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a>,0,1,0);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        glRotatef(<a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.<a class="code" href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">x</a>,1,0,0);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        glRotatef(<a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.<a class="code" href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">z</a>,0,0,1);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> WorldObject::ModifyPerspectiveBack()</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_world_object.html#a4873b7b568e1ce3886092823834c16b3">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_world_object.html#a4873b7b568e1ce3886092823834c16b3">WorldObject::ModifyPerspectiveBack</a>()</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        glRotatef(-rotate.z,0,0,1);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        glRotatef(-rotate.x,1,0,0);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        glRotatef(-rotate.y,0,1,0);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        glRotatef(-<a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.<a class="code" href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">z</a>,0,0,1);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        glRotatef(-<a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.<a class="code" href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">x</a>,1,0,0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        glRotatef(-<a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a>,0,1,0);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        glTranslatef(-translate.x,-translate.y,-translate.z);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        glTranslatef(-<a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>.<a class="code" href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">x</a>,-<a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a>,-<a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>.<a class="code" href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">z</a>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> WorldObject::Translate(<a class="code" href="struct_point3_d.html">Point3D</a> translation)</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_world_object.html#a95de7162381945513e86fcf354297da9">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_world_object.html#a95de7162381945513e86fcf354297da9">WorldObject::Translate</a>(<a class="code" href="struct_point3_d.html">Point3D</a> translation)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        translate += translation;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a> += translation;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> WorldObject::Rotate(<a class="code" href="struct_point3_d.html">Point3D</a> rotation)</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">WorldObject::Rotate</a>(<a class="code" href="struct_point3_d.html">Point3D</a> rotation)</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        rotate += rotation;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a> += rotation;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> WorldObject::GetTranslate()</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_world_object.html#a3a3158dc13f636eb3835e22fdc32a7b9">   53</a></span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> <a class="code" href="class_world_object.html#a3a3158dc13f636eb3835e22fdc32a7b9">WorldObject::GetForward</a>()</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> translate;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> WorldObject::GetForward() {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="struct_point3_d.html">Point3D</a>(0.0, 0.0, -1.0).rotateY(rotate.y);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> WorldObject::GetRight() {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="struct_point3_d.html">Point3D</a>(1.0, 0.0, 0.0).rotateY(rotate.y);        </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> WorldObject::GetRotate() {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> rotate;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">/* (0.0, 0.0, -1.0) global forward vector rotated by the objects rotation */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="struct_point3_d.html">Point3D</a>(0.0, 0.0, -1.0).<a class="code" href="struct_point3_d.html#ac9c0cb7390bde518217651587119ff87">rotateY</a>(<a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_world_object.html#aba6fb82b134193bdcb5882a7e83e937a">   59</a></span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> <a class="code" href="class_world_object.html#aba6fb82b134193bdcb5882a7e83e937a">WorldObject::GetRight</a>() </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">/* (1.0, 0.0, 0.0) global right vector rotated by the objects rotation */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="struct_point3_d.html">Point3D</a>(1.0, 0.0, 0.0).<a class="code" href="struct_point3_d.html#ac9c0cb7390bde518217651587119ff87">rotateY</a>(<a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a>);        </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">   65</a></span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> <a class="code" href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">WorldObject::GetTranslate</a>()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00013">WorldObject.h:13</a></div></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_world_object.html#a443ed580b100165115e4fd2d7cdaae43">   70</a></span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> <a class="code" href="class_world_object.html#a443ed580b100165115e4fd2d7cdaae43">WorldObject::GetRotate</a>() </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="ttc" id="class_world_object_html_a95de7162381945513e86fcf354297da9"><div class="ttname"><a href="class_world_object.html#a95de7162381945513e86fcf354297da9">WorldObject::Translate</a></div><div class="ttdeci">void Translate(Point3D point)</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00043">WorldObject.cpp:43</a></div></div>
+<div class="ttc" id="class_world_object_html_aff5a65911deeaedf114357217d16c66f"><div class="ttname"><a href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">WorldObject::GetTranslate</a></div><div class="ttdeci">Point3D GetTranslate()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00065">WorldObject.cpp:65</a></div></div>
+<div class="ttc" id="class_world_object_html_aba6fb82b134193bdcb5882a7e83e937a"><div class="ttname"><a href="class_world_object.html#aba6fb82b134193bdcb5882a7e83e937a">WorldObject::GetRight</a></div><div class="ttdeci">Point3D GetRight()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00059">WorldObject.cpp:59</a></div></div>
+<div class="ttc" id="class_world_object_html_a8be4166121ff9a8c90cc1938807dd2f2"><div class="ttname"><a href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">WorldObject::Rotate</a></div><div class="ttdeci">void Rotate(Point3D point)</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00048">WorldObject.cpp:48</a></div></div>
+<div class="ttc" id="class_world_object_html_a443ed580b100165115e4fd2d7cdaae43"><div class="ttname"><a href="class_world_object.html#a443ed580b100165115e4fd2d7cdaae43">WorldObject::GetRotate</a></div><div class="ttdeci">Point3D GetRotate()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00070">WorldObject.cpp:70</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a5d428049115cb9b3ce0fbe5b7433e449"><div class="ttname"><a href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">Point3D::x</a></div><div class="ttdeci">GLfloat x</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
+<div class="ttc" id="class_world_object_html_aa4d4ce305467868cdbb17fc25759408f"><div class="ttname"><a href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">WorldObject::width</a></div><div class="ttdeci">GLfloat width</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00110">WorldObject.h:110</a></div></div>
+<div class="ttc" id="class_world_object_html_ac6a87c572496ee57740aff2bf4cb7c07"><div class="ttname"><a href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">WorldObject::rotate</a></div><div class="ttdeci">Point3D rotate</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00106">WorldObject.h:106</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a8dc7ed16862ef24cb1d3e845b40d89f9"><div class="ttname"><a href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">Point3D::z</a></div><div class="ttdeci">GLfloat z</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
+<div class="ttc" id="class_world_object_html_a464fd2e8938ae8ca4e778235819d616a"><div class="ttname"><a href="class_world_object.html#a464fd2e8938ae8ca4e778235819d616a">WorldObject::WorldObject</a></div><div class="ttdeci">WorldObject(GLfloat W=0.0, GLfloat H=0.0, GLfloat X=0.0, GLfloat Y=0.0, GLfloat Z=0.0)</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00003">WorldObject.cpp:3</a></div></div>
+<div class="ttc" id="class_world_object_html_a52db8a34a804e30a25043b8b118b3365"><div class="ttname"><a href="class_world_object.html#a52db8a34a804e30a25043b8b118b3365">WorldObject::ModifyPerspective</a></div><div class="ttdeci">void ModifyPerspective()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00023">WorldObject.cpp:23</a></div></div>
+<div class="ttc" id="class_world_object_html_a22d6db7c7f7ac55f873d55417417d29d"><div class="ttname"><a href="class_world_object.html#a22d6db7c7f7ac55f873d55417417d29d">WorldObject::DrawObject</a></div><div class="ttdeci">virtual void DrawObject()=0</div></div>
+<div class="ttc" id="class_world_object_html_a3e290757727e835e6a075d2565e093a7"><div class="ttname"><a href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">WorldObject::translate</a></div><div class="ttdeci">Point3D translate</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00108">WorldObject.h:108</a></div></div>
+<div class="ttc" id="class_world_object_html_a3a3158dc13f636eb3835e22fdc32a7b9"><div class="ttname"><a href="class_world_object.html#a3a3158dc13f636eb3835e22fdc32a7b9">WorldObject::GetForward</a></div><div class="ttdeci">Point3D GetForward()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00053">WorldObject.cpp:53</a></div></div>
+<div class="ttc" id="struct_point3_d_html_ac9c0cb7390bde518217651587119ff87"><div class="ttname"><a href="struct_point3_d.html#ac9c0cb7390bde518217651587119ff87">Point3D::rotateY</a></div><div class="ttdeci">Point3D rotateY(GLfloat angle)</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00066">WorldObject.h:66</a></div></div>
+<div class="ttc" id="_world_object_8h_html"><div class="ttname"><a href="_world_object_8h.html">WorldObject.h</a></div></div>
+<div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdoc">A 3D point. </div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00016">WorldObject.h:16</a></div></div>
+<div class="ttc" id="class_world_object_html_ae46caed8b37233c2b9e0383a26cb9f87"><div class="ttname"><a href="class_world_object.html#ae46caed8b37233c2b9e0383a26cb9f87">WorldObject::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00014">WorldObject.cpp:14</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a266c2ec796b3af5f5a232cad101ac278"><div class="ttname"><a href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">Point3D::y</a></div><div class="ttdeci">GLfloat y</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
+<div class="ttc" id="class_world_object_html_a287e5b87a26133cd35f3015268d2a5a3"><div class="ttname"><a href="class_world_object.html#a287e5b87a26133cd35f3015268d2a5a3">WorldObject::~WorldObject</a></div><div class="ttdeci">~WorldObject()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00010">WorldObject.cpp:10</a></div></div>
+<div class="ttc" id="class_world_object_html_a0457012633125921dd5c43e8538e8674"><div class="ttname"><a href="class_world_object.html#a0457012633125921dd5c43e8538e8674">WorldObject::height</a></div><div class="ttdeci">GLfloat height</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00110">WorldObject.h:110</a></div></div>
+<div class="ttc" id="class_world_object_html_a4873b7b568e1ce3886092823834c16b3"><div class="ttname"><a href="class_world_object.html#a4873b7b568e1ce3886092823834c16b3">WorldObject::ModifyPerspectiveBack</a></div><div class="ttdeci">void ModifyPerspectiveBack()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00033">WorldObject.cpp:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:52:15 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 10:07:21 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

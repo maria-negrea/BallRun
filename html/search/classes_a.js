@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['worldobject',['WorldObject',['../class_world_object.html',1,'']]]
+  ['updatable',['Updatable',['../class_updatable.html',1,'']]]
 ];

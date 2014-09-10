@@ -3,6 +3,9 @@
 #include "WorldObject.h"
 #include "Textures.h"
 
+/*! \brief
+*	Draws a quad with the "road texture" 
+*/
 class Road : public WorldObject
 {
 public:
@@ -10,6 +13,7 @@ public:
         translate = x;
     }
     ~Road() {}
+
     void DrawObject();
-    Point3D GetEndPoint();
+	Point3D GetEndPoint();
 };

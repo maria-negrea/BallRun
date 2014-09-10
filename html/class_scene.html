@@ -58,7 +58,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -71,38 +71,287 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_scene-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Scene Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A collection of all the objects on the screen and a camera for the perspective.  
+ <a href="class_scene.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_scene_8h_source.html">Scene.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a91913b921d41d374e00eac347358dc14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91913b921d41d374e00eac347358dc14"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Render</b> ()</td></tr>
+<tr class="memitem:ad10176d75a9cc0da56626f682d083507"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene</a> ()</td></tr>
+<tr class="separator:ad10176d75a9cc0da56626f682d083507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b8cec2e32546713915f8c6303c951f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">~Scene</a> ()</td></tr>
+<tr class="separator:a3b8cec2e32546713915f8c6303c951f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91913b921d41d374e00eac347358dc14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a91913b921d41d374e00eac347358dc14">Render</a> ()</td></tr>
 <tr class="separator:a91913b921d41d374e00eac347358dc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6ad6931a0fcbba7bdb60c105dbb9af2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6ad6931a0fcbba7bdb60c105dbb9af2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMainCamera</b> (<a class="el" href="class_camera.html">Camera</a> *camera)</td></tr>
+<tr class="memitem:a71a71b4f7752b853ff8032b0941a9d8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a71a71b4f7752b853ff8032b0941a9d8d">Update</a> ()</td></tr>
+<tr class="separator:a71a71b4f7752b853ff8032b0941a9d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ad6931a0fcbba7bdb60c105dbb9af2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ac6ad6931a0fcbba7bdb60c105dbb9af2">SetMainCamera</a> (<a class="el" href="class_camera.html">Camera</a> *camera)</td></tr>
 <tr class="separator:ac6ad6931a0fcbba7bdb60c105dbb9af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac395fac38291f84eaf6cffd8458e6d95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac395fac38291f84eaf6cffd8458e6d95"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddObject</b> (<a class="el" href="class_world_object.html">WorldObject</a> *object)</td></tr>
+<tr class="memitem:ac395fac38291f84eaf6cffd8458e6d95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ac395fac38291f84eaf6cffd8458e6d95">AddObject</a> (<a class="el" href="class_world_object.html">WorldObject</a> *object)</td></tr>
 <tr class="separator:ac395fac38291f84eaf6cffd8458e6d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0f05dc45b2bcec9f41f45ce79305116"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0f05dc45b2bcec9f41f45ce79305116"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveObject</b> (<a class="el" href="class_world_object.html">WorldObject</a> *object)</td></tr>
+<tr class="memitem:ac0f05dc45b2bcec9f41f45ce79305116"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ac0f05dc45b2bcec9f41f45ce79305116">RemoveObject</a> (<a class="el" href="class_world_object.html">WorldObject</a> *object)</td></tr>
 <tr class="separator:ac0f05dc45b2bcec9f41f45ce79305116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab78a4c5e3b753db89ae26062231f3548"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ab78a4c5e3b753db89ae26062231f3548">RemoveUpdatable</a> (<a class="el" href="class_updatable.html">Updatable</a> *object)</td></tr>
+<tr class="separator:ab78a4c5e3b753db89ae26062231f3548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a878011b448f85714694abf6ddeee9376"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a878011b448f85714694abf6ddeee9376">mainCamera</a></td></tr>
+<tr class="separator:a878011b448f85714694abf6ddeee9376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10480179cba116c3a7897aa8903d653a"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_world_object.html">WorldObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a10480179cba116c3a7897aa8903d653a">sceneObjects</a></td></tr>
+<tr class="separator:a10480179cba116c3a7897aa8903d653a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc57f679a11ccf1b3381cefe8f5a22f"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_updatable.html">Updatable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">updateObjects</a></td></tr>
+<tr class="separator:a7cc57f679a11ccf1b3381cefe8f5a22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_scene_8h_source.html#l00008">8</a> of file <a class="el" href="_scene_8h_source.html">Scene.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>A collection of all the objects on the screen and a camera for the perspective. </p>
+
+<p>Definition at line <a class="el" href="_scene_8h_source.html#l00011">11</a> of file <a class="el" href="_scene_8h_source.html">Scene.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ad10176d75a9cc0da56626f682d083507"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::Scene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_scene_8cpp_source.html#l00003">3</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b8cec2e32546713915f8c6303c951f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::~Scene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_scene_8cpp_source.html#l00007">7</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac395fac38291f84eaf6cffd8458e6d95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::AddObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_world_object.html">WorldObject</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds an object from the objects in the sceen if the object is <a class="el" href="class_updatable.html" title="Used for objects who need updated A WorldObject added into Scene who is also Updatable will be updata...">Updatable</a> it also adds it from the updateObjects list </p>
+
+<p>Definition at line <a class="el" href="_scene_8cpp_source.html#l00055">55</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0f05dc45b2bcec9f41f45ce79305116"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::RemoveObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_world_object.html">WorldObject</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds an object from the objects in the sceen if the object is <a class="el" href="class_updatable.html" title="Used for objects who need updated A WorldObject added into Scene who is also Updatable will be updata...">Updatable</a> it also removes it from the updateObjects list </p>
+
+<p>Definition at line <a class="el" href="_scene_8cpp_source.html#l00066">66</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab78a4c5e3b753db89ae26062231f3548"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::RemoveUpdatable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_updatable.html">Updatable</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes an object from the updateObjects list </p>
+
+<p>Definition at line <a class="el" href="_scene_8cpp_source.html#l00038">38</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91913b921d41d374e00eac347358dc14"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::Render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draws the object on the screen </p>
+
+<p>Definition at line <a class="el" href="_scene_8cpp_source.html#l00011">11</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6ad6931a0fcbba7bdb60c105dbb9af2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::SetMainCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_scene_8cpp_source.html#l00050">50</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71a71b4f7752b853ff8032b0941a9d8d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Updates all the objects that need updating </p>
+
+<p>Definition at line <a class="el" href="_scene_8cpp_source.html#l00029">29</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a878011b448f85714694abf6ddeee9376"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera.html">Camera</a>* Scene::mainCamera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The camera from wich perspective the scene gets rendered </p>
+
+<p>Definition at line <a class="el" href="_scene_8h_source.html#l00014">14</a> of file <a class="el" href="_scene_8h_source.html">Scene.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a10480179cba116c3a7897aa8903d653a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_world_object.html">WorldObject</a>*&gt; Scene::sceneObjects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Objects in the scene </p>
+
+<p>Definition at line <a class="el" href="_scene_8h_source.html#l00017">17</a> of file <a class="el" href="_scene_8h_source.html">Scene.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7cc57f679a11ccf1b3381cefe8f5a22f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_updatable.html">Updatable</a>*&gt; Scene::updateObjects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Objects that need updating </p>
+
+<p>Definition at line <a class="el" href="_scene_8h_source.html#l00019">19</a> of file <a class="el" href="_scene_8h_source.html">Scene.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_scene_8h_source.html">Scene.h</a></li>
 <li><a class="el" href="_scene_8cpp_source.html">Scene.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:52:15 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 10:07:21 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

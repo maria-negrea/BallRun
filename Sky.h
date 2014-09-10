@@ -1,18 +1,29 @@
 #pragma once
 #include "WorldObject.h"
 #include "Ball.h"
+#include "Updatable.h"
 
-class Sky : public WorldObject
+/*! \brief
+* Skybox 
+*/
+class Sky : public WorldObject, public Updatable
 {
+	/*! size of the skybox*/
 	GLfloat size;
+	
 	void DrawObject();
+
+	/*! The ball it follows*/	
 	Ball* ball;
-public:
+public:	
 	Sky(GLfloat size);
 	~Sky();
 
+	/*! Sets the object to follow the ball*/
 	void Follow(Ball* ball);
+	/*! Stops following the selected ball*/
 	void UnFollow();
 
+	/* Goes to the followed ball's position*/
 	void Update();
 };

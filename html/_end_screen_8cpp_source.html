@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,30 +71,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">EndScreen.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;EndScreen.h&quot;</span></div>
+<a href="_end_screen_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_end_screen_8h.html">EndScreen.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;EndScreen::EndScreen()</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_end_screen.html#a6f8482d749b1631306945bd0467fb6df">    3</a></span>&#160;<a class="code" href="class_end_screen.html#a6f8482d749b1631306945bd0467fb6df">EndScreen::EndScreen</a>()</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;EndScreen::~EndScreen()</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_end_screen.html#a2bf71fd8fe94ee4ff206ff5303110864">    7</a></span>&#160;<a class="code" href="class_end_screen.html#a2bf71fd8fe94ee4ff206ff5303110864">EndScreen::~EndScreen</a>()</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> EndScreen::DrawObject() {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()-&gt;GetTextures()[8]);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        glBegin(GL_QUADS);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                glTexCoord2f(0, 0); glVertex3f(-6.0, 0.0, -10.0);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                glTexCoord2f(1, 0); glVertex3f( 6.0, 0.0, -10.0);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                glTexCoord2f(1, 1); glVertex3f( 6.0, 5.0, -10.0);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                glTexCoord2f(0, 1); glVertex3f(-6.0, 5.0, -10.0);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        glEnd();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_end_screen.html#a45122556c25891fda9bd8ee1567d60ee">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_end_screen.html#a45122556c25891fda9bd8ee1567d60ee">EndScreen::DrawObject</a>() {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        glBindTexture(GL_TEXTURE_2D, <a class="code" href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a>()-&gt;GetTextures()[8]);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        glBegin(GL_QUADS);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                glTexCoord2f(0, 0); glVertex3f(-6.0, 0.0, -10.0);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                glTexCoord2f(1, 0); glVertex3f( 6.0, 0.0, -10.0);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                glTexCoord2f(1, 1); glVertex3f( 6.0, 5.0, -10.0);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                glTexCoord2f(0, 1); glVertex3f(-6.0, 5.0, -10.0);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        glEnd();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="ttc" id="class_end_screen_html_a45122556c25891fda9bd8ee1567d60ee"><div class="ttname"><a href="class_end_screen.html#a45122556c25891fda9bd8ee1567d60ee">EndScreen::DrawObject</a></div><div class="ttdeci">void DrawObject()</div><div class="ttdef"><b>Definition:</b> <a href="_end_screen_8cpp_source.html#l00014">EndScreen.cpp:14</a></div></div>
+<div class="ttc" id="class_end_screen_html_a6f8482d749b1631306945bd0467fb6df"><div class="ttname"><a href="class_end_screen.html#a6f8482d749b1631306945bd0467fb6df">EndScreen::EndScreen</a></div><div class="ttdeci">EndScreen()</div><div class="ttdef"><b>Definition:</b> <a href="_end_screen_8cpp_source.html#l00003">EndScreen.cpp:3</a></div></div>
+<div class="ttc" id="_end_screen_8h_html"><div class="ttname"><a href="_end_screen_8h.html">EndScreen.h</a></div></div>
+<div class="ttc" id="class_textures_html_a3e5839f0cee717b4c7808a49ad9cf040"><div class="ttname"><a href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a></div><div class="ttdeci">static Textures * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_textures_8cpp_source.html#l00017">Textures.cpp:17</a></div></div>
+<div class="ttc" id="class_end_screen_html_a2bf71fd8fe94ee4ff206ff5303110864"><div class="ttname"><a href="class_end_screen.html#a2bf71fd8fe94ee4ff206ff5303110864">EndScreen::~EndScreen</a></div><div class="ttdeci">~EndScreen()</div><div class="ttdef"><b>Definition:</b> <a href="_end_screen_8cpp_source.html#l00007">EndScreen.cpp:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:52:14 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 10:07:21 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

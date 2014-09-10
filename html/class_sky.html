@@ -58,7 +58,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -71,95 +71,284 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_sky-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Sky Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Skybox.  
+ <a href="class_sky.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_sky_8h_source.html">Sky.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Sky:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_sky.png" usemap="#Sky_map" alt=""/>
   <map id="Sky_map" name="Sky_map">
-<area href="class_world_object.html" alt="WorldObject" shape="rect" coords="0,0,82,24"/>
+<area href="class_world_object.html" title="A 3D object. " alt="WorldObject" shape="rect" coords="0,0,82,24"/>
+<area href="class_updatable.html" title="Used for objects who need updated A WorldObject added into Scene who is also Updatable will be updata..." alt="Updatable" shape="rect" coords="92,0,174,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7969328d2fcbebdd7c7d456dc2a6cccd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7969328d2fcbebdd7c7d456dc2a6cccd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Sky</b> (GLfloat size)</td></tr>
+<tr class="memitem:a7969328d2fcbebdd7c7d456dc2a6cccd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sky.html#a7969328d2fcbebdd7c7d456dc2a6cccd">Sky</a> (GLfloat <a class="el" href="class_sky.html#a2f0c5fe368ce0ff87efa78646cf30dec">size</a>)</td></tr>
 <tr class="separator:a7969328d2fcbebdd7c7d456dc2a6cccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd761d9057943cc404448b3889e7e4f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd761d9057943cc404448b3889e7e4f7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Follow</b> (<a class="el" href="class_ball.html">Ball</a> *ball)</td></tr>
+<tr class="memitem:a913bd9249a3137ca2de087450b346521"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sky.html#a913bd9249a3137ca2de087450b346521">~Sky</a> ()</td></tr>
+<tr class="separator:a913bd9249a3137ca2de087450b346521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd761d9057943cc404448b3889e7e4f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sky.html#afd761d9057943cc404448b3889e7e4f7">Follow</a> (<a class="el" href="class_ball.html">Ball</a> *<a class="el" href="class_sky.html#a2918094c0e34751c50c52c0b1fb6cf12">ball</a>)</td></tr>
 <tr class="separator:afd761d9057943cc404448b3889e7e4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2e87407bf02877b5375374990320cfc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2e87407bf02877b5375374990320cfc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UnFollow</b> ()</td></tr>
+<tr class="memitem:ab2e87407bf02877b5375374990320cfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sky.html#ab2e87407bf02877b5375374990320cfc">UnFollow</a> ()</td></tr>
 <tr class="separator:ab2e87407bf02877b5375374990320cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93a15559c1de7e0862d248933002620b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93a15559c1de7e0862d248933002620b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:a93a15559c1de7e0862d248933002620b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sky.html#a93a15559c1de7e0862d248933002620b">Update</a> ()</td></tr>
 <tr class="separator:a93a15559c1de7e0862d248933002620b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_world_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_world_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_world_object.html">WorldObject</a></td></tr>
-<tr class="memitem:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a464fd2e8938ae8ca4e778235819d616a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WorldObject</b> (GLfloat W=0.0, GLfloat H=0.0, GLfloat X=0.0, GLfloat Y=0.0, GLfloat Z=0.0)</td></tr>
+<tr class="memitem:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a464fd2e8938ae8ca4e778235819d616a">WorldObject</a> (GLfloat W=0.0, GLfloat H=0.0, GLfloat X=0.0, GLfloat Y=0.0, GLfloat Z=0.0)</td></tr>
 <tr class="separator:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab70b8fbf6ec1c1d9fe6a95c791c321f3 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab70b8fbf6ec1c1d9fe6a95c791c321f3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Translate</b> (<a class="el" href="struct_point3_d.html">Point3D</a>)</td></tr>
-<tr class="separator:ab70b8fbf6ec1c1d9fe6a95c791c321f3 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc741ef57132da4aa8cbac78db3fff26 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc741ef57132da4aa8cbac78db3fff26"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Rotate</b> (<a class="el" href="struct_point3_d.html">Point3D</a>)</td></tr>
-<tr class="separator:adc741ef57132da4aa8cbac78db3fff26 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae46caed8b37233c2b9e0383a26cb9f87 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae46caed8b37233c2b9e0383a26cb9f87"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
+<tr class="memitem:a287e5b87a26133cd35f3015268d2a5a3 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a287e5b87a26133cd35f3015268d2a5a3">~WorldObject</a> ()</td></tr>
+<tr class="separator:a287e5b87a26133cd35f3015268d2a5a3 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95de7162381945513e86fcf354297da9 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> <a class="el" href="_main_8cpp.html#a9933aa50b0707f2f424f2fe8d40b08c1">point</a>)</td></tr>
+<tr class="separator:a95de7162381945513e86fcf354297da9 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8be4166121ff9a8c90cc1938807dd2f2 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">Rotate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> <a class="el" href="_main_8cpp.html#a9933aa50b0707f2f424f2fe8d40b08c1">point</a>)</td></tr>
+<tr class="separator:a8be4166121ff9a8c90cc1938807dd2f2 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae46caed8b37233c2b9e0383a26cb9f87 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#ae46caed8b37233c2b9e0383a26cb9f87">Draw</a> ()</td></tr>
 <tr class="separator:ae46caed8b37233c2b9e0383a26cb9f87 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a3158dc13f636eb3835e22fdc32a7b9 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a3158dc13f636eb3835e22fdc32a7b9"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetForward</b> ()</td></tr>
+<tr class="memitem:a3a3158dc13f636eb3835e22fdc32a7b9 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a3a3158dc13f636eb3835e22fdc32a7b9">GetForward</a> ()</td></tr>
 <tr class="separator:a3a3158dc13f636eb3835e22fdc32a7b9 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff5a65911deeaedf114357217d16c66f"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetTranslate</b> ()</td></tr>
-<tr class="separator:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba6fb82b134193bdcb5882a7e83e937a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba6fb82b134193bdcb5882a7e83e937a"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetRight</b> ()</td></tr>
+<tr class="memitem:aba6fb82b134193bdcb5882a7e83e937a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#aba6fb82b134193bdcb5882a7e83e937a">GetRight</a> ()</td></tr>
 <tr class="separator:aba6fb82b134193bdcb5882a7e83e937a inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a443ed580b100165115e4fd2d7cdaae43 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a443ed580b100165115e4fd2d7cdaae43"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetRotate</b> ()</td></tr>
+<tr class="memitem:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">GetTranslate</a> ()</td></tr>
+<tr class="separator:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a443ed580b100165115e4fd2d7cdaae43 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a443ed580b100165115e4fd2d7cdaae43">GetRotate</a> ()</td></tr>
 <tr class="separator:a443ed580b100165115e4fd2d7cdaae43 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_updatable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_updatable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_updatable.html">Updatable</a></td></tr>
+<tr class="memitem:a9a8b6c0e34f2958db872b6090455f90d inherit pub_methods_class_updatable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_updatable.html#a9a8b6c0e34f2958db872b6090455f90d">Updatable</a> ()</td></tr>
+<tr class="separator:a9a8b6c0e34f2958db872b6090455f90d inherit pub_methods_class_updatable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d575546f727080c9153a05986202cc1 inherit pub_methods_class_updatable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_updatable.html#a8d575546f727080c9153a05986202cc1">~Updatable</a> ()</td></tr>
+<tr class="separator:a8d575546f727080c9153a05986202cc1 inherit pub_methods_class_updatable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a08835fbc3137f6546514d1a8038cf3b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sky.html#a08835fbc3137f6546514d1a8038cf3b9">DrawObject</a> ()</td></tr>
+<tr class="separator:a08835fbc3137f6546514d1a8038cf3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2f0c5fe368ce0ff87efa78646cf30dec"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sky.html#a2f0c5fe368ce0ff87efa78646cf30dec">size</a></td></tr>
+<tr class="separator:a2f0c5fe368ce0ff87efa78646cf30dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2918094c0e34751c50c52c0b1fb6cf12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ball.html">Ball</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sky.html#a2918094c0e34751c50c52c0b1fb6cf12">ball</a></td></tr>
+<tr class="separator:a2918094c0e34751c50c52c0b1fb6cf12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_world_object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_world_object')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_world_object.html">WorldObject</a></td></tr>
-<tr class="memitem:a52db8a34a804e30a25043b8b118b3365 inherit pro_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52db8a34a804e30a25043b8b118b3365"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ModifyPerspective</b> ()</td></tr>
+<tr class="memitem:a52db8a34a804e30a25043b8b118b3365 inherit pro_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a52db8a34a804e30a25043b8b118b3365">ModifyPerspective</a> ()</td></tr>
 <tr class="separator:a52db8a34a804e30a25043b8b118b3365 inherit pro_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4873b7b568e1ce3886092823834c16b3 inherit pro_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4873b7b568e1ce3886092823834c16b3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ModifyPerspectiveBack</b> ()</td></tr>
+<tr class="memitem:a4873b7b568e1ce3886092823834c16b3 inherit pro_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a4873b7b568e1ce3886092823834c16b3">ModifyPerspectiveBack</a> ()</td></tr>
 <tr class="separator:a4873b7b568e1ce3886092823834c16b3 inherit pro_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_world_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_world_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_world_object.html">WorldObject</a></td></tr>
-<tr class="memitem:ac6a87c572496ee57740aff2bf4cb7c07 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6a87c572496ee57740aff2bf4cb7c07"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rotate</b></td></tr>
+<tr class="memitem:ac6a87c572496ee57740aff2bf4cb7c07 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a></td></tr>
 <tr class="separator:ac6a87c572496ee57740aff2bf4cb7c07 inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e290757727e835e6a075d2565e093a7 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e290757727e835e6a075d2565e093a7"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b></td></tr>
+<tr class="memitem:a3e290757727e835e6a075d2565e093a7 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a></td></tr>
 <tr class="separator:a3e290757727e835e6a075d2565e093a7 inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4d4ce305467868cdbb17fc25759408f inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4d4ce305467868cdbb17fc25759408f"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
+<tr class="memitem:aa4d4ce305467868cdbb17fc25759408f inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a></td></tr>
 <tr class="separator:aa4d4ce305467868cdbb17fc25759408f inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0457012633125921dd5c43e8538e8674 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0457012633125921dd5c43e8538e8674"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+<tr class="memitem:a0457012633125921dd5c43e8538e8674 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a0457012633125921dd5c43e8538e8674">height</a></td></tr>
 <tr class="separator:a0457012633125921dd5c43e8538e8674 inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_sky_8h_source.html#l00005">5</a> of file <a class="el" href="_sky_8h_source.html">Sky.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Skybox. </p>
+
+<p>Definition at line <a class="el" href="_sky_8h_source.html#l00009">9</a> of file <a class="el" href="_sky_8h_source.html">Sky.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7969328d2fcbebdd7c7d456dc2a6cccd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sky::Sky </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_sky_8cpp_source.html#l00004">4</a> of file <a class="el" href="_sky_8cpp_source.html">Sky.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a913bd9249a3137ca2de087450b346521"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sky::~Sky </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_sky_8cpp_source.html#l00009">9</a> of file <a class="el" href="_sky_8cpp_source.html">Sky.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a08835fbc3137f6546514d1a8038cf3b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sky::DrawObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws the object on the screen </p>
+
+<p>Implements <a class="el" href="class_world_object.html#a22d6db7c7f7ac55f873d55417417d29d">WorldObject</a>.</p>
+
+<p>Definition at line <a class="el" href="_sky_8cpp_source.html#l00013">13</a> of file <a class="el" href="_sky_8cpp_source.html">Sky.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd761d9057943cc404448b3889e7e4f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sky::Follow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_ball.html">Ball</a> *&#160;</td>
+          <td class="paramname"><em>ball</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the object to follow the ball </p>
+
+<p>Definition at line <a class="el" href="_sky_8cpp_source.html#l00049">49</a> of file <a class="el" href="_sky_8cpp_source.html">Sky.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2e87407bf02877b5375374990320cfc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sky::UnFollow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stops following the selected ball </p>
+
+<p>Definition at line <a class="el" href="_sky_8cpp_source.html#l00062">62</a> of file <a class="el" href="_sky_8cpp_source.html">Sky.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93a15559c1de7e0862d248933002620b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sky::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_updatable.html#a4bed06c6110e7a2fcb71c66cc30fa55e">Updatable</a>.</p>
+
+<p>Definition at line <a class="el" href="_sky_8cpp_source.html#l00054">54</a> of file <a class="el" href="_sky_8cpp_source.html">Sky.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a2918094c0e34751c50c52c0b1fb6cf12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ball.html">Ball</a>* Sky::ball</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The ball it follows </p>
+
+<p>Definition at line <a class="el" href="_sky_8h_source.html#l00017">17</a> of file <a class="el" href="_sky_8h_source.html">Sky.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f0c5fe368ce0ff87efa78646cf30dec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat Sky::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>size of the skybox </p>
+
+<p>Definition at line <a class="el" href="_sky_8h_source.html#l00012">12</a> of file <a class="el" href="_sky_8h_source.html">Sky.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_sky_8h_source.html">Sky.h</a></li>
 <li><a class="el" href="_sky_8cpp_source.html">Sky.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:52:15 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 10:07:21 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

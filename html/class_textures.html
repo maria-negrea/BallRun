@@ -58,7 +58,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -72,31 +72,213 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_textures-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Textures Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class used to load textures for our objects. We used SOIL to load all of the textures and use them.  
+ <a href="class_textures.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_textures_8h_source.html">Textures.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2eccc3b8d43e96e65af1b063fe642dc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2eccc3b8d43e96e65af1b063fe642dc0"></a>
-GLuint *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTextures</b> ()</td></tr>
+<tr class="memitem:aa1480566dae8b3a6de5e6c98d9fdc225"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#aa1480566dae8b3a6de5e6c98d9fdc225">~Textures</a> ()</td></tr>
+<tr class="separator:aa1480566dae8b3a6de5e6c98d9fdc225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eccc3b8d43e96e65af1b063fe642dc0"><td class="memItemLeft" align="right" valign="top">GLuint *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a2eccc3b8d43e96e65af1b063fe642dc0">GetTextures</a> ()</td></tr>
 <tr class="separator:a2eccc3b8d43e96e65af1b063fe642dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a130496e6fdd0da614bd4733cc18bb19f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a130496e6fdd0da614bd4733cc18bb19f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadGLTextures</b> ()</td></tr>
+<tr class="memitem:a130496e6fdd0da614bd4733cc18bb19f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a130496e6fdd0da614bd4733cc18bb19f">LoadGLTextures</a> ()</td></tr>
 <tr class="separator:a130496e6fdd0da614bd4733cc18bb19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3e5839f0cee717b4c7808a49ad9cf040"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e5839f0cee717b4c7808a49ad9cf040"></a>
-static <a class="el" href="class_textures.html">Textures</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetInstance</b> ()</td></tr>
+<tr class="memitem:a3e5839f0cee717b4c7808a49ad9cf040"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_textures.html">Textures</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">GetInstance</a> ()</td></tr>
 <tr class="separator:a3e5839f0cee717b4c7808a49ad9cf040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a43eceaf4fb6fa052e1c41cebb7b18189"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a43eceaf4fb6fa052e1c41cebb7b18189">Textures</a> ()</td></tr>
+<tr class="separator:a43eceaf4fb6fa052e1c41cebb7b18189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7e39befe90606fc6785bb02a204ede47"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a7e39befe90606fc6785bb02a204ede47">textures</a> [7]</td></tr>
+<tr class="separator:a7e39befe90606fc6785bb02a204ede47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a40edad3d358527e99417d0d7639b16f5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_textures.html">Textures</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a40edad3d358527e99417d0d7639b16f5">instance</a> = NULL</td></tr>
+<tr class="separator:a40edad3d358527e99417d0d7639b16f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_textures_8h_source.html#l00015">15</a> of file <a class="el" href="_textures_8h_source.html">Textures.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Class used to load textures for our objects. We used SOIL to load all of the textures and use them. </p>
+
+<p>Definition at line <a class="el" href="_textures_8h_source.html#l00017">17</a> of file <a class="el" href="_textures_8h_source.html">Textures.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a43eceaf4fb6fa052e1c41cebb7b18189"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Textures::Textures </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>&lt;vector containing all the textures Private constructor</p>
+<p>Default constructor </p>
+
+<p>Definition at line <a class="el" href="_textures_8cpp_source.html#l00007">7</a> of file <a class="el" href="_textures_8cpp_source.html">Textures.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa1480566dae8b3a6de5e6c98d9fdc225"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Textures::~Textures </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor</p>
+<p>Default destructor </p>
+
+<p>Definition at line <a class="el" href="_textures_8cpp_source.html#l00012">12</a> of file <a class="el" href="_textures_8cpp_source.html">Textures.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3e5839f0cee717b4c7808a49ad9cf040"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_textures.html">Textures</a> * Textures::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the global instance of our class</p>
+<p>Return the global instance for our class </p>
+
+<p>Definition at line <a class="el" href="_textures_8cpp_source.html#l00017">17</a> of file <a class="el" href="_textures_8cpp_source.html">Textures.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2eccc3b8d43e96e65af1b063fe642dc0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint * Textures::GetTextures </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the textures vector</p>
+<p>Return the texture vector </p>
+
+<p>Definition at line <a class="el" href="_textures_8cpp_source.html#l00146">146</a> of file <a class="el" href="_textures_8cpp_source.html">Textures.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a130496e6fdd0da614bd4733cc18bb19f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Textures::LoadGLTextures </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Load all the textures which are used</p>
+<p>Load all the textures from the Assets folder into our texture vector </p>
+
+<p>Definition at line <a class="el" href="_textures_8cpp_source.html#l00026">26</a> of file <a class="el" href="_textures_8cpp_source.html">Textures.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a40edad3d358527e99417d0d7639b16f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_textures.html">Textures</a> * Textures::instance = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_textures_8h_source.html#l00020">20</a> of file <a class="el" href="_textures_8h_source.html">Textures.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e39befe90606fc6785bb02a204ede47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint Textures::textures[7]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>&lt;static instance of the class used for Singleton </p>
+
+<p>Definition at line <a class="el" href="_textures_8h_source.html#l00021">21</a> of file <a class="el" href="_textures_8h_source.html">Textures.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_textures_8h_source.html">Textures.h</a></li>
 <li><a class="el" href="_main_8cpp_source.html">Main.cpp</a></li>
 <li><a class="el" href="_textures_8cpp_source.html">Textures.cpp</a></li>
@@ -104,7 +286,7 @@ static <a class="el" href="class_textures.html">Textures</a> *&#160;</td><td cla
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:52:15 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 10:07:21 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

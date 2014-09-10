@@ -3,14 +3,17 @@
 
 using namespace std;
 
+/** Default constructor */
 Textures::Textures()
 {
 }
 
+/** Default destructor */
 Textures::~Textures()
 {
 }
 
+/** Return the global instance for our class */
 Textures* Textures::GetInstance()
 {
 	if(instance == NULL)
@@ -19,7 +22,7 @@ Textures* Textures::GetInstance()
 	return instance;
 }
 
-
+/** Load all the textures from the Assets folder into our texture vector */
 void Textures::LoadGLTextures()
 {
 	textures[0] = SOIL_load_OGL_texture
@@ -139,6 +142,7 @@ void Textures::LoadGLTextures()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 }
 
+/** Return the texture vector */
 GLuint* Textures::GetTextures()
 {
 	return textures;

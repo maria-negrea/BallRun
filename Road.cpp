@@ -14,7 +14,10 @@ void Road::DrawObject()
     glEnd();
 }
 
-Point3D Road::GetEndPoint() 
+/*!
+* Returns a Point3D right after the road
+*/
+Point3D Road::GetEndPoint()
 {
-    return GetForward()*5 + translate;
+    return GetForward()*20 + translate;
 }

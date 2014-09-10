@@ -50,7 +50,7 @@ void Plant:: PutTextureOnCylinder(vector<Point3D> base, vector<Point3D> top)
 	{
 		/*!
 		*	Puts texture on each triangle based on each 2 points of the top and 1 point of the base.
-		*/.
+		*/
 		glBegin(GL_TRIANGLES);
 			glTexCoord2f(j, 0.0f); glVertex3f(base[k].x, base[k].y, base[k].z);				
 			glTexCoord2f(j, 1.0f); glVertex3f(top[k].x, top[k].y, top[k].z);

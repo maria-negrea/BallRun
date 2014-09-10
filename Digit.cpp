@@ -1,8 +1,8 @@
 #include "Digit.h"
 #include "Textures.h"
 
-Digit::Digit(int digit)
-	:digit(digit)
+Digit::Digit(int digit,int position, GLfloat* score)
+	:digit(digit),position(position),score(score)
 {
 }
 
@@ -37,10 +37,22 @@ void Digit::Update()
 		translate.y = followPoint.y;
 
 		rotate.y = ball->GetRotate().y;
+
+		GLfloat sc = *score;
+		for(int i=0;i<position;++i)
+		{
+			sc = sc/10;
+		}
+		SetDigit(sc);
 	}
 }
 
 void Digit::SetDigit(double digit)
 {
 	this->digit = (int)digit%10;
+}
+
+void Digit::UnFollow()
+{
+	this->ball = NULL;
 }
