@@ -1,6 +1,9 @@
 #include "Road.h"
 #include <time.h>
 
+/*!
+*	Draws a quad with the "road texture" 
+*/
 
 void Road::DrawObject()
 {
@@ -14,6 +17,9 @@ void Road::DrawObject()
     glEnd();
 }
 
+/*!
+* Returns a Point3D right after the road
+*/
 Point3D Road::GetEndPoint()
 {
     return GetForward()*20 + translate;

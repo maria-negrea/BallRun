@@ -49,7 +49,7 @@ void Ball::Update()
 	Translate(direction*speed);
 	Translate(onTrack*0.2);
 
-	onTrack = onTrack*0.2;
+	onTrack = onTrack*0.8;
 
 	Rotate(Point3D(15*speed,0,0));
 
