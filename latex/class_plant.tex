@@ -1,0 +1,229 @@
+\hypertarget{class_plant}{\section{Plant Class Reference}
+\label{class_plant}\index{Plant@{Plant}}
+}
+
+
+Abstract class, indicates the way a branch will be drawn.  
+
+
+
+
+{\ttfamily \#include $<$Plant.\+h$>$}
+
+Inheritance diagram for Plant\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_plant}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_plant_ac5fefc6f365188701cbc72d92ca42af1}{Plant} (double width, double height, int \hyperlink{class_plant_a4f86c46865d6211636140cef8805c6ee}{number\+Of\+Branches}, int \hyperlink{class_plant_ab49e92a2ab4ecdc762b5a1711fa3d65f}{level})
+\item 
+\hyperlink{class_plant_ac63f88c71ee3a3da6d6bdcf0111268e1}{$\sim$\+Plant} (void)
+\item 
+void \hyperlink{class_plant_ac04e2a45a28c7fa0d97b3c764128c9e5}{Draw\+Object} ()
+\item 
+void \hyperlink{class_plant_ac4b9655b2932b5dab8cc67671ca9e89f}{Draw\+Branch} (vector$<$ \hyperlink{struct_point3_d}{Point3\+D} $>$base, G\+Lfloat \hyperlink{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}{radius}, int current\+Level)
+\item 
+void \hyperlink{class_plant_a8d678cebc0b25205820d111a27d90344}{Put\+Texture\+On\+Cylinder} (vector$<$ \hyperlink{struct_point3_d}{Point3\+D} $>$ base, vector$<$ \hyperlink{struct_point3_d}{Point3\+D} $>$ top)
+\item 
+\hypertarget{class_plant_a9660240dc434e603ea26335eed9e3c7a}{virtual void {\bfseries Set\+Branch\+Top} (vector$<$ \hyperlink{struct_point3_d}{Point3\+D} $>$ base, vector$<$ \hyperlink{struct_point3_d}{Point3\+D} $>$ \&top, int current\+Level, G\+Lfloat \hyperlink{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}{radius}, G\+Lfloat pass, G\+Lfloat index)=0}\label{class_plant_a9660240dc434e603ea26335eed9e3c7a}
+
+\item 
+\hypertarget{class_plant_a66954b597c49fc536cebe914697b762b}{virtual void {\bfseries Set\+Initial\+Pass} (G\+Lfloat \&pass, G\+Lfloat \hyperlink{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}{radius})=0}\label{class_plant_a66954b597c49fc536cebe914697b762b}
+
+\item 
+\hypertarget{class_plant_a77a88d6d25e58b0cf9bd5f6aaa5d9572}{virtual void {\bfseries Increment\+Pass} (G\+Lfloat \&pass, G\+Lfloat \hyperlink{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}{radius})=0}\label{class_plant_a77a88d6d25e58b0cf9bd5f6aaa5d9572}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lfloat \hyperlink{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}{radius}
+\item 
+G\+Lfloat \hyperlink{class_plant_a71a5a857d8a0adcfb612dadfcfffc731}{max\+Height}
+\item 
+vector$<$ G\+Lfloat $>$ \hyperlink{class_plant_a16888c602067089a5aaa25ab6a92466f}{angles\+Y}
+\item 
+vector$<$ G\+Lfloat $>$ \hyperlink{class_plant_a298b462dbd0b350d08b5262990a2576b}{angles\+Z}
+\item 
+vector$<$ G\+Lfloat $>$ \hyperlink{class_plant_a4d8a4ea7bbede32b0f6ba1f3415d8f54}{branches\+Radius}
+\item 
+vector$<$ int $>$ \hyperlink{class_plant_a3ec2334fa4c49998f74f62240eaf7537}{directions}
+\item 
+vector$<$ G\+Lfloat $>$ \hyperlink{class_plant_aa12026d894eba8a2764d5edf94757850}{heights}
+\item 
+int \hyperlink{class_plant_a4f86c46865d6211636140cef8805c6ee}{number\+Of\+Branches}
+\item 
+int \hyperlink{class_plant_aeaaf035b21354b12a272f66db178f5cb}{texture\+Index}
+\item 
+int \hyperlink{class_plant_ab49e92a2ab4ecdc762b5a1711fa3d65f}{level}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lfloat \hyperlink{class_plant_a38de3a3700e430ebecffa518977d2880}{Get\+Random\+G\+Lfloat} (G\+Lfloat min, G\+Lfloat max)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Abstract class, indicates the way a branch will be drawn. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_plant_ac5fefc6f365188701cbc72d92ca42af1}{\index{Plant@{Plant}!Plant@{Plant}}
+\index{Plant@{Plant}!Plant@{Plant}}
+\subsubsection[{Plant}]{\setlength{\rightskip}{0pt plus 5cm}Plant\+::\+Plant (
+\begin{DoxyParamCaption}
+\item[{double}]{width, }
+\item[{double}]{height, }
+\item[{int}]{number\+Of\+Branches, }
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)}}\label{class_plant_ac5fefc6f365188701cbc72d92ca42af1}
+\hyperlink{class_plant}{Plant}'s constructor 
+\begin{DoxyParams}{Parameters}
+{\em width} & double -- The width of the surface \\
+\hline
+{\em height} & double -- The height of the surface \\
+\hline
+{\em number\+Of\+Branches} & int -- The number of branches \\
+\hline
+{\em level} & int -- The levels of branches \\
+\hline
+\end{DoxyParams}
+Calculate the minimum between height and width. Generates a random value in \mbox{[}min\+Dimension/8, min\+Dimension/4\mbox{]} for the radius.\hypertarget{class_plant_ac63f88c71ee3a3da6d6bdcf0111268e1}{\index{Plant@{Plant}!````~Plant@{$\sim$\+Plant}}
+\index{````~Plant@{$\sim$\+Plant}!Plant@{Plant}}
+\subsubsection[{$\sim$\+Plant}]{\setlength{\rightskip}{0pt plus 5cm}Plant\+::$\sim$\+Plant (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_plant_ac63f88c71ee3a3da6d6bdcf0111268e1}
+\hyperlink{class_plant}{Plant}'s destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_plant_ac4b9655b2932b5dab8cc67671ca9e89f}{\index{Plant@{Plant}!Draw\+Branch@{Draw\+Branch}}
+\index{Draw\+Branch@{Draw\+Branch}!Plant@{Plant}}
+\subsubsection[{Draw\+Branch}]{\setlength{\rightskip}{0pt plus 5cm}void Plant\+::\+Draw\+Branch (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Point3\+D} $>$}]{base, }
+\item[{G\+Lfloat}]{radius, }
+\item[{int}]{current\+Level}
+\end{DoxyParamCaption}
+)}}\label{class_plant_ac4b9655b2932b5dab8cc67671ca9e89f}
+Draw\+Branch method 
+\begin{DoxyParams}{Parameters}
+{\em base} & vector$<$\+Point3\+D$>$ -- A vector that stores the points of the base of the branch \\
+\hline
+{\em radius} & G\+Lfloat -- Base's radius of the branch \\
+\hline
+{\em current\+Level} & int -- The current level of branches \\
+\hline
+\end{DoxyParams}
+Checks if the current level is the last one.
+
+Draws the branch on the right side.
+
+Make rotations around the Y and Z axis with the corresponding angles for the current branch if the current branch is not the last one.
+
+Draws a branch of the current branch.
+
+Make rotations around the Y and Z axis with the inverse angles of the previous rotation.
+
+Draws the branch on the left side.
+
+Make rotations around the Y and Z axis with the opposite angles corresponding to the left branch.
+
+Draws a branch of the current branch.
+
+Make rotations around the Y and Z axis with the opposite angles corresponding to the left branch.
+
+The base will be replaced by the top, the top will be generated after.\hypertarget{class_plant_ac04e2a45a28c7fa0d97b3c764128c9e5}{\index{Plant@{Plant}!Draw\+Object@{Draw\+Object}}
+\index{Draw\+Object@{Draw\+Object}!Plant@{Plant}}
+\subsubsection[{Draw\+Object}]{\setlength{\rightskip}{0pt plus 5cm}void Plant\+::\+Draw\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_plant_ac04e2a45a28c7fa0d97b3c764128c9e5}
+Draw\+Object method Draws all branches of the plant. Generates the points of the initial base using the equation of an ellipse.
+
+Implements \hyperlink{class_world_object}{World\+Object}.
+
+\hypertarget{class_plant_a8d678cebc0b25205820d111a27d90344}{\index{Plant@{Plant}!Put\+Texture\+On\+Cylinder@{Put\+Texture\+On\+Cylinder}}
+\index{Put\+Texture\+On\+Cylinder@{Put\+Texture\+On\+Cylinder}!Plant@{Plant}}
+\subsubsection[{Put\+Texture\+On\+Cylinder}]{\setlength{\rightskip}{0pt plus 5cm}void Plant\+::\+Put\+Texture\+On\+Cylinder (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Point3\+D} $>$}]{base, }
+\item[{vector$<$ {\bf Point3\+D} $>$}]{top}
+\end{DoxyParamCaption}
+)}}\label{class_plant_a8d678cebc0b25205820d111a27d90344}
+Put\+Texture\+On\+Cylinder Method Puts a texture on a cylinder based on its base points and its top points 
+\begin{DoxyParams}{Parameters}
+{\em base} & vector$<$\+Point3\+D$>$ -- A vector that stores the points of the base of the cylinder \\
+\hline
+{\em top} & vector$<$\+Point3\+D$>$ -- A vector that stores the points of the top of the cylinder \\
+\hline
+\end{DoxyParams}
+Calculate the distance between two pixels of the texture.
+
+Puts texture on each triangle based on each 2 points of the top and 1 point of the base.
+
+Puts texture on the next triangle based on each 2 points of the base and 1 point of the top.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_plant_a38de3a3700e430ebecffa518977d2880}{\index{Plant@{Plant}!Get\+Random\+G\+Lfloat@{Get\+Random\+G\+Lfloat}}
+\index{Get\+Random\+G\+Lfloat@{Get\+Random\+G\+Lfloat}!Plant@{Plant}}
+\subsubsection[{Get\+Random\+G\+Lfloat}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Get\+Random\+G\+Lfloat (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{min, }
+\item[{G\+Lfloat}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_plant_a38de3a3700e430ebecffa518977d2880}
+Draw\+Branch method 
+\begin{DoxyParams}{Parameters}
+{\em min} & G\+Lfloat -- The minimum value \\
+\hline
+{\em max} & G\+Lfloat -- The maximum value Generates a random value in \mbox{[}min, max\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_plant_a16888c602067089a5aaa25ab6a92466f}{\index{Plant@{Plant}!angles\+Y@{angles\+Y}}
+\index{angles\+Y@{angles\+Y}!Plant@{Plant}}
+\subsubsection[{angles\+Y}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$G\+Lfloat$>$ Plant\+::angles\+Y\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_a16888c602067089a5aaa25ab6a92466f}
+A vector G\+Lfloat that stores the angles for the rotation around the Y axis for each branch \hypertarget{class_plant_a298b462dbd0b350d08b5262990a2576b}{\index{Plant@{Plant}!angles\+Z@{angles\+Z}}
+\index{angles\+Z@{angles\+Z}!Plant@{Plant}}
+\subsubsection[{angles\+Z}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$G\+Lfloat$>$ Plant\+::angles\+Z\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_a298b462dbd0b350d08b5262990a2576b}
+A vector that stores the angles for the rotation around the Z axis for each branch \hypertarget{class_plant_a4d8a4ea7bbede32b0f6ba1f3415d8f54}{\index{Plant@{Plant}!branches\+Radius@{branches\+Radius}}
+\index{branches\+Radius@{branches\+Radius}!Plant@{Plant}}
+\subsubsection[{branches\+Radius}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$G\+Lfloat$>$ Plant\+::branches\+Radius\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_a4d8a4ea7bbede32b0f6ba1f3415d8f54}
+A vector that stores the radius of the base of each branch \hypertarget{class_plant_a3ec2334fa4c49998f74f62240eaf7537}{\index{Plant@{Plant}!directions@{directions}}
+\index{directions@{directions}!Plant@{Plant}}
+\subsubsection[{directions}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Plant\+::directions\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_a3ec2334fa4c49998f74f62240eaf7537}
+A vector that stores the directions of each branch(left\+:1, right\+:2) \hypertarget{class_plant_aa12026d894eba8a2764d5edf94757850}{\index{Plant@{Plant}!heights@{heights}}
+\index{heights@{heights}!Plant@{Plant}}
+\subsubsection[{heights}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$G\+Lfloat$>$ Plant\+::heights\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_aa12026d894eba8a2764d5edf94757850}
+A vector that stores the maximum heights of each branch \hypertarget{class_plant_ab49e92a2ab4ecdc762b5a1711fa3d65f}{\index{Plant@{Plant}!level@{level}}
+\index{level@{level}!Plant@{Plant}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}int Plant\+::level\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_ab49e92a2ab4ecdc762b5a1711fa3d65f}
+A value that indicates the levels of branches(1-\/st level\+: the stem, 2-\/level\+: the branches, 3-\/level\+: the branches of the branches) \hypertarget{class_plant_a71a5a857d8a0adcfb612dadfcfffc731}{\index{Plant@{Plant}!max\+Height@{max\+Height}}
+\index{max\+Height@{max\+Height}!Plant@{Plant}}
+\subsubsection[{max\+Height}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Plant\+::max\+Height\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_a71a5a857d8a0adcfb612dadfcfffc731}
+The maximum height of the stem \hypertarget{class_plant_a4f86c46865d6211636140cef8805c6ee}{\index{Plant@{Plant}!number\+Of\+Branches@{number\+Of\+Branches}}
+\index{number\+Of\+Branches@{number\+Of\+Branches}!Plant@{Plant}}
+\subsubsection[{number\+Of\+Branches}]{\setlength{\rightskip}{0pt plus 5cm}int Plant\+::number\+Of\+Branches\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_a4f86c46865d6211636140cef8805c6ee}
+The total number of branches \hypertarget{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}{\index{Plant@{Plant}!radius@{radius}}
+\index{radius@{radius}!Plant@{Plant}}
+\subsubsection[{radius}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Plant\+::radius\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}
+The radius of the base of the plant \hypertarget{class_plant_aeaaf035b21354b12a272f66db178f5cb}{\index{Plant@{Plant}!texture\+Index@{texture\+Index}}
+\index{texture\+Index@{texture\+Index}!Plant@{Plant}}
+\subsubsection[{texture\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int Plant\+::texture\+Index\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_plant_aeaaf035b21354b12a272f66db178f5cb}
+\hyperlink{class_plant}{Plant}'s index in textures vector 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Plant.\+h\item 
+Plant.\+cpp\end{DoxyCompactItemize}

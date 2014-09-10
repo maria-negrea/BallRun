@@ -1,6 +1,10 @@
 #pragma once
 #include "Plant.h"
 
+/*! \brief
+ * Derived from Plant class, indicates the pattern for creating each set of top points and the difference between 
+ * each top's and base's radius.
+ */
 class Cactus: public Plant
 {
 public:

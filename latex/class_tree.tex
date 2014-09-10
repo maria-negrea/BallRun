@@ -1,0 +1,130 @@
+\hypertarget{class_tree}{\section{Tree Class Reference}
+\label{class_tree}\index{Tree@{Tree}}
+}
+
+
+Derived from \hyperlink{class_plant}{Plant} class, indicates the pattern for creating each set of top points and the difference between each top's and base's radius.  
+
+
+
+
+{\ttfamily \#include $<$Tree.\+h$>$}
+
+Inheritance diagram for Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tree}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tree_a5f8726222034fdd427bf41abb2f1dced}{Tree} (double width, double height, int \hyperlink{class_plant_a4f86c46865d6211636140cef8805c6ee}{number\+Of\+Branches}, int \hyperlink{class_plant_ab49e92a2ab4ecdc762b5a1711fa3d65f}{level})
+\item 
+void \hyperlink{class_tree_ab0297a975c2e94b18773edb3e6eaf289}{Set\+Branch\+Top} (vector$<$ \hyperlink{struct_point3_d}{Point3\+D} $>$ base, vector$<$ \hyperlink{struct_point3_d}{Point3\+D} $>$ \&top, int current\+Level, G\+Lfloat \hyperlink{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}{radius}, G\+Lfloat pass, G\+Lfloat index)
+\item 
+void \hyperlink{class_tree_afe594a748c525993d67ad51e005fc402}{Set\+Initial\+Pass} (G\+Lfloat \&pass, G\+Lfloat \hyperlink{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}{radius})
+\item 
+void \hyperlink{class_tree_ae5a8dc3f5f4f94cd7cdf75ca1124cbc5}{Increment\+Pass} (G\+Lfloat \&pass, G\+Lfloat \hyperlink{class_plant_abef0f751fe6b1b43ed208966a70b4ab3}{radius})
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Derived from \hyperlink{class_plant}{Plant} class, indicates the pattern for creating each set of top points and the difference between each top's and base's radius. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tree_a5f8726222034fdd427bf41abb2f1dced}{\index{Tree@{Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree@{Tree}}
+\subsubsection[{Tree}]{\setlength{\rightskip}{0pt plus 5cm}Tree\+::\+Tree (
+\begin{DoxyParamCaption}
+\item[{double}]{width, }
+\item[{double}]{height, }
+\item[{int}]{number\+Of\+Branches, }
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)}}\label{class_tree_a5f8726222034fdd427bf41abb2f1dced}
+\hyperlink{class_tree}{Tree}'s constructor 
+\begin{DoxyParams}{Parameters}
+{\em width} & double -- The width of the surface \\
+\hline
+{\em height} & double -- The height of the surface \\
+\hline
+{\em number\+Of\+Branches} & int -- The number of branches \\
+\hline
+{\em level} & int -- The levels of branches \\
+\hline
+\end{DoxyParams}
+Initializes the texture index. Generates a random value for the maximum height. Generates random values for directions, each branch's radius and angles for the rotations around Y and Z axis. Calculate the maximum height for the current branch. Generates the maximum heights for each branch.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tree_ae5a8dc3f5f4f94cd7cdf75ca1124cbc5}{\index{Tree@{Tree}!Increment\+Pass@{Increment\+Pass}}
+\index{Increment\+Pass@{Increment\+Pass}!Tree@{Tree}}
+\subsubsection[{Increment\+Pass}]{\setlength{\rightskip}{0pt plus 5cm}void Tree\+::\+Increment\+Pass (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat \&}]{pass, }
+\item[{G\+Lfloat}]{radius}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tree_ae5a8dc3f5f4f94cd7cdf75ca1124cbc5}
+Sets the value for incrementing the pass. 
+
+Implements \hyperlink{class_plant}{Plant}.
+
+\hypertarget{class_tree_ab0297a975c2e94b18773edb3e6eaf289}{\index{Tree@{Tree}!Set\+Branch\+Top@{Set\+Branch\+Top}}
+\index{Set\+Branch\+Top@{Set\+Branch\+Top}!Tree@{Tree}}
+\subsubsection[{Set\+Branch\+Top}]{\setlength{\rightskip}{0pt plus 5cm}void Tree\+::\+Set\+Branch\+Top (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Point3\+D} $>$}]{base, }
+\item[{vector$<$ {\bf Point3\+D} $>$ \&}]{top, }
+\item[{int}]{current\+Level, }
+\item[{G\+Lfloat}]{radius, }
+\item[{G\+Lfloat}]{pass, }
+\item[{G\+Lfloat}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tree_ab0297a975c2e94b18773edb3e6eaf289}
+Initializes a vector of top points using a given base, its radius and a pass. 
+\begin{DoxyParams}{Parameters}
+{\em base} & vector$<$\+Point3\+D$>$ -- A vector that stores the points of the base of the branch \\
+\hline
+{\em top} & vector$<$\+Point3\+D$>$ -- A vector that will be initialized with the points of the top of the branch \\
+\hline
+{\em current\+Level} & int -- The current level of branches \\
+\hline
+{\em radius} & G\+Lfloat -- The radius of the base \\
+\hline
+{\em pass} & G\+Lfloat -- The difference between the radius of the base and the radius of the top \\
+\hline
+{\em index} & G\+Lfloat -- The index of the branch \\
+\hline
+\end{DoxyParams}
+Calculates the difference between each top and base.
+
+Initializes the top points on the left/right side according to the corresponding direction(1-\/left, 2-\/right). The radius of the top will be smaller than the radius of the base.
+
+Implements \hyperlink{class_plant}{Plant}.
+
+\hypertarget{class_tree_afe594a748c525993d67ad51e005fc402}{\index{Tree@{Tree}!Set\+Initial\+Pass@{Set\+Initial\+Pass}}
+\index{Set\+Initial\+Pass@{Set\+Initial\+Pass}!Tree@{Tree}}
+\subsubsection[{Set\+Initial\+Pass}]{\setlength{\rightskip}{0pt plus 5cm}void Tree\+::\+Set\+Initial\+Pass (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat \&}]{pass, }
+\item[{G\+Lfloat}]{radius}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tree_afe594a748c525993d67ad51e005fc402}
+Initializes the difference between top's and base's radius. 
+\begin{DoxyParams}{Parameters}
+{\em radius} & G\+Lfloat -- The radius of the base \\
+\hline
+{\em pass} & G\+Lfloat -- The difference between the radius of the base and the radius of the top \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_plant}{Plant}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Tree.\+h\item 
+Tree.\+cpp\end{DoxyCompactItemize}

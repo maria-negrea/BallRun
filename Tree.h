@@ -5,6 +5,10 @@
 #include<ctime>
 #define PI 3.14
 
+/*! \brief
+ * Derived from Plant class, indicates the pattern for creating each set of top points and the difference between 
+ * each top's and base's radius.
+ */
 class Tree:public Plant
 {
 
