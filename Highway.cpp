@@ -83,7 +83,8 @@ void Highway::Follow(Ball* ball)
 
 void Highway::Update()
 {
-	if(lastRoad && (lastRoad->GetEndPoint() - ball->GetTranslate() ).Magnitude() > 30.0)
+	/** Draw plants. Random draws a type of plant, choose a side, the rotation angle and the position */
+	if(lastRoad && (lastRoad->GetEndPoint() - ball->GetTranslate() ).Magnitude() > 50.0)
 	{
 		if(rand() % 5 == 0)
 		{
@@ -104,6 +105,7 @@ void Highway::Update()
 		}
 	}
 
+	/** Draw new roads after the current one is close to the end */
 	if(lastRoad == NULL)
 	{
 		CheckPossibilities();
@@ -111,7 +113,7 @@ void Highway::Update()
 	else
 	{
 		Point3D endRoad = lastRoad->GetEndPoint();
-		if((endRoad - ball->GetTranslate()).Magnitude() < 15.0)
+		if((endRoad - ball->GetTranslate()).Magnitude() < 35.0)
 		{
 			Road *newRoad = new Road(lastRoad->GetTranslate());
 			roads.push_back(newRoad);
@@ -120,6 +122,7 @@ void Highway::Update()
 
 			int random = rand() % 7;
 			
+			/** Randomly draws a right curve, left one, or a double-way intersetction */
 		   if(random == 0) 
 		   {
 				newRoad->Rotate(Point3D(0.0, 90.0, 0.0));
@@ -177,8 +180,9 @@ void Highway::Update()
 				lastRoad = newRoad;
 		   }
 
+		   /** Draw mountains. Choose the side, a random size, a random position, and a random rotation angle */
 		    int side = rand() % 2;
-			int dist = rand() % 10 + 20;
+			int dist = rand() % 10 + 25;
 
    		    Mountain *newMountain = new Mountain(rand() % 10 + 10, -rand() % 10 - 10, rand() % 10 + 10);
 
@@ -189,6 +193,7 @@ void Highway::Update()
 			newMountain->Rotate(Point3D(0, rand() % 360, 0));
 			mountains.push_back(newMountain);
 
+			/** Free the vectors of mountains, plants and roads */
 			int nr = mountains.size() - 5;
 			for(int i = 0; i < nr; i++)
 				mountains.erase(mountains.begin());

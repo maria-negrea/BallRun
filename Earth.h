@@ -6,5 +6,7 @@ class Earth : public WorldObject
 public:
     Earth() {}
     ~Earth() {}
+	
+	/*! Draws the Earth */
     void DrawObject();
 };

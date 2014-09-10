@@ -50,19 +50,24 @@ void WorldObject::Rotate(Point3D rotation)
 	rotate += rotation;
 }
 
+Point3D WorldObject::GetForward()
+{
+	/* (0.0, 0.0, -1.0) global forward vector rotated by the objects rotation */
+	return Point3D(0.0, 0.0, -1.0).rotateY(rotate.y);
+}
+
+Point3D WorldObject::GetRight() 
+{
+	/* (1.0, 0.0, 0.0) global right vector rotated by the objects rotation */
+	return Point3D(1.0, 0.0, 0.0).rotateY(rotate.y);	
+}
+
 Point3D WorldObject::GetTranslate()
 {
 	return translate;
 }
 
-Point3D WorldObject::GetForward() {
-	return Point3D(0.0, 0.0, -1.0).rotateY(rotate.y);
-}
-
-Point3D WorldObject::GetRight() {
-	return Point3D(1.0, 0.0, 0.0).rotateY(rotate.y);	
-}
-
-Point3D WorldObject::GetRotate() {
+Point3D WorldObject::GetRotate() 
+{
 	return rotate;
 }

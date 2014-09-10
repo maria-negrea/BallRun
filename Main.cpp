@@ -1,17 +1,9 @@
-#include "Ball.h"
 #include "Camera.h"
-#include "Road.h"
-#include "Tree.h"
-#include "Cactus.h"
-#include "Earth.h"
-#include "Corner.h"
 #include "Sky.h"
-#include "Scene.h"
 #include "Highway.h"
-#include "Curve.h"
-#include "Mountain.h"
 #include "EndScreen.h"
 #include "Digit.h"
+#include "Earth.h"
 
 #include <vector>
 #include <iostream>
@@ -33,14 +25,19 @@ Highway* highway = new Highway(scene);
 EndScreen *screen = new EndScreen();
 bool isGameOver = false;
 
-Digit *scoreDigit1 = new Digit(0);
-Digit *scoreDigit2 = new Digit(0);
+GLfloat* score;
 
-GLfloat score = 0;
+Digit *scoreDigit1;
+Digit *scoreDigit2; 
 
 void Initialize() 
 {
 	srand(time(0));
+	score = new GLfloat[1];
+	*score = 0;
+
+	scoreDigit1 = new Digit(0,0,score);
+	scoreDigit2 = new Digit(0,1,score);
 
 	scene = new Scene();
 	highway = new Highway(scene);
@@ -68,6 +65,7 @@ void Initialize()
 	scene->AddObject(scoreDigit1);
 	scene->AddObject(scoreDigit2);
 	Textures::GetInstance()->LoadGLTextures();	
+
 }
 
 void Draw()
@@ -98,6 +96,8 @@ void GameOver()
 {
 	mainCamera->UnFollow();
 	sky->UnFollow();
+	scoreDigit1->UnFollow();
+	scoreDigit2->UnFollow();
 
 	scene->AddObject(screen);
 	screen->Translate(screen->GetTranslate()*(-1));
@@ -119,21 +119,14 @@ void CheckGameOver()
 void Timer(int value)
 {
 	Point3D lastBallPosition = newBall->GetTranslate();
-	newBall->MoveForward();
+	
+	scene->Update();
 
-	if(!isGameOver)
+	if(!isGameOver);
 	{
-		highway->Update();
-		sky->Update();
-		mainCamera->Update();
-		scoreDigit1->Update();
-		scoreDigit2->Update();
-
-		score += (newBall->GetTranslate()-lastBallPosition).Magnitude()/100*1.5;
-		scoreDigit1->SetDigit(score);
-		scoreDigit2->SetDigit(score/10);
+		*score = *score + (newBall->GetTranslate()-lastBallPosition).Magnitude()/100*1.5;
 	}
-
+	
 	CheckGameOver();
 
     glutPostRedisplay();
@@ -145,7 +138,7 @@ void reshape(int w, int h)
    glViewport(0, 0, (GLsizei) w, (GLsizei) h);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 100.0);
+   gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 10000.0);
 }
 
 int main(int argc, char** argv)

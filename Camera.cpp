@@ -33,6 +33,7 @@ void Camera::Update()
 {
 	if(ball != NULL)
 	{
+		/** The camera fades a little behind the ball */
 		Point3D gap = ball->GetDirection()-direction;
 
 		direction = direction+gap*0.25;

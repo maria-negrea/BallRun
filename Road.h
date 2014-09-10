@@ -10,6 +10,7 @@ public:
         translate = x;
     }
     ~Road() {}
+
     void DrawObject();
-    Point3D GetEndPoint();
+	Point3D GetEndPoint();
 };

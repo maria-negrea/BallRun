@@ -14,14 +14,37 @@ void Scene::Render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
 
+	//Sets the perspective to the perspective of the main camera
 	mainCamera->Perspective();
 
-	for(int i=0;i<sceneObjects.size();i++)
+	//Draws the objects on screen
+	for(unsigned i=0;i<sceneObjects.size();++i)
 	{
 		sceneObjects[i]->Draw();
 	}
 	glFlush();
 
+}
+
+void Scene::Update()
+{
+	for(unsigned i=0;i<updateObjects.size();++i)
+	{
+		updateObjects[i]->Update();
+	}
+	mainCamera->Update();
+}
+
+void Scene::RemoveUpdatable(Updatable* object)
+{
+	for (unsigned i=0; i<updateObjects.size(); ++i)
+	{
+		if(updateObjects[i] == object)
+		{
+			updateObjects.erase(updateObjects.begin()+i);
+			break;
+		}
+	}
 }
 
 void Scene::SetMainCamera(Camera* camera)
@@ -32,6 +55,12 @@ void Scene::SetMainCamera(Camera* camera)
 void Scene::AddObject(WorldObject* object)
 {
 	sceneObjects.push_back(object);
+
+	Updatable* updatableObject = dynamic_cast<Updatable*>(object);
+	if(updatableObject != NULL)
+	{
+		updateObjects.push_back(updatableObject);
+	}
 }
 
 void Scene::RemoveObject(WorldObject* object)
@@ -43,5 +72,11 @@ void Scene::RemoveObject(WorldObject* object)
 			sceneObjects.erase(sceneObjects.begin()+i);
 			break;
 		}
+	}
+
+	Updatable* updatableObject = dynamic_cast<Updatable*>(object);
+	if(updatableObject != NULL)
+	{
+		RemoveUpdatable(updatableObject);
 	}
 }

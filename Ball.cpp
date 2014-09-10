@@ -21,29 +21,6 @@ void Ball::DrawObject()
 {
 	glBindTexture(GL_TEXTURE_2D, Textures::GetInstance()->GetTextures()[0]);
 	gluSphere(quadratic,radius,100,100);
-
-	//glEnable(GL_BLEND);
-	//glBindTexture(GL_TEXTURE_2D,0);
-	//glColor4f(0.5,0.5,0.5,0.5);
-	//GLfloat PI = 3.141;
-	//
-	//glRotatef(-rotate.z,0,0,1);
-	//glRotatef(-rotate.x,1,0,0);
-	//glRotatef(-rotate.y,0,1,0);
-
-	//glBegin(GL_TRIANGLE_FAN);
-	//	glVertex3f(0.0,-0.3,0.0);
-	//	for(GLfloat t = 0; t< PI*2 ; t +=0.1)
-	//	{
-	//		glVertex3f(cos(t)*radius,-radius,sin(t)*radius);			
-	//	}
-	//glEnd();
-
-	//glColor4f(1.0,1.0,1.0,1.0);
-
-	//glRotatef(rotate.y,0,1,0);
-	//glRotatef(rotate.x,1,0,0);
-	//glRotatef(rotate.z,0,0,1);
 }
 
 void Ball::MoveLeft(Point3D onTrack)
@@ -67,12 +44,12 @@ Point3D Ball::GetDirection()
 	return direction;
 }
 
-void Ball::MoveForward()
+void Ball::Update()
 {
 	Translate(direction*speed);
-	Translate(onTrack*0.5);
+	Translate(onTrack*0.2);
 
-	onTrack = onTrack*0.5;
+	onTrack = onTrack*0.2;
 
 	Rotate(Point3D(15*speed,0,0));
 

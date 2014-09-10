@@ -240,6 +240,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Updatable.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\WorldObject.cpp"
 				>
 			</File>
@@ -315,6 +319,10 @@
 			</File>
 			<File
 				RelativePath=".\Tree.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Updatable.h"
 				>
 			</File>
 			<File
