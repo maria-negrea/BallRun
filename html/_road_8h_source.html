@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,31 +71,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Road.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Textures.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;WorldObject.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Textures.h&quot;</span></div>
+<a href="_road_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_textures_8h.html">Textures.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_world_object_8h.html">WorldObject.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_textures_8h.html">Textures.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_road.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_road.html">Road</a> : <span class="keyword">public</span> <a class="code" href="class_world_object.html">WorldObject</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_road.html">Road</a>(<a class="code" href="struct_point3_d.html">Point3D</a> x) {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        translate = x;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_road.html#a90be7d4371f8026017d3f6b819eeb688">    9</a></span>&#160;    <a class="code" href="class_road.html#a90be7d4371f8026017d3f6b819eeb688">Road</a>(<a class="code" href="struct_point3_d.html">Point3D</a> x) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a> = x;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    ~<a class="code" href="class_road.html">Road</a>() {}</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_road.html#a3fa0feda8a96c3763d5f5a1f06f2972e">   12</a></span>&#160;    <a class="code" href="class_road.html#a3fa0feda8a96c3763d5f5a1f06f2972e">~Road</a>() {}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_road.html#adff20b6c1061106d116f624103650ec6">DrawObject</a>();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="struct_point3_d.html">Point3D</a> <a class="code" href="class_road.html#a6e70d66fa043f061218a013a2a7c24c5">GetEndPoint</a>();</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
 <div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00093">WorldObject.h:93</a></div></div>
+<div class="ttc" id="_textures_8h_html"><div class="ttname"><a href="_textures_8h.html">Textures.h</a></div></div>
+<div class="ttc" id="class_road_html_a90be7d4371f8026017d3f6b819eeb688"><div class="ttname"><a href="class_road.html#a90be7d4371f8026017d3f6b819eeb688">Road::Road</a></div><div class="ttdeci">Road(Point3D x)</div><div class="ttdef"><b>Definition:</b> <a href="_road_8h_source.html#l00009">Road.h:9</a></div></div>
+<div class="ttc" id="class_road_html_a3fa0feda8a96c3763d5f5a1f06f2972e"><div class="ttname"><a href="class_road.html#a3fa0feda8a96c3763d5f5a1f06f2972e">Road::~Road</a></div><div class="ttdeci">~Road()</div><div class="ttdef"><b>Definition:</b> <a href="_road_8h_source.html#l00012">Road.h:12</a></div></div>
 <div class="ttc" id="class_road_html"><div class="ttname"><a href="class_road.html">Road</a></div><div class="ttdef"><b>Definition:</b> <a href="_road_8h_source.html#l00006">Road.h:6</a></div></div>
 <div class="ttc" id="class_road_html_a6e70d66fa043f061218a013a2a7c24c5"><div class="ttname"><a href="class_road.html#a6e70d66fa043f061218a013a2a7c24c5">Road::GetEndPoint</a></div><div class="ttdeci">Point3D GetEndPoint()</div><div class="ttdef"><b>Definition:</b> <a href="_road_8cpp_source.html#l00023">Road.cpp:23</a></div></div>
+<div class="ttc" id="class_world_object_html_a3e290757727e835e6a075d2565e093a7"><div class="ttname"><a href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">WorldObject::translate</a></div><div class="ttdeci">Point3D translate</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00106">WorldObject.h:106</a></div></div>
+<div class="ttc" id="_world_object_8h_html"><div class="ttname"><a href="_world_object_8h.html">WorldObject.h</a></div></div>
 <div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00016">WorldObject.h:16</a></div></div>
 <div class="ttc" id="class_road_html_adff20b6c1061106d116f624103650ec6"><div class="ttname"><a href="class_road.html#adff20b6c1061106d116f624103650ec6">Road::DrawObject</a></div><div class="ttdeci">void DrawObject()</div><div class="ttdef"><b>Definition:</b> <a href="_road_8cpp_source.html#l00008">Road.cpp:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

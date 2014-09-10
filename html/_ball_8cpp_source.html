@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,78 +71,89 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Ball.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Ball.h&quot;</span></div>
+<a href="_ball_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_ball_8h.html">Ball.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_ball.html#a5b02c078ccc7dc50db406cc6afee22cd">    3</a></span>&#160;<a class="code" href="class_ball.html#a5b02c078ccc7dc50db406cc6afee22cd">Ball::Ball</a>(<a class="code" href="struct_point3_d.html">Point3D</a> initialDirection,<span class="keywordtype">double</span> speed, GLfloat radius)</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;:direction(initialDirection),speed(speed),radius(radius),<a class="code" href="class_world_object.html">WorldObject</a>(radius*2,radius*2)</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <a class="code" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a>(<a class="code" href="struct_point3_d.html">Point3D</a>(0,radius,0));</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        quadratic = gluNewQuadric();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        gluQuadricDrawStyle(quadratic, GLU_FILL);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        gluQuadricNormals(quadratic, GLU_SMOOTH);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <a class="code" href="class_ball.html#ad9feb6585ada214b485eb54abe8e050f">quadratic</a> = gluNewQuadric();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        gluQuadricDrawStyle(<a class="code" href="class_ball.html#ad9feb6585ada214b485eb54abe8e050f">quadratic</a>, GLU_FILL);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        gluQuadricNormals(<a class="code" href="class_ball.html#ad9feb6585ada214b485eb54abe8e050f">quadratic</a>, GLU_SMOOTH);</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        gluQuadricTexture(quadratic, GL_TRUE);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        onTrack = <a class="code" href="struct_point3_d.html">Point3D</a>(0,0,0);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        gluQuadricTexture(<a class="code" href="class_ball.html#ad9feb6585ada214b485eb54abe8e050f">quadratic</a>, GL_TRUE);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_ball.html#a3396c3784d689a17e7f7c0ddd0cfec98">onTrack</a> = <a class="code" href="struct_point3_d.html">Point3D</a>(0,0,0);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_ball.html#a20f2f6ac0bf648f406a8e12e63429fcd">   15</a></span>&#160;<a class="code" href="class_ball.html#a20f2f6ac0bf648f406a8e12e63429fcd">Ball::~Ball</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">delete</span> quadratic;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_ball.html#ad9feb6585ada214b485eb54abe8e050f">quadratic</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_ball.html#a6bc4fe06d40ae8bb833cd758a6bca1ab">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_ball.html#a6bc4fe06d40ae8bb833cd758a6bca1ab">Ball::DrawObject</a>()</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        glBindTexture(GL_TEXTURE_2D, <a class="code" href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a>()-&gt;GetTextures()[0]);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        gluSphere(quadratic,radius,100,100);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        gluSphere(<a class="code" href="class_ball.html#ad9feb6585ada214b485eb54abe8e050f">quadratic</a>,<a class="code" href="class_ball.html#a9687fc2df073812484d8e4c162e77743">radius</a>,100,100);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_ball.html#ad56e662d67b4135c43cd637be246cf78">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_ball.html#ad56e662d67b4135c43cd637be246cf78">Ball::MoveLeft</a>(<a class="code" href="struct_point3_d.html">Point3D</a> onTrack)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        direction = <a class="code" href="struct_point3_d.html">Point3D</a>(direction.z, 0, -direction.x);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_ball.html#a3b3f02341073c519b820d6fd98e54ca9">direction</a> = <a class="code" href="struct_point3_d.html">Point3D</a>(<a class="code" href="class_ball.html#a3b3f02341073c519b820d6fd98e54ca9">direction</a>.<a class="code" href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">z</a>, 0, -<a class="code" href="class_ball.html#a3b3f02341073c519b820d6fd98e54ca9">direction</a>.<a class="code" href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">x</a>);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">Rotate</a>(<a class="code" href="struct_point3_d.html">Point3D</a>(0,90,0));</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        this-&gt;onTrack = onTrack-translate;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        this-&gt;onTrack.y = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        this-&gt;onTrack = onTrack-<a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        this-&gt;onTrack.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a> = 0;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_ball.html#ace7571918ebb61526c6b30b7a2ecb711">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_ball.html#ace7571918ebb61526c6b30b7a2ecb711">Ball::MoveRight</a>(<a class="code" href="struct_point3_d.html">Point3D</a> onTrack)</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        direction = <a class="code" href="struct_point3_d.html">Point3D</a>(-direction.z, 0, direction.x);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_ball.html#a3b3f02341073c519b820d6fd98e54ca9">direction</a> = <a class="code" href="struct_point3_d.html">Point3D</a>(-<a class="code" href="class_ball.html#a3b3f02341073c519b820d6fd98e54ca9">direction</a>.<a class="code" href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">z</a>, 0, <a class="code" href="class_ball.html#a3b3f02341073c519b820d6fd98e54ca9">direction</a>.<a class="code" href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">x</a>);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">Rotate</a>(<a class="code" href="struct_point3_d.html">Point3D</a>(0,-90,0));</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        this-&gt;onTrack = onTrack-translate;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        this-&gt;onTrack.y = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        this-&gt;onTrack = onTrack-<a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        this-&gt;onTrack.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a> = 0;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> Ball::GetDirection()</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_ball.html#ad4e6eac0cd9afd3d2be2267d6befe18a">   42</a></span>&#160;<a class="code" href="struct_point3_d.html">Point3D</a> <a class="code" href="class_ball.html#ad4e6eac0cd9afd3d2be2267d6befe18a">Ball::GetDirection</a>()</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> direction;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_ball.html#a3b3f02341073c519b820d6fd98e54ca9">direction</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_ball.html#ac2f234d525c0fcf04334ac1d0acf5653">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_ball.html#ac2f234d525c0fcf04334ac1d0acf5653">Ball::Update</a>()</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a>(direction*speed);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a>(onTrack*0.2);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a>(<a class="code" href="class_ball.html#a3b3f02341073c519b820d6fd98e54ca9">direction</a>*<a class="code" href="class_ball.html#a0ff5f6cd08eff74287fbb1be438879c2">speed</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a>(<a class="code" href="class_ball.html#a3396c3784d689a17e7f7c0ddd0cfec98">onTrack</a>*0.2);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        onTrack = onTrack*0.8;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_ball.html#a3396c3784d689a17e7f7c0ddd0cfec98">onTrack</a> = <a class="code" href="class_ball.html#a3396c3784d689a17e7f7c0ddd0cfec98">onTrack</a>*0.8;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">Rotate</a>(<a class="code" href="struct_point3_d.html">Point3D</a>(15*speed,0,0));</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        speed -= 0.001;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="ttc" id="class_world_object_html_a95de7162381945513e86fcf354297da9"><div class="ttname"><a href="class_world_object.html#a95de7162381945513e86fcf354297da9">WorldObject::Translate</a></div><div class="ttdeci">void Translate(Point3D point)</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00043">WorldObject.cpp:43</a></div></div>
+<div class="ttc" id="_ball_8h_html"><div class="ttname"><a href="_ball_8h.html">Ball.h</a></div></div>
 <div class="ttc" id="class_ball_html_ac2f234d525c0fcf04334ac1d0acf5653"><div class="ttname"><a href="class_ball.html#ac2f234d525c0fcf04334ac1d0acf5653">Ball::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cpp_source.html#l00047">Ball.cpp:47</a></div></div>
 <div class="ttc" id="class_world_object_html_a8be4166121ff9a8c90cc1938807dd2f2"><div class="ttname"><a href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">WorldObject::Rotate</a></div><div class="ttdeci">void Rotate(Point3D point)</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00048">WorldObject.cpp:48</a></div></div>
 <div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00093">WorldObject.h:93</a></div></div>
 <div class="ttc" id="class_ball_html_a6bc4fe06d40ae8bb833cd758a6bca1ab"><div class="ttname"><a href="class_ball.html#a6bc4fe06d40ae8bb833cd758a6bca1ab">Ball::DrawObject</a></div><div class="ttdeci">void DrawObject()</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cpp_source.html#l00020">Ball.cpp:20</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a5d428049115cb9b3ce0fbe5b7433e449"><div class="ttname"><a href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">Point3D::x</a></div><div class="ttdeci">GLfloat x</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
 <div class="ttc" id="class_ball_html_ace7571918ebb61526c6b30b7a2ecb711"><div class="ttname"><a href="class_ball.html#ace7571918ebb61526c6b30b7a2ecb711">Ball::MoveRight</a></div><div class="ttdeci">void MoveRight(Point3D onTrack)</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cpp_source.html#l00034">Ball.cpp:34</a></div></div>
+<div class="ttc" id="class_ball_html_ad4e6eac0cd9afd3d2be2267d6befe18a"><div class="ttname"><a href="class_ball.html#ad4e6eac0cd9afd3d2be2267d6befe18a">Ball::GetDirection</a></div><div class="ttdeci">Point3D GetDirection()</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cpp_source.html#l00042">Ball.cpp:42</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a8dc7ed16862ef24cb1d3e845b40d89f9"><div class="ttname"><a href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">Point3D::z</a></div><div class="ttdeci">GLfloat z</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
 <div class="ttc" id="class_ball_html_a20f2f6ac0bf648f406a8e12e63429fcd"><div class="ttname"><a href="class_ball.html#a20f2f6ac0bf648f406a8e12e63429fcd">Ball::~Ball</a></div><div class="ttdeci">~Ball()</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cpp_source.html#l00015">Ball.cpp:15</a></div></div>
 <div class="ttc" id="class_textures_html_a3e5839f0cee717b4c7808a49ad9cf040"><div class="ttname"><a href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a></div><div class="ttdeci">static Textures * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_textures_8cpp_source.html#l00017">Textures.cpp:17</a></div></div>
+<div class="ttc" id="class_world_object_html_a3e290757727e835e6a075d2565e093a7"><div class="ttname"><a href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">WorldObject::translate</a></div><div class="ttdeci">Point3D translate</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00106">WorldObject.h:106</a></div></div>
 <div class="ttc" id="class_ball_html_ad56e662d67b4135c43cd637be246cf78"><div class="ttname"><a href="class_ball.html#ad56e662d67b4135c43cd637be246cf78">Ball::MoveLeft</a></div><div class="ttdeci">void MoveLeft(Point3D onTrack)</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cpp_source.html#l00026">Ball.cpp:26</a></div></div>
 <div class="ttc" id="class_ball_html_a5b02c078ccc7dc50db406cc6afee22cd"><div class="ttname"><a href="class_ball.html#a5b02c078ccc7dc50db406cc6afee22cd">Ball::Ball</a></div><div class="ttdeci">Ball(Point3D initialDirection, double speed, GLfloat radius)</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cpp_source.html#l00003">Ball.cpp:3</a></div></div>
+<div class="ttc" id="class_ball_html_a3396c3784d689a17e7f7c0ddd0cfec98"><div class="ttname"><a href="class_ball.html#a3396c3784d689a17e7f7c0ddd0cfec98">Ball::onTrack</a></div><div class="ttdeci">Point3D onTrack</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00013">Ball.h:13</a></div></div>
+<div class="ttc" id="class_ball_html_a3b3f02341073c519b820d6fd98e54ca9"><div class="ttname"><a href="class_ball.html#a3b3f02341073c519b820d6fd98e54ca9">Ball::direction</a></div><div class="ttdeci">Point3D direction</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00011">Ball.h:11</a></div></div>
 <div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00016">WorldObject.h:16</a></div></div>
+<div class="ttc" id="class_ball_html_a9687fc2df073812484d8e4c162e77743"><div class="ttname"><a href="class_ball.html#a9687fc2df073812484d8e4c162e77743">Ball::radius</a></div><div class="ttdeci">GLfloat radius</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00014">Ball.h:14</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a266c2ec796b3af5f5a232cad101ac278"><div class="ttname"><a href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">Point3D::y</a></div><div class="ttdeci">GLfloat y</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
+<div class="ttc" id="class_ball_html_ad9feb6585ada214b485eb54abe8e050f"><div class="ttname"><a href="class_ball.html#ad9feb6585ada214b485eb54abe8e050f">Ball::quadratic</a></div><div class="ttdeci">GLUquadricObj * quadratic</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00009">Ball.h:9</a></div></div>
+<div class="ttc" id="class_ball_html_a0ff5f6cd08eff74287fbb1be438879c2"><div class="ttname"><a href="class_ball.html#a0ff5f6cd08eff74287fbb1be438879c2">Ball::speed</a></div><div class="ttdeci">double speed</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00012">Ball.h:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,76 +71,95 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Digit.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Digit.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Textures.h&quot;</span></div>
+<a href="_digit_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_digit_8h.html">Digit.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_textures_8h.html">Textures.h</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;Digit::Digit(<span class="keywordtype">int</span> digit,<span class="keywordtype">int</span> position, GLfloat* score)</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_digit.html#a874d3909e9453201181d1ce2707e64aa">    4</a></span>&#160;<a class="code" href="class_digit.html#a874d3909e9453201181d1ce2707e64aa">Digit::Digit</a>(<span class="keywordtype">int</span> digit,<span class="keywordtype">int</span> position, GLfloat* <a class="code" href="_main_8cpp.html#acbb9403577f58d6d07e68ae1c575f737">score</a>)</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        :digit(digit),position(position),score(score)</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;Digit::~Digit(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_digit.html#ad451d3b0f50985ed2730ba0eb7d09b03">    9</a></span>&#160;<a class="code" href="class_digit.html#ad451d3b0f50985ed2730ba0eb7d09b03">Digit::~Digit</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> Digit::DrawObject()</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_digit.html#a4bf7e83ffc6375431bedcd0fceb7c7bc">   13</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_digit.html#a4bf7e83ffc6375431bedcd0fceb7c7bc">Digit::DrawObject</a>()</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">int</span> digitPlus = digit+1;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">int</span> digitPlus = <a class="code" href="class_digit.html#aa85baa6070fd54b524eb8b0b5bcf01f7">digit</a>+1;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        glBindTexture(GL_TEXTURE_2D, <a class="code" href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a>()-&gt;GetTextures()[9]);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        glBegin(GL_QUADS);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                glTexCoord2f(0.1*digit, 0); glVertex3f(-1.0, -1.5, 0.0);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                glTexCoord2f(0.1*<a class="code" href="class_digit.html#aa85baa6070fd54b524eb8b0b5bcf01f7">digit</a>, 0); glVertex3f(-1.0, -1.5, 0.0);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                glTexCoord2f(0.1*digitPlus, 0); glVertex3f( 1.0, -1.5, 0.0);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                glTexCoord2f(0.1*digitPlus, 1); glVertex3f( 1.0, 1.5, 0.0);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                glTexCoord2f(0.1*digit, 1); glVertex3f(-1.0, 1.5, 0.0);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                glTexCoord2f(0.1*<a class="code" href="class_digit.html#aa85baa6070fd54b524eb8b0b5bcf01f7">digit</a>, 1); glVertex3f(-1.0, 1.5, 0.0);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        glEnd();        </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_digit.html#ae67a2c0b0a951a31b8a618911b87f0bc">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_digit.html#ae67a2c0b0a951a31b8a618911b87f0bc">Digit::Follow</a>(<a class="code" href="class_ball.html">Ball</a>* ball,<a class="code" href="struct_point3_d.html">Point3D</a> followPoint)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this-&gt;ball = ball;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        this-&gt;followPoint = followPoint;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this-&gt;ball = <a class="code" href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">ball</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        this-&gt;followPoint = <a class="code" href="class_digit.html#addfff408ae5753928dfab13415c77867">followPoint</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_digit.html#a00d932e15f940d2e1e1da94bdeaa498a">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_digit.html#a00d932e15f940d2e1e1da94bdeaa498a">Digit::Update</a>()</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span>(ball != NULL)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">ball</a> != NULL)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                translate = ball-&gt;GetTranslate();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                translate += ball-&gt;GetDirection()*-followPoint.x+ball-&gt;GetDirection().<a class="code" href="struct_point3_d.html#ac9c0cb7390bde518217651587119ff87">rotateY</a>(90)*-followPoint.z;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                translate.y = followPoint.y;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a> = <a class="code" href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">ball</a>-&gt;<a class="code" href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">GetTranslate</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a> += <a class="code" href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">ball</a>-&gt;<a class="code" href="class_ball.html#ad4e6eac0cd9afd3d2be2267d6befe18a">GetDirection</a>()*-<a class="code" href="class_digit.html#addfff408ae5753928dfab13415c77867">followPoint</a>.<a class="code" href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">x</a>+<a class="code" href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">ball</a>-&gt;<a class="code" href="class_ball.html#ad4e6eac0cd9afd3d2be2267d6befe18a">GetDirection</a>().<a class="code" href="struct_point3_d.html#ac9c0cb7390bde518217651587119ff87">rotateY</a>(90)*-<a class="code" href="class_digit.html#addfff408ae5753928dfab13415c77867">followPoint</a>.<a class="code" href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">z</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <a class="code" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a>.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a> = <a class="code" href="class_digit.html#addfff408ae5753928dfab13415c77867">followPoint</a>.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.y = ball-&gt;GetRotate().y;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <a class="code" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a>.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a> = <a class="code" href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">ball</a>-&gt;<a class="code" href="class_world_object.html#a443ed580b100165115e4fd2d7cdaae43">GetRotate</a>().<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                GLfloat sc = *score;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;position;++i)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                GLfloat sc = *<a class="code" href="class_digit.html#a793b3cc79d4d0a1044e49b4a46990eff">score</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="class_digit.html#a8d63592b44e2a80a5c9508302496b38d">position</a>;++i)</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        sc = sc/10;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                SetDigit(sc);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="class_digit.html#a528791513a2feaa3e96b12475f86843f">SetDigit</a>(sc);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> Digit::SetDigit(<span class="keywordtype">double</span> digit)</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_digit.html#a528791513a2feaa3e96b12475f86843f">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_digit.html#a528791513a2feaa3e96b12475f86843f">Digit::SetDigit</a>(<span class="keywordtype">double</span> digit)</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        this-&gt;digit = (int)digit%10;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_digit.html#a0cddec852897574becda6e3e1923ca9e">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_digit.html#a0cddec852897574becda6e3e1923ca9e">Digit::UnFollow</a>()</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        this-&gt;ball = NULL;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        this-&gt;<a class="code" href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">ball</a> = NULL;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="ttc" id="class_world_object_html_aff5a65911deeaedf114357217d16c66f"><div class="ttname"><a href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">WorldObject::GetTranslate</a></div><div class="ttdeci">Point3D GetTranslate()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00065">WorldObject.cpp:65</a></div></div>
+<div class="ttc" id="class_digit_html_a793b3cc79d4d0a1044e49b4a46990eff"><div class="ttname"><a href="class_digit.html#a793b3cc79d4d0a1044e49b4a46990eff">Digit::score</a></div><div class="ttdeci">GLfloat * score</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8h_source.html#l00016">Digit.h:16</a></div></div>
+<div class="ttc" id="class_digit_html_a4bf7e83ffc6375431bedcd0fceb7c7bc"><div class="ttname"><a href="class_digit.html#a4bf7e83ffc6375431bedcd0fceb7c7bc">Digit::DrawObject</a></div><div class="ttdeci">void DrawObject()</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00013">Digit.cpp:13</a></div></div>
+<div class="ttc" id="class_world_object_html_a443ed580b100165115e4fd2d7cdaae43"><div class="ttname"><a href="class_world_object.html#a443ed580b100165115e4fd2d7cdaae43">WorldObject::GetRotate</a></div><div class="ttdeci">Point3D GetRotate()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8cpp_source.html#l00070">WorldObject.cpp:70</a></div></div>
+<div class="ttc" id="class_digit_html_a2657e88581e5ad14679ccb9f3da64c4c"><div class="ttname"><a href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">Digit::ball</a></div><div class="ttdeci">Ball * ball</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8h_source.html#l00014">Digit.h:14</a></div></div>
+<div class="ttc" id="class_digit_html_a8d63592b44e2a80a5c9508302496b38d"><div class="ttname"><a href="class_digit.html#a8d63592b44e2a80a5c9508302496b38d">Digit::position</a></div><div class="ttdeci">int position</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8h_source.html#l00012">Digit.h:12</a></div></div>
+<div class="ttc" id="_textures_8h_html"><div class="ttname"><a href="_textures_8h.html">Textures.h</a></div></div>
 <div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00006">Ball.h:6</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a5d428049115cb9b3ce0fbe5b7433e449"><div class="ttname"><a href="struct_point3_d.html#a5d428049115cb9b3ce0fbe5b7433e449">Point3D::x</a></div><div class="ttdeci">GLfloat x</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
+<div class="ttc" id="class_ball_html_ad4e6eac0cd9afd3d2be2267d6befe18a"><div class="ttname"><a href="class_ball.html#ad4e6eac0cd9afd3d2be2267d6befe18a">Ball::GetDirection</a></div><div class="ttdeci">Point3D GetDirection()</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cpp_source.html#l00042">Ball.cpp:42</a></div></div>
+<div class="ttc" id="_main_8cpp_html_acbb9403577f58d6d07e68ae1c575f737"><div class="ttname"><a href="_main_8cpp.html#acbb9403577f58d6d07e68ae1c575f737">score</a></div><div class="ttdeci">GLfloat * score</div><div class="ttdef"><b>Definition:</b> <a href="_main_8cpp_source.html#l00042">Main.cpp:42</a></div></div>
 <div class="ttc" id="class_world_object_html_ac6a87c572496ee57740aff2bf4cb7c07"><div class="ttname"><a href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">WorldObject::rotate</a></div><div class="ttdeci">Point3D rotate</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00104">WorldObject.h:104</a></div></div>
+<div class="ttc" id="class_digit_html_aa85baa6070fd54b524eb8b0b5bcf01f7"><div class="ttname"><a href="class_digit.html#aa85baa6070fd54b524eb8b0b5bcf01f7">Digit::digit</a></div><div class="ttdeci">int digit</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8h_source.html#l00009">Digit.h:9</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a8dc7ed16862ef24cb1d3e845b40d89f9"><div class="ttname"><a href="struct_point3_d.html#a8dc7ed16862ef24cb1d3e845b40d89f9">Point3D::z</a></div><div class="ttdeci">GLfloat z</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
 <div class="ttc" id="class_textures_html_a3e5839f0cee717b4c7808a49ad9cf040"><div class="ttname"><a href="class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040">Textures::GetInstance</a></div><div class="ttdeci">static Textures * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_textures_8cpp_source.html#l00017">Textures.cpp:17</a></div></div>
+<div class="ttc" id="_digit_8h_html"><div class="ttname"><a href="_digit_8h.html">Digit.h</a></div></div>
+<div class="ttc" id="class_digit_html_a528791513a2feaa3e96b12475f86843f"><div class="ttname"><a href="class_digit.html#a528791513a2feaa3e96b12475f86843f">Digit::SetDigit</a></div><div class="ttdeci">void SetDigit(double digit)</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00050">Digit.cpp:50</a></div></div>
 <div class="ttc" id="class_digit_html_a0cddec852897574becda6e3e1923ca9e"><div class="ttname"><a href="class_digit.html#a0cddec852897574becda6e3e1923ca9e">Digit::UnFollow</a></div><div class="ttdeci">void UnFollow()</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00055">Digit.cpp:55</a></div></div>
+<div class="ttc" id="class_digit_html_addfff408ae5753928dfab13415c77867"><div class="ttname"><a href="class_digit.html#addfff408ae5753928dfab13415c77867">Digit::followPoint</a></div><div class="ttdeci">Point3D followPoint</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8h_source.html#l00018">Digit.h:18</a></div></div>
+<div class="ttc" id="class_world_object_html_a3e290757727e835e6a075d2565e093a7"><div class="ttname"><a href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">WorldObject::translate</a></div><div class="ttdeci">Point3D translate</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00106">WorldObject.h:106</a></div></div>
 <div class="ttc" id="struct_point3_d_html_ac9c0cb7390bde518217651587119ff87"><div class="ttname"><a href="struct_point3_d.html#ac9c0cb7390bde518217651587119ff87">Point3D::rotateY</a></div><div class="ttdeci">Point3D rotateY(GLfloat angle)</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00066">WorldObject.h:66</a></div></div>
 <div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00016">WorldObject.h:16</a></div></div>
+<div class="ttc" id="class_digit_html_ad451d3b0f50985ed2730ba0eb7d09b03"><div class="ttname"><a href="class_digit.html#ad451d3b0f50985ed2730ba0eb7d09b03">Digit::~Digit</a></div><div class="ttdeci">~Digit()</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00009">Digit.cpp:9</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a266c2ec796b3af5f5a232cad101ac278"><div class="ttname"><a href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">Point3D::y</a></div><div class="ttdeci">GLfloat y</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
+<div class="ttc" id="class_digit_html_a874d3909e9453201181d1ce2707e64aa"><div class="ttname"><a href="class_digit.html#a874d3909e9453201181d1ce2707e64aa">Digit::Digit</a></div><div class="ttdeci">Digit(int digit, int position, GLfloat *score)</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00004">Digit.cpp:4</a></div></div>
 <div class="ttc" id="class_digit_html_ae67a2c0b0a951a31b8a618911b87f0bc"><div class="ttname"><a href="class_digit.html#ae67a2c0b0a951a31b8a618911b87f0bc">Digit::Follow</a></div><div class="ttdeci">void Follow(Ball *ball, Point3D followPoint)</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00025">Digit.cpp:25</a></div></div>
 <div class="ttc" id="class_digit_html_a00d932e15f940d2e1e1da94bdeaa498a"><div class="ttname"><a href="class_digit.html#a00d932e15f940d2e1e1da94bdeaa498a">Digit::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00031">Digit.cpp:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,19 +71,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Scene.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Camera.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;WorldObject.h&quot;</span></div>
+<a href="_scene_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_camera_8h.html">Camera.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_world_object_8h.html">WorldObject.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_scene.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html">Scene</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_camera.html">Camera</a>* mainCamera;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_scene.html#a878011b448f85714694abf6ddeee9376">   11</a></span>&#160;        <a class="code" href="class_camera.html">Camera</a>* <a class="code" href="class_scene.html#a878011b448f85714694abf6ddeee9376">mainCamera</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        vector&lt;WorldObject*&gt; sceneObjects;      </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        vector&lt;Updatable*&gt; updateObjects;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_scene.html#a10480179cba116c3a7897aa8903d653a">   14</a></span>&#160;        vector&lt;WorldObject*&gt; <a class="code" href="class_scene.html#a10480179cba116c3a7897aa8903d653a">sceneObjects</a>;      </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">   16</a></span>&#160;        vector&lt;Updatable*&gt; <a class="code" href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">updateObjects</a>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> RemoveUpdatable(<a class="code" href="class_updatable.html">Updatable</a>* <span class="keywordtype">object</span>);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
@@ -100,12 +101,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00093">WorldObject.h:93</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
 <div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="_camera_8h_source.html#l00007">Camera.h:7</a></div></div>
+<div class="ttc" id="class_scene_html_a7cc57f679a11ccf1b3381cefe8f5a22f"><div class="ttname"><a href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">Scene::updateObjects</a></div><div class="ttdeci">vector&lt; Updatable * &gt; updateObjects</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00016">Scene.h:16</a></div></div>
 <div class="ttc" id="class_updatable_html"><div class="ttname"><a href="class_updatable.html">Updatable</a></div><div class="ttdef"><b>Definition:</b> <a href="_updatable_8h_source.html#l00007">Updatable.h:7</a></div></div>
 <div class="ttc" id="class_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00008">Scene.h:8</a></div></div>
+<div class="ttc" id="_world_object_8h_html"><div class="ttname"><a href="_world_object_8h.html">WorldObject.h</a></div></div>
+<div class="ttc" id="_camera_8h_html"><div class="ttname"><a href="_camera_8h.html">Camera.h</a></div></div>
+<div class="ttc" id="class_scene_html_a10480179cba116c3a7897aa8903d653a"><div class="ttname"><a href="class_scene.html#a10480179cba116c3a7897aa8903d653a">Scene::sceneObjects</a></div><div class="ttdeci">vector&lt; WorldObject * &gt; sceneObjects</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00014">Scene.h:14</a></div></div>
+<div class="ttc" id="class_scene_html_a878011b448f85714694abf6ddeee9376"><div class="ttname"><a href="class_scene.html#a878011b448f85714694abf6ddeee9376">Scene::mainCamera</a></div><div class="ttdeci">Camera * mainCamera</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00011">Scene.h:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

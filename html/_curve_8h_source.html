@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,27 +71,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Curve.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="_curve_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;WorldObject.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_world_object_8h.html">WorldObject.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_curve.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_curve.html">Curve</a> : <span class="keyword">public</span> <a class="code" href="class_world_object.html">WorldObject</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                <span class="keywordtype">void</span> DrawObject();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                <span class="keywordtype">int</span> turn; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_curve.html#a4ff6f61e972b5582439782860fa05339">DrawObject</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_curve.html#a0c89d305058a131a2d6c704e1af018e2">    9</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="class_curve.html#a0c89d305058a131a2d6c704e1af018e2">turn</a>; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                <a class="code" href="class_curve.html#a25ea22fdfb1642309a758bf05829b77e">Curve</a>(<span class="keywordtype">int</span> TURN);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                ~<a class="code" href="class_curve.html">Curve</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                <a class="code" href="class_curve.html#a7ce6ff79064e9795241423ed47166539">~Curve</a>();</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
 <div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00093">WorldObject.h:93</a></div></div>
+<div class="ttc" id="class_curve_html_a0c89d305058a131a2d6c704e1af018e2"><div class="ttname"><a href="class_curve.html#a0c89d305058a131a2d6c704e1af018e2">Curve::turn</a></div><div class="ttdeci">int turn</div><div class="ttdef"><b>Definition:</b> <a href="_curve_8h_source.html#l00009">Curve.h:9</a></div></div>
+<div class="ttc" id="class_curve_html_a4ff6f61e972b5582439782860fa05339"><div class="ttname"><a href="class_curve.html#a4ff6f61e972b5582439782860fa05339">Curve::DrawObject</a></div><div class="ttdeci">void DrawObject()</div><div class="ttdef"><b>Definition:</b> <a href="_curve_8cpp_source.html#l00027">Curve.cpp:27</a></div></div>
+<div class="ttc" id="class_curve_html_a7ce6ff79064e9795241423ed47166539"><div class="ttname"><a href="class_curve.html#a7ce6ff79064e9795241423ed47166539">Curve::~Curve</a></div><div class="ttdeci">~Curve()</div><div class="ttdef"><b>Definition:</b> <a href="_curve_8cpp_source.html#l00020">Curve.cpp:20</a></div></div>
+<div class="ttc" id="_world_object_8h_html"><div class="ttname"><a href="_world_object_8h.html">WorldObject.h</a></div></div>
 <div class="ttc" id="class_curve_html_a25ea22fdfb1642309a758bf05829b77e"><div class="ttname"><a href="class_curve.html#a25ea22fdfb1642309a758bf05829b77e">Curve::Curve</a></div><div class="ttdeci">Curve(int TURN)</div><div class="ttdef"><b>Definition:</b> <a href="_curve_8cpp_source.html#l00016">Curve.cpp:16</a></div></div>
 <div class="ttc" id="class_curve_html"><div class="ttname"><a href="class_curve.html">Curve</a></div><div class="ttdef"><b>Definition:</b> <a href="_curve_8h_source.html#l00005">Curve.h:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

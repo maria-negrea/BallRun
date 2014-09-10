@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,31 +71,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Tree.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Tree.h&quot;</span></div>
+<a href="_tree_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tree_8h.html">Tree.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;Tree::Tree(<span class="keywordtype">double</span> width, <span class="keywordtype">double</span> height, <span class="keywordtype">int</span> numberOfBranches, <span class="keywordtype">int</span> level)</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_tree.html#a5f8726222034fdd427bf41abb2f1dced">    5</a></span>&#160;<a class="code" href="class_tree.html#a5f8726222034fdd427bf41abb2f1dced">Tree::Tree</a>(<span class="keywordtype">double</span> width, <span class="keywordtype">double</span> height, <span class="keywordtype">int</span> numberOfBranches, <span class="keywordtype">int</span> level)</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;:<a class="code" href="class_plant.html">Plant</a>(width, height, numberOfBranches, level)</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        textureIndex=6;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;numberOfBranches;i++)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="class_plant.html#aeaaf035b21354b12a272f66db178f5cb">textureIndex</a>=6;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="class_plant.html#a4f86c46865d6211636140cef8805c6ee">numberOfBranches</a>;i++)</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                anglesY.push_back(GetRandomGLfloat(0.0, 360.0));</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                anglesZ.push_back(GetRandomGLfloat(10.0, 60.0));</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                branchesRadius.push_back(GetRandomGLfloat(this-&gt;radius/4, this-&gt;radius/2));</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                <a class="code" href="class_plant.html#a16888c602067089a5aaa25ab6a92466f">anglesY</a>.push_back(<a class="code" href="class_plant.html#a38de3a3700e430ebecffa518977d2880">GetRandomGLfloat</a>(0.0, 360.0));</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                <a class="code" href="class_plant.html#a298b462dbd0b350d08b5262990a2576b">anglesZ</a>.push_back(<a class="code" href="class_plant.html#a38de3a3700e430ebecffa518977d2880">GetRandomGLfloat</a>(10.0, 60.0));</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                <a class="code" href="class_plant.html#a4d8a4ea7bbede32b0f6ba1f3415d8f54">branchesRadius</a>.push_back(<a class="code" href="class_plant.html#a38de3a3700e430ebecffa518977d2880">GetRandomGLfloat</a>(this-&gt;<a class="code" href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">radius</a>/4, this-&gt;<a class="code" href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">radius</a>/2));</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;Tree::~Tree(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_tree.html#a78df615b812e94c051407e78df467196">   17</a></span>&#160;<a class="code" href="class_tree.html#a78df615b812e94c051407e78df467196">Tree::~Tree</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> Tree:: SetBranchTop(vector&lt;Point3D&gt; base, vector&lt;Point3D&gt;&amp; top, <span class="keywordtype">int</span> currentLevel, GLfloat radius, GLfloat pass, GLfloat index)</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_tree.html#ab0297a975c2e94b18773edb3e6eaf289">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#ab0297a975c2e94b18773edb3e6eaf289">Tree:: SetBranchTop</a>(vector&lt;Point3D&gt; base, vector&lt;Point3D&gt;&amp; top, <span class="keywordtype">int</span> currentLevel, GLfloat radius, GLfloat pass, GLfloat index)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">double</span> value=heights[index]/numberOfBranches;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> randomValue=directions[index];</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">double</span> t = 0; t &lt; 2 * PI; t = t + 1.5)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">double</span> value=<a class="code" href="class_plant.html#aa12026d894eba8a2764d5edf94757850">heights</a>[index]/<a class="code" href="class_plant.html#a4f86c46865d6211636140cef8805c6ee">numberOfBranches</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> randomValue=<a class="code" href="class_plant.html#a3ec2334fa4c49998f74f62240eaf7537">directions</a>[index];</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">double</span> t = 0; t &lt; 2 * <a class="code" href="_plant_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>; t = t + 1.5)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                {                       </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                        <span class="keywordflow">switch</span>(randomValue)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                        {</div>
@@ -115,23 +116,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> Tree::SetInitialPass(GLfloat&amp; pass, GLfloat radius)</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_tree.html#afe594a748c525993d67ad51e005fc402">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#afe594a748c525993d67ad51e005fc402">Tree::SetInitialPass</a>(GLfloat&amp; pass, GLfloat radius)</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        pass=radius/6;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> Tree::IncrementPass(GLfloat&amp; pass, GLfloat radius)</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_tree.html#ae5a8dc3f5f4f94cd7cdf75ca1124cbc5">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#ae5a8dc3f5f4f94cd7cdf75ca1124cbc5">Tree::IncrementPass</a>(GLfloat&amp; pass, GLfloat radius)</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        pass+=radius/6;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="ttc" id="class_tree_html_ae5a8dc3f5f4f94cd7cdf75ca1124cbc5"><div class="ttname"><a href="class_tree.html#ae5a8dc3f5f4f94cd7cdf75ca1124cbc5">Tree::IncrementPass</a></div><div class="ttdeci">void IncrementPass(GLfloat &amp;pass, GLfloat radius)</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8cpp_source.html#l00051">Tree.cpp:51</a></div></div>
+<div class="ttc" id="class_plant_html_a16888c602067089a5aaa25ab6a92466f"><div class="ttname"><a href="class_plant.html#a16888c602067089a5aaa25ab6a92466f">Plant::anglesY</a></div><div class="ttdeci">vector&lt; GLfloat &gt; anglesY</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00014">Plant.h:14</a></div></div>
+<div class="ttc" id="class_plant_html_a4f86c46865d6211636140cef8805c6ee"><div class="ttname"><a href="class_plant.html#a4f86c46865d6211636140cef8805c6ee">Plant::numberOfBranches</a></div><div class="ttdeci">int numberOfBranches</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00019">Plant.h:19</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_plant_html_a298b462dbd0b350d08b5262990a2576b"><div class="ttname"><a href="class_plant.html#a298b462dbd0b350d08b5262990a2576b">Plant::anglesZ</a></div><div class="ttdeci">vector&lt; GLfloat &gt; anglesZ</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00015">Plant.h:15</a></div></div>
+<div class="ttc" id="class_plant_html_abef0f751fe6b1b43ed208966a70b4ab3"><div class="ttname"><a href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">Plant::radius</a></div><div class="ttdeci">GLfloat radius</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00012">Plant.h:12</a></div></div>
+<div class="ttc" id="class_tree_html_a78df615b812e94c051407e78df467196"><div class="ttname"><a href="class_tree.html#a78df615b812e94c051407e78df467196">Tree::~Tree</a></div><div class="ttdeci">~Tree(void)</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8cpp_source.html#l00017">Tree.cpp:17</a></div></div>
+<div class="ttc" id="class_plant_html_a4d8a4ea7bbede32b0f6ba1f3415d8f54"><div class="ttname"><a href="class_plant.html#a4d8a4ea7bbede32b0f6ba1f3415d8f54">Plant::branchesRadius</a></div><div class="ttdeci">vector&lt; GLfloat &gt; branchesRadius</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00016">Plant.h:16</a></div></div>
+<div class="ttc" id="class_tree_html_a5f8726222034fdd427bf41abb2f1dced"><div class="ttname"><a href="class_tree.html#a5f8726222034fdd427bf41abb2f1dced">Tree::Tree</a></div><div class="ttdeci">Tree(double width, double height, int numberOfBranches, int level)</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8cpp_source.html#l00005">Tree.cpp:5</a></div></div>
+<div class="ttc" id="_tree_8h_html"><div class="ttname"><a href="_tree_8h.html">Tree.h</a></div></div>
+<div class="ttc" id="_plant_8h_html_a598a3330b3c21701223ee0ca14316eca"><div class="ttname"><a href="_plant_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a></div><div class="ttdeci">#define PI</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00007">Plant.h:7</a></div></div>
+<div class="ttc" id="class_plant_html_aa12026d894eba8a2764d5edf94757850"><div class="ttname"><a href="class_plant.html#aa12026d894eba8a2764d5edf94757850">Plant::heights</a></div><div class="ttdeci">vector&lt; GLfloat &gt; heights</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00018">Plant.h:18</a></div></div>
+<div class="ttc" id="class_tree_html_ab0297a975c2e94b18773edb3e6eaf289"><div class="ttname"><a href="class_tree.html#ab0297a975c2e94b18773edb3e6eaf289">Tree::SetBranchTop</a></div><div class="ttdeci">void SetBranchTop(vector&lt; Point3D &gt; base, vector&lt; Point3D &gt; &amp;top, int currentLevel, GLfloat radius, GLfloat pass, GLfloat index)</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8cpp_source.html#l00021">Tree.cpp:21</a></div></div>
 <div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00016">WorldObject.h:16</a></div></div>
 <div class="ttc" id="class_plant_html"><div class="ttname"><a href="class_plant.html">Plant</a></div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00009">Plant.h:9</a></div></div>
+<div class="ttc" id="class_plant_html_a38de3a3700e430ebecffa518977d2880"><div class="ttname"><a href="class_plant.html#a38de3a3700e430ebecffa518977d2880">Plant::GetRandomGLfloat</a></div><div class="ttdeci">friend GLfloat GetRandomGLfloat(GLfloat min, GLfloat max)</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8cpp_source.html#l00145">Plant.cpp:145</a></div></div>
+<div class="ttc" id="class_plant_html_a3ec2334fa4c49998f74f62240eaf7537"><div class="ttname"><a href="class_plant.html#a3ec2334fa4c49998f74f62240eaf7537">Plant::directions</a></div><div class="ttdeci">vector&lt; int &gt; directions</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00017">Plant.h:17</a></div></div>
+<div class="ttc" id="class_tree_html_afe594a748c525993d67ad51e005fc402"><div class="ttname"><a href="class_tree.html#afe594a748c525993d67ad51e005fc402">Tree::SetInitialPass</a></div><div class="ttdeci">void SetInitialPass(GLfloat &amp;pass, GLfloat radius)</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8cpp_source.html#l00046">Tree.cpp:46</a></div></div>
+<div class="ttc" id="class_plant_html_aeaaf035b21354b12a272f66db178f5cb"><div class="ttname"><a href="class_plant.html#aeaaf035b21354b12a272f66db178f5cb">Plant::textureIndex</a></div><div class="ttdeci">int textureIndex</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00020">Plant.h:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

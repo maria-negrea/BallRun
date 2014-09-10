@@ -58,7 +58,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -76,6 +76,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Cactus Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_cactus_8h_source.html">Cactus.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Cactus:</div>
 <div class="dyncontent">
@@ -89,50 +91,45 @@ Inheritance diagram for Cactus:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a93bded0d899fc3b89e6be5f010d210e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93bded0d899fc3b89e6be5f010d210e9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Cactus</b> (double <a class="el" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a>, double height, int numberOfBranches, int level)</td></tr>
+<tr class="memitem:a93bded0d899fc3b89e6be5f010d210e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cactus.html#a93bded0d899fc3b89e6be5f010d210e9">Cactus</a> (double <a class="el" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a>, double <a class="el" href="class_world_object.html#a0457012633125921dd5c43e8538e8674">height</a>, int <a class="el" href="class_plant.html#a4f86c46865d6211636140cef8805c6ee">numberOfBranches</a>, int <a class="el" href="class_plant.html#ab49e92a2ab4ecdc762b5a1711fa3d65f">level</a>)</td></tr>
 <tr class="separator:a93bded0d899fc3b89e6be5f010d210e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae39a9e242e327a3f6c89126fb6d24a6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae39a9e242e327a3f6c89126fb6d24a6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBranchTop</b> (vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt; base, vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt; &amp;top, int currentLevel, GLfloat radius, GLfloat pass, GLfloat index)</td></tr>
+<tr class="memitem:ae39a9e242e327a3f6c89126fb6d24a6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cactus.html#ae39a9e242e327a3f6c89126fb6d24a6b">SetBranchTop</a> (vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt; base, vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt; &amp;top, int currentLevel, GLfloat <a class="el" href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">radius</a>, GLfloat pass, GLfloat index)</td></tr>
 <tr class="separator:ae39a9e242e327a3f6c89126fb6d24a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a302b89f9c3ff94ac749bc870728c9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a302b89f9c3ff94ac749bc870728c9e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetInitialPass</b> (GLfloat &amp;pass, GLfloat radius)</td></tr>
+<tr class="memitem:a4a302b89f9c3ff94ac749bc870728c9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cactus.html#a4a302b89f9c3ff94ac749bc870728c9e">SetInitialPass</a> (GLfloat &amp;pass, GLfloat <a class="el" href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">radius</a>)</td></tr>
 <tr class="separator:a4a302b89f9c3ff94ac749bc870728c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae13abc19633a73f5647fb7da08b87faa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae13abc19633a73f5647fb7da08b87faa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>IncrementPass</b> (GLfloat &amp;pass, GLfloat radius)</td></tr>
+<tr class="memitem:ae13abc19633a73f5647fb7da08b87faa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cactus.html#ae13abc19633a73f5647fb7da08b87faa">IncrementPass</a> (GLfloat &amp;pass, GLfloat <a class="el" href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">radius</a>)</td></tr>
 <tr class="separator:ae13abc19633a73f5647fb7da08b87faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a313ed9b42237dee8f91624b2fdd6de0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cactus.html#a313ed9b42237dee8f91624b2fdd6de0d">~Cactus</a> (void)</td></tr>
+<tr class="separator:a313ed9b42237dee8f91624b2fdd6de0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_plant"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_plant')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_plant.html">Plant</a></td></tr>
-<tr class="memitem:ac5fefc6f365188701cbc72d92ca42af1 inherit pub_methods_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5fefc6f365188701cbc72d92ca42af1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Plant</b> (double <a class="el" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a>, double height, int numberOfBranches, int level)</td></tr>
+<tr class="memitem:ac5fefc6f365188701cbc72d92ca42af1 inherit pub_methods_class_plant"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#ac5fefc6f365188701cbc72d92ca42af1">Plant</a> (double <a class="el" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a>, double <a class="el" href="class_world_object.html#a0457012633125921dd5c43e8538e8674">height</a>, int <a class="el" href="class_plant.html#a4f86c46865d6211636140cef8805c6ee">numberOfBranches</a>, int <a class="el" href="class_plant.html#ab49e92a2ab4ecdc762b5a1711fa3d65f">level</a>)</td></tr>
 <tr class="separator:ac5fefc6f365188701cbc72d92ca42af1 inherit pub_methods_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63f88c71ee3a3da6d6bdcf0111268e1 inherit pub_methods_class_plant"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#ac63f88c71ee3a3da6d6bdcf0111268e1">~Plant</a> (void)</td></tr>
+<tr class="separator:ac63f88c71ee3a3da6d6bdcf0111268e1 inherit pub_methods_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac04e2a45a28c7fa0d97b3c764128c9e5 inherit pub_methods_class_plant"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#ac04e2a45a28c7fa0d97b3c764128c9e5">DrawObject</a> ()</td></tr>
 <tr class="separator:ac04e2a45a28c7fa0d97b3c764128c9e5 inherit pub_methods_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4b9655b2932b5dab8cc67671ca9e89f inherit pub_methods_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4b9655b2932b5dab8cc67671ca9e89f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawBranch</b> (vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt;base, GLfloat radius, int currentLevel)</td></tr>
+<tr class="memitem:ac4b9655b2932b5dab8cc67671ca9e89f inherit pub_methods_class_plant"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#ac4b9655b2932b5dab8cc67671ca9e89f">DrawBranch</a> (vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt;base, GLfloat <a class="el" href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">radius</a>, int currentLevel)</td></tr>
 <tr class="separator:ac4b9655b2932b5dab8cc67671ca9e89f inherit pub_methods_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d678cebc0b25205820d111a27d90344 inherit pub_methods_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d678cebc0b25205820d111a27d90344"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PutTextureOnCylinder</b> (vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt; base, vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt; top)</td></tr>
+<tr class="memitem:a8d678cebc0b25205820d111a27d90344 inherit pub_methods_class_plant"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#a8d678cebc0b25205820d111a27d90344">PutTextureOnCylinder</a> (vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt; base, vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt; top)</td></tr>
 <tr class="separator:a8d678cebc0b25205820d111a27d90344 inherit pub_methods_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_world_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_world_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_world_object.html">WorldObject</a></td></tr>
-<tr class="memitem:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a464fd2e8938ae8ca4e778235819d616a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WorldObject</b> (GLfloat W=0.0, GLfloat H=0.0, GLfloat X=0.0, GLfloat Y=0.0, GLfloat Z=0.0)</td></tr>
+<tr class="memitem:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a464fd2e8938ae8ca4e778235819d616a">WorldObject</a> (GLfloat W=0.0, GLfloat H=0.0, GLfloat X=0.0, GLfloat Y=0.0, GLfloat Z=0.0)</td></tr>
 <tr class="separator:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95de7162381945513e86fcf354297da9 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> point)</td></tr>
+<tr class="memitem:a287e5b87a26133cd35f3015268d2a5a3 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a287e5b87a26133cd35f3015268d2a5a3">~WorldObject</a> ()</td></tr>
+<tr class="separator:a287e5b87a26133cd35f3015268d2a5a3 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95de7162381945513e86fcf354297da9 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> <a class="el" href="_main_8cpp.html#a9933aa50b0707f2f424f2fe8d40b08c1">point</a>)</td></tr>
 <tr class="separator:a95de7162381945513e86fcf354297da9 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8be4166121ff9a8c90cc1938807dd2f2 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">Rotate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> point)</td></tr>
+<tr class="memitem:a8be4166121ff9a8c90cc1938807dd2f2 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">Rotate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> <a class="el" href="_main_8cpp.html#a9933aa50b0707f2f424f2fe8d40b08c1">point</a>)</td></tr>
 <tr class="separator:a8be4166121ff9a8c90cc1938807dd2f2 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae46caed8b37233c2b9e0383a26cb9f87 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae46caed8b37233c2b9e0383a26cb9f87"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
+<tr class="memitem:ae46caed8b37233c2b9e0383a26cb9f87 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#ae46caed8b37233c2b9e0383a26cb9f87">Draw</a> ()</td></tr>
 <tr class="separator:ae46caed8b37233c2b9e0383a26cb9f87 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a3158dc13f636eb3835e22fdc32a7b9 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a3a3158dc13f636eb3835e22fdc32a7b9">GetForward</a> ()</td></tr>
 <tr class="separator:a3a3158dc13f636eb3835e22fdc32a7b9 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba6fb82b134193bdcb5882a7e83e937a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#aba6fb82b134193bdcb5882a7e83e937a">GetRight</a> ()</td></tr>
 <tr class="separator:aba6fb82b134193bdcb5882a7e83e937a inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff5a65911deeaedf114357217d16c66f"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetTranslate</b> ()</td></tr>
+<tr class="memitem:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">GetTranslate</a> ()</td></tr>
 <tr class="separator:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a443ed580b100165115e4fd2d7cdaae43 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a443ed580b100165115e4fd2d7cdaae43"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetRotate</b> ()</td></tr>
+<tr class="memitem:a443ed580b100165115e4fd2d7cdaae43 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a443ed580b100165115e4fd2d7cdaae43">GetRotate</a> ()</td></tr>
 <tr class="separator:a443ed580b100165115e4fd2d7cdaae43 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -143,59 +140,245 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a4873b7b568e1ce3886092823834c16b3 inherit pro_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a4873b7b568e1ce3886092823834c16b3">ModifyPerspectiveBack</a> ()</td></tr>
 <tr class="separator:a4873b7b568e1ce3886092823834c16b3 inherit pro_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_plant"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_plant')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_plant.html">Plant</a></td></tr>
-<tr class="memitem:abef0f751fe6b1b43ed208966a70b4ab3 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abef0f751fe6b1b43ed208966a70b4ab3"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
+<tr class="memitem:abef0f751fe6b1b43ed208966a70b4ab3 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">radius</a></td></tr>
 <tr class="separator:abef0f751fe6b1b43ed208966a70b4ab3 inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71a5a857d8a0adcfb612dadfcfffc731 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71a5a857d8a0adcfb612dadfcfffc731"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>maxHeight</b></td></tr>
+<tr class="memitem:a71a5a857d8a0adcfb612dadfcfffc731 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#a71a5a857d8a0adcfb612dadfcfffc731">maxHeight</a></td></tr>
 <tr class="separator:a71a5a857d8a0adcfb612dadfcfffc731 inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16888c602067089a5aaa25ab6a92466f inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16888c602067089a5aaa25ab6a92466f"></a>
-vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>anglesY</b></td></tr>
+<tr class="memitem:a16888c602067089a5aaa25ab6a92466f inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#a16888c602067089a5aaa25ab6a92466f">anglesY</a></td></tr>
 <tr class="separator:a16888c602067089a5aaa25ab6a92466f inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a298b462dbd0b350d08b5262990a2576b inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a298b462dbd0b350d08b5262990a2576b"></a>
-vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>anglesZ</b></td></tr>
+<tr class="memitem:a298b462dbd0b350d08b5262990a2576b inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#a298b462dbd0b350d08b5262990a2576b">anglesZ</a></td></tr>
 <tr class="separator:a298b462dbd0b350d08b5262990a2576b inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8a4ea7bbede32b0f6ba1f3415d8f54 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d8a4ea7bbede32b0f6ba1f3415d8f54"></a>
-vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>branchesRadius</b></td></tr>
+<tr class="memitem:a4d8a4ea7bbede32b0f6ba1f3415d8f54 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#a4d8a4ea7bbede32b0f6ba1f3415d8f54">branchesRadius</a></td></tr>
 <tr class="separator:a4d8a4ea7bbede32b0f6ba1f3415d8f54 inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ec2334fa4c49998f74f62240eaf7537 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ec2334fa4c49998f74f62240eaf7537"></a>
-vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>directions</b></td></tr>
+<tr class="memitem:a3ec2334fa4c49998f74f62240eaf7537 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#a3ec2334fa4c49998f74f62240eaf7537">directions</a></td></tr>
 <tr class="separator:a3ec2334fa4c49998f74f62240eaf7537 inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa12026d894eba8a2764d5edf94757850 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa12026d894eba8a2764d5edf94757850"></a>
-vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>heights</b></td></tr>
+<tr class="memitem:aa12026d894eba8a2764d5edf94757850 inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#aa12026d894eba8a2764d5edf94757850">heights</a></td></tr>
 <tr class="separator:aa12026d894eba8a2764d5edf94757850 inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f86c46865d6211636140cef8805c6ee inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f86c46865d6211636140cef8805c6ee"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfBranches</b></td></tr>
+<tr class="memitem:a4f86c46865d6211636140cef8805c6ee inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#a4f86c46865d6211636140cef8805c6ee">numberOfBranches</a></td></tr>
 <tr class="separator:a4f86c46865d6211636140cef8805c6ee inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaaf035b21354b12a272f66db178f5cb inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaaf035b21354b12a272f66db178f5cb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>textureIndex</b></td></tr>
+<tr class="memitem:aeaaf035b21354b12a272f66db178f5cb inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#aeaaf035b21354b12a272f66db178f5cb">textureIndex</a></td></tr>
 <tr class="separator:aeaaf035b21354b12a272f66db178f5cb inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab49e92a2ab4ecdc762b5a1711fa3d65f inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab49e92a2ab4ecdc762b5a1711fa3d65f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>level</b></td></tr>
+<tr class="memitem:ab49e92a2ab4ecdc762b5a1711fa3d65f inherit pro_attribs_class_plant"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plant.html#ab49e92a2ab4ecdc762b5a1711fa3d65f">level</a></td></tr>
 <tr class="separator:ab49e92a2ab4ecdc762b5a1711fa3d65f inherit pro_attribs_class_plant"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_world_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_world_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_world_object.html">WorldObject</a></td></tr>
 <tr class="memitem:ac6a87c572496ee57740aff2bf4cb7c07 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a></td></tr>
 <tr class="separator:ac6a87c572496ee57740aff2bf4cb7c07 inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e290757727e835e6a075d2565e093a7 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e290757727e835e6a075d2565e093a7"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b></td></tr>
+<tr class="memitem:a3e290757727e835e6a075d2565e093a7 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a></td></tr>
 <tr class="separator:a3e290757727e835e6a075d2565e093a7 inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d4ce305467868cdbb17fc25759408f inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a></td></tr>
 <tr class="separator:aa4d4ce305467868cdbb17fc25759408f inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0457012633125921dd5c43e8538e8674 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0457012633125921dd5c43e8538e8674"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+<tr class="memitem:a0457012633125921dd5c43e8538e8674 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a0457012633125921dd5c43e8538e8674">height</a></td></tr>
 <tr class="separator:a0457012633125921dd5c43e8538e8674 inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_cactus_8h_source.html#l00004">4</a> of file <a class="el" href="_cactus_8h_source.html">Cactus.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a93bded0d899fc3b89e6be5f010d210e9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cactus::Cactus </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numberOfBranches</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_cactus_8cpp_source.html#l00003">3</a> of file <a class="el" href="_cactus_8cpp_source.html">Cactus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a313ed9b42237dee8f91624b2fdd6de0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cactus::~Cactus </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_cactus_8cpp_source.html#l00083">83</a> of file <a class="el" href="_cactus_8cpp_source.html">Cactus.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae13abc19633a73f5647fb7da08b87faa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cactus::IncrementPass </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat &amp;&#160;</td>
+          <td class="paramname"><em>pass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_plant.html#a77a88d6d25e58b0cf9bd5f6aaa5d9572">Plant</a>.</p>
+
+<p>Definition at line <a class="el" href="_cactus_8cpp_source.html#l00079">79</a> of file <a class="el" href="_cactus_8cpp_source.html">Cactus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae39a9e242e327a3f6c89126fb6d24a6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cactus::SetBranchTop </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt;&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="struct_point3_d.html">Point3D</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentLevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>pass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_plant.html#a9660240dc434e603ea26335eed9e3c7a">Plant</a>.</p>
+
+<p>Definition at line <a class="el" href="_cactus_8cpp_source.html#l00015">15</a> of file <a class="el" href="_cactus_8cpp_source.html">Cactus.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a302b89f9c3ff94ac749bc870728c9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cactus::SetInitialPass </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat &amp;&#160;</td>
+          <td class="paramname"><em>pass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_plant.html#a66954b597c49fc536cebe914697b762b">Plant</a>.</p>
+
+<p>Definition at line <a class="el" href="_cactus_8cpp_source.html#l00074">74</a> of file <a class="el" href="_cactus_8cpp_source.html">Cactus.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_cactus_8h_source.html">Cactus.h</a></li>
 <li><a class="el" href="_cactus_8cpp_source.html">Cactus.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ball',['ball',['../class_camera.html#ac949c9480f9e1935fcfe31b1b88f12bb',1,'Camera']]]
+  ['anglesy',['anglesY',['../class_plant.html#a16888c602067089a5aaa25ab6a92466f',1,'Plant']]],
+  ['anglesz',['anglesZ',['../class_plant.html#a298b462dbd0b350d08b5262990a2576b',1,'Plant']]]
 ];

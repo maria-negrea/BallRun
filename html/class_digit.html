@@ -58,7 +58,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -71,11 +71,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_digit-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Digit Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_digit_8h_source.html">Digit.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Digit:</div>
 <div class="dyncontent">
@@ -89,36 +93,60 @@ Inheritance diagram for Digit:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a874d3909e9453201181d1ce2707e64aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a874d3909e9453201181d1ce2707e64aa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Digit</b> (int digit, int position, GLfloat *score)</td></tr>
+<tr class="memitem:a874d3909e9453201181d1ce2707e64aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a874d3909e9453201181d1ce2707e64aa">Digit</a> (int <a class="el" href="class_digit.html#aa85baa6070fd54b524eb8b0b5bcf01f7">digit</a>, int <a class="el" href="class_digit.html#a8d63592b44e2a80a5c9508302496b38d">position</a>, GLfloat *<a class="el" href="class_digit.html#a793b3cc79d4d0a1044e49b4a46990eff">score</a>)</td></tr>
 <tr class="separator:a874d3909e9453201181d1ce2707e64aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae67a2c0b0a951a31b8a618911b87f0bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#ae67a2c0b0a951a31b8a618911b87f0bc">Follow</a> (<a class="el" href="class_ball.html">Ball</a> *ball, <a class="el" href="struct_point3_d.html">Point3D</a> followPoint)</td></tr>
+<tr class="memitem:ad451d3b0f50985ed2730ba0eb7d09b03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#ad451d3b0f50985ed2730ba0eb7d09b03">~Digit</a> ()</td></tr>
+<tr class="separator:ad451d3b0f50985ed2730ba0eb7d09b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67a2c0b0a951a31b8a618911b87f0bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#ae67a2c0b0a951a31b8a618911b87f0bc">Follow</a> (<a class="el" href="class_ball.html">Ball</a> *<a class="el" href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">ball</a>, <a class="el" href="struct_point3_d.html">Point3D</a> <a class="el" href="class_digit.html#addfff408ae5753928dfab13415c77867">followPoint</a>)</td></tr>
 <tr class="separator:ae67a2c0b0a951a31b8a618911b87f0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cddec852897574becda6e3e1923ca9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a0cddec852897574becda6e3e1923ca9e">UnFollow</a> ()</td></tr>
 <tr class="separator:a0cddec852897574becda6e3e1923ca9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00d932e15f940d2e1e1da94bdeaa498a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a00d932e15f940d2e1e1da94bdeaa498a">Update</a> ()</td></tr>
 <tr class="separator:a00d932e15f940d2e1e1da94bdeaa498a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_world_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_world_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_world_object.html">WorldObject</a></td></tr>
-<tr class="memitem:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a464fd2e8938ae8ca4e778235819d616a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WorldObject</b> (GLfloat W=0.0, GLfloat H=0.0, GLfloat X=0.0, GLfloat Y=0.0, GLfloat Z=0.0)</td></tr>
+<tr class="memitem:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a464fd2e8938ae8ca4e778235819d616a">WorldObject</a> (GLfloat W=0.0, GLfloat H=0.0, GLfloat X=0.0, GLfloat Y=0.0, GLfloat Z=0.0)</td></tr>
 <tr class="separator:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95de7162381945513e86fcf354297da9 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> point)</td></tr>
+<tr class="memitem:a287e5b87a26133cd35f3015268d2a5a3 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a287e5b87a26133cd35f3015268d2a5a3">~WorldObject</a> ()</td></tr>
+<tr class="separator:a287e5b87a26133cd35f3015268d2a5a3 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95de7162381945513e86fcf354297da9 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a95de7162381945513e86fcf354297da9">Translate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> <a class="el" href="_main_8cpp.html#a9933aa50b0707f2f424f2fe8d40b08c1">point</a>)</td></tr>
 <tr class="separator:a95de7162381945513e86fcf354297da9 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8be4166121ff9a8c90cc1938807dd2f2 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">Rotate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> point)</td></tr>
+<tr class="memitem:a8be4166121ff9a8c90cc1938807dd2f2 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a8be4166121ff9a8c90cc1938807dd2f2">Rotate</a> (<a class="el" href="struct_point3_d.html">Point3D</a> <a class="el" href="_main_8cpp.html#a9933aa50b0707f2f424f2fe8d40b08c1">point</a>)</td></tr>
 <tr class="separator:a8be4166121ff9a8c90cc1938807dd2f2 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae46caed8b37233c2b9e0383a26cb9f87 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae46caed8b37233c2b9e0383a26cb9f87"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
+<tr class="memitem:ae46caed8b37233c2b9e0383a26cb9f87 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#ae46caed8b37233c2b9e0383a26cb9f87">Draw</a> ()</td></tr>
 <tr class="separator:ae46caed8b37233c2b9e0383a26cb9f87 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a3158dc13f636eb3835e22fdc32a7b9 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a3a3158dc13f636eb3835e22fdc32a7b9">GetForward</a> ()</td></tr>
 <tr class="separator:a3a3158dc13f636eb3835e22fdc32a7b9 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba6fb82b134193bdcb5882a7e83e937a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#aba6fb82b134193bdcb5882a7e83e937a">GetRight</a> ()</td></tr>
 <tr class="separator:aba6fb82b134193bdcb5882a7e83e937a inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff5a65911deeaedf114357217d16c66f"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetTranslate</b> ()</td></tr>
+<tr class="memitem:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#aff5a65911deeaedf114357217d16c66f">GetTranslate</a> ()</td></tr>
 <tr class="separator:aff5a65911deeaedf114357217d16c66f inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a443ed580b100165115e4fd2d7cdaae43 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a443ed580b100165115e4fd2d7cdaae43"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetRotate</b> ()</td></tr>
+<tr class="memitem:a443ed580b100165115e4fd2d7cdaae43 inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a443ed580b100165115e4fd2d7cdaae43">GetRotate</a> ()</td></tr>
 <tr class="separator:a443ed580b100165115e4fd2d7cdaae43 inherit pub_methods_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_updatable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_updatable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_updatable.html">Updatable</a></td></tr>
+<tr class="memitem:a9a8b6c0e34f2958db872b6090455f90d inherit pub_methods_class_updatable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_updatable.html#a9a8b6c0e34f2958db872b6090455f90d">Updatable</a> ()</td></tr>
+<tr class="separator:a9a8b6c0e34f2958db872b6090455f90d inherit pub_methods_class_updatable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d575546f727080c9153a05986202cc1 inherit pub_methods_class_updatable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_updatable.html#a8d575546f727080c9153a05986202cc1">~Updatable</a> ()</td></tr>
+<tr class="separator:a8d575546f727080c9153a05986202cc1 inherit pub_methods_class_updatable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4bf7e83ffc6375431bedcd0fceb7c7bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a4bf7e83ffc6375431bedcd0fceb7c7bc">DrawObject</a> ()</td></tr>
+<tr class="separator:a4bf7e83ffc6375431bedcd0fceb7c7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528791513a2feaa3e96b12475f86843f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a528791513a2feaa3e96b12475f86843f">SetDigit</a> (double <a class="el" href="class_digit.html#aa85baa6070fd54b524eb8b0b5bcf01f7">digit</a>)</td></tr>
+<tr class="separator:a528791513a2feaa3e96b12475f86843f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa85baa6070fd54b524eb8b0b5bcf01f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#aa85baa6070fd54b524eb8b0b5bcf01f7">digit</a></td></tr>
+<tr class="separator:aa85baa6070fd54b524eb8b0b5bcf01f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d63592b44e2a80a5c9508302496b38d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a8d63592b44e2a80a5c9508302496b38d">position</a></td></tr>
+<tr class="separator:a8d63592b44e2a80a5c9508302496b38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2657e88581e5ad14679ccb9f3da64c4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ball.html">Ball</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a2657e88581e5ad14679ccb9f3da64c4c">ball</a></td></tr>
+<tr class="separator:a2657e88581e5ad14679ccb9f3da64c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793b3cc79d4d0a1044e49b4a46990eff"><td class="memItemLeft" align="right" valign="top">GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a793b3cc79d4d0a1044e49b4a46990eff">score</a></td></tr>
+<tr class="separator:a793b3cc79d4d0a1044e49b4a46990eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addfff408ae5753928dfab13415c77867"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#addfff408ae5753928dfab13415c77867">followPoint</a></td></tr>
+<tr class="separator:addfff408ae5753928dfab13415c77867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -130,19 +158,98 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_world_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_world_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_world_object.html">WorldObject</a></td></tr>
 <tr class="memitem:ac6a87c572496ee57740aff2bf4cb7c07 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#ac6a87c572496ee57740aff2bf4cb7c07">rotate</a></td></tr>
 <tr class="separator:ac6a87c572496ee57740aff2bf4cb7c07 inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e290757727e835e6a075d2565e093a7 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e290757727e835e6a075d2565e093a7"></a>
-<a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b></td></tr>
+<tr class="memitem:a3e290757727e835e6a075d2565e093a7 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a3e290757727e835e6a075d2565e093a7">translate</a></td></tr>
 <tr class="separator:a3e290757727e835e6a075d2565e093a7 inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d4ce305467868cdbb17fc25759408f inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a></td></tr>
 <tr class="separator:aa4d4ce305467868cdbb17fc25759408f inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0457012633125921dd5c43e8538e8674 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0457012633125921dd5c43e8538e8674"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+<tr class="memitem:a0457012633125921dd5c43e8538e8674 inherit pro_attribs_class_world_object"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_object.html#a0457012633125921dd5c43e8538e8674">height</a></td></tr>
 <tr class="separator:a0457012633125921dd5c43e8538e8674 inherit pro_attribs_class_world_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_digit_8h_source.html#l00006">6</a> of file <a class="el" href="_digit_8h_source.html">Digit.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a874d3909e9453201181d1ce2707e64aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Digit::Digit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>digit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat *&#160;</td>
+          <td class="paramname"><em>score</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_digit_8cpp_source.html#l00004">4</a> of file <a class="el" href="_digit_8cpp_source.html">Digit.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad451d3b0f50985ed2730ba0eb7d09b03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Digit::~Digit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_digit_8cpp_source.html#l00009">9</a> of file <a class="el" href="_digit_8cpp_source.html">Digit.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4bf7e83ffc6375431bedcd0fceb7c7bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Digit::DrawObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws the object on the screen </p>
+
+<p>Implements <a class="el" href="class_world_object.html#a22d6db7c7f7ac55f873d55417417d29d">WorldObject</a>.</p>
+
+<p>Definition at line <a class="el" href="_digit_8cpp_source.html#l00013">13</a> of file <a class="el" href="_digit_8cpp_source.html">Digit.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ae67a2c0b0a951a31b8a618911b87f0bc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -175,6 +282,32 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></t
 </dl>
 
 <p>Definition at line <a class="el" href="_digit_8cpp_source.html#l00025">25</a> of file <a class="el" href="_digit_8cpp_source.html">Digit.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a528791513a2feaa3e96b12475f86843f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Digit::SetDigit </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>digit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_digit_8cpp_source.html#l00050">50</a> of file <a class="el" href="_digit_8cpp_source.html">Digit.cpp</a>.</p>
 
 </div>
 </div>
@@ -218,9 +351,122 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></t
 </div><div class="memdoc">
 <p>Moves the object to the relative position indicated by the followPoint </p>
 
-<p>Implements <a class="el" href="class_updatable.html">Updatable</a>.</p>
+<p>Implements <a class="el" href="class_updatable.html#a4bed06c6110e7a2fcb71c66cc30fa55e">Updatable</a>.</p>
 
 <p>Definition at line <a class="el" href="_digit_8cpp_source.html#l00031">31</a> of file <a class="el" href="_digit_8cpp_source.html">Digit.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a2657e88581e5ad14679ccb9f3da64c4c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ball.html">Ball</a>* Digit::ball</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_digit_8h_source.html#l00014">14</a> of file <a class="el" href="_digit_8h_source.html">Digit.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa85baa6070fd54b524eb8b0b5bcf01f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Digit::digit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>&lt; The digit to draw </p>
+
+<p>Definition at line <a class="el" href="_digit_8h_source.html#l00009">9</a> of file <a class="el" href="_digit_8h_source.html">Digit.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="addfff408ae5753928dfab13415c77867"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_point3_d.html">Point3D</a> Digit::followPoint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_digit_8h_source.html#l00018">18</a> of file <a class="el" href="_digit_8h_source.html">Digit.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d63592b44e2a80a5c9508302496b38d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Digit::position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_digit_8h_source.html#l00012">12</a> of file <a class="el" href="_digit_8h_source.html">Digit.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a793b3cc79d4d0a1044e49b4a46990eff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat* Digit::score</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The position of the digit relative to the ball </p>
+
+<p>Definition at line <a class="el" href="_digit_8h_source.html#l00016">16</a> of file <a class="el" href="_digit_8h_source.html">Digit.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +477,7 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:23 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

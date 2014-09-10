@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['perspective',['Perspective',['../class_camera.html#aa2f1b00493b49201482e3836d8969d08',1,'Camera']]],
-  ['plant',['Plant',['../class_plant.html',1,'']]],
-  ['point3d',['Point3D',['../struct_point3_d.html',1,'Point3D'],['../struct_point3_d.html#a03a8cfff43d21da2bcad81978e1c3b32',1,'Point3D::Point3D()']]]
+  ['ontrack',['onTrack',['../class_ball.html#a3396c3784d689a17e7f7c0ddd0cfec98',1,'Ball']]],
+  ['operator_2a',['operator*',['../struct_point3_d.html#a03ef9abe42698842355f913aa43dfcab',1,'Point3D::operator*(GLfloat value)'],['../struct_point3_d.html#ad96d5781f0dba88c6fc5f28b5aa1bcbc',1,'Point3D::operator*(Point3D point)']]],
+  ['operator_2b',['operator+',['../struct_point3_d.html#adcbe6c92c5b9ab981526c90c404f2d5e',1,'Point3D']]],
+  ['operator_2b_3d',['operator+=',['../struct_point3_d.html#a0786801cd6144da35faccb7fa1c2871a',1,'Point3D']]],
+  ['operator_2d',['operator-',['../struct_point3_d.html#abf8f30a54be0f396e2b16e01d1f9994c',1,'Point3D']]],
+  ['operator_2f',['operator/',['../struct_point3_d.html#a7dd6c71db077570810dbb0a08545a147',1,'Point3D']]]
 ];

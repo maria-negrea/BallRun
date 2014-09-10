@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,16 +71,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Camera.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Camera.h&quot;</span></div>
+<a href="_camera_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_camera_8h.html">Camera.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include&lt;iostream&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;Camera::Camera()</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_camera.html#a01f94c3543f56ede7af49dc778f19331">    6</a></span>&#160;<a class="code" href="class_camera.html#a01f94c3543f56ede7af49dc778f19331">Camera::Camera</a>()</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;Camera::~Camera()</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_camera.html#ad1897942d0ccf91052386388a497349f">   10</a></span>&#160;<a class="code" href="class_camera.html#ad1897942d0ccf91052386388a497349f">Camera::~Camera</a>()</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
@@ -98,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_camera.html#a8a49e140cb548b3fc11c61c8f48214c4">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_camera.html#a8a49e140cb548b3fc11c61c8f48214c4">Camera::Follow</a>(<a class="code" href="class_ball.html">Ball</a>* ball)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        this-&gt;ball = ball;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        direction = ball-&gt;GetDirection();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        direction = ball-&gt;<a class="code" href="class_ball.html#ad4e6eac0cd9afd3d2be2267d6befe18a">GetDirection</a>();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_camera.html#a4a596a3ea1fdc7d244ba4268031a360b">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_camera.html#a4a596a3ea1fdc7d244ba4268031a360b">Camera::Update</a>()</div>
@@ -112,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                translate = ball-&gt;GetTranslate()+direction*5;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                rotate.y = <a class="code" href="struct_point3_d.html">Point3D</a>(0,0,1).<a class="code" href="struct_point3_d.html#a15963489cfc76c387e031d92eb2ade2a">AngleBetween</a>(direction);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                rotate.<a class="code" href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">y</a> = <a class="code" href="struct_point3_d.html">Point3D</a>(0,0,1).<a class="code" href="struct_point3_d.html#a15963489cfc76c387e031d92eb2ade2a">AngleBetween</a>(direction);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">if</span>(direction.x &lt; 0)</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        rotate.y = 360-rotate.y;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
@@ -129,14 +130,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="struct_point3_d_html_a15963489cfc76c387e031d92eb2ade2a"><div class="ttname"><a href="struct_point3_d.html#a15963489cfc76c387e031d92eb2ade2a">Point3D::AngleBetween</a></div><div class="ttdeci">GLfloat AngleBetween(Point3D point)</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00082">WorldObject.h:82</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
 <div class="ttc" id="class_camera_html_aa2f1b00493b49201482e3836d8969d08"><div class="ttname"><a href="class_camera.html#aa2f1b00493b49201482e3836d8969d08">Camera::Perspective</a></div><div class="ttdeci">void Perspective()</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00020">Camera.cpp:20</a></div></div>
+<div class="ttc" id="class_ball_html_ad4e6eac0cd9afd3d2be2267d6befe18a"><div class="ttname"><a href="class_ball.html#ad4e6eac0cd9afd3d2be2267d6befe18a">Ball::GetDirection</a></div><div class="ttdeci">Point3D GetDirection()</div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cpp_source.html#l00042">Ball.cpp:42</a></div></div>
+<div class="ttc" id="class_camera_html_a01f94c3543f56ede7af49dc778f19331"><div class="ttname"><a href="class_camera.html#a01f94c3543f56ede7af49dc778f19331">Camera::Camera</a></div><div class="ttdeci">Camera()</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00006">Camera.cpp:6</a></div></div>
 <div class="ttc" id="class_camera_html_a4a596a3ea1fdc7d244ba4268031a360b"><div class="ttname"><a href="class_camera.html#a4a596a3ea1fdc7d244ba4268031a360b">Camera::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00032">Camera.cpp:32</a></div></div>
 <div class="ttc" id="struct_point3_d_html_a12bea3732255eceaad6bba3f3e7de179"><div class="ttname"><a href="struct_point3_d.html#a12bea3732255eceaad6bba3f3e7de179">Point3D::Normalize</a></div><div class="ttdeci">Point3D Normalize()</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00073">WorldObject.h:73</a></div></div>
 <div class="ttc" id="class_camera_html_ac8552e15d6c3eabd50ddf300520ca8a1"><div class="ttname"><a href="class_camera.html#ac8552e15d6c3eabd50ddf300520ca8a1">Camera::DrawObject</a></div><div class="ttdeci">void DrawObject()</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00015">Camera.cpp:15</a></div></div>
+<div class="ttc" id="class_camera_html_ad1897942d0ccf91052386388a497349f"><div class="ttname"><a href="class_camera.html#ad1897942d0ccf91052386388a497349f">Camera::~Camera</a></div><div class="ttdeci">~Camera()</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00010">Camera.cpp:10</a></div></div>
+<div class="ttc" id="_camera_8h_html"><div class="ttname"><a href="_camera_8h.html">Camera.h</a></div></div>
 <div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00016">WorldObject.h:16</a></div></div>
+<div class="ttc" id="struct_point3_d_html_a266c2ec796b3af5f5a232cad101ac278"><div class="ttname"><a href="struct_point3_d.html#a266c2ec796b3af5f5a232cad101ac278">Point3D::y</a></div><div class="ttdeci">GLfloat y</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00018">WorldObject.h:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -56,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -70,25 +71,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Cactus.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Plant.h&quot;</span></div>
+<a href="_cactus_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_plant_8h.html">Plant.h</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_cactus.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cactus.html">Cactus</a>: <span class="keyword">public</span> <a class="code" href="class_plant.html">Plant</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <a class="code" href="class_cactus.html">Cactus</a>(<span class="keywordtype">double</span> <a class="code" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a>, <span class="keywordtype">double</span> height, <span class="keywordtype">int</span> numberOfBranches, <span class="keywordtype">int</span> level);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordtype">void</span> SetBranchTop(vector&lt;Point3D&gt; base, vector&lt;Point3D&gt;&amp; top, <span class="keywordtype">int</span> currentLevel, GLfloat radius, GLfloat pass, GLfloat index);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">void</span> SetInitialPass(GLfloat&amp; pass, GLfloat radius);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">void</span> IncrementPass(GLfloat&amp; pass, GLfloat radius);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        ~<a class="code" href="class_cactus.html">Cactus</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <a class="code" href="class_cactus.html#a93bded0d899fc3b89e6be5f010d210e9">Cactus</a>(<span class="keywordtype">double</span> <a class="code" href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">width</a>, <span class="keywordtype">double</span> <a class="code" href="class_world_object.html#a0457012633125921dd5c43e8538e8674">height</a>, <span class="keywordtype">int</span> <a class="code" href="class_plant.html#a4f86c46865d6211636140cef8805c6ee">numberOfBranches</a>, <span class="keywordtype">int</span> <a class="code" href="class_plant.html#ab49e92a2ab4ecdc762b5a1711fa3d65f">level</a>);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_cactus.html#ae39a9e242e327a3f6c89126fb6d24a6b">SetBranchTop</a>(vector&lt;Point3D&gt; base, vector&lt;Point3D&gt;&amp; top, <span class="keywordtype">int</span> currentLevel, GLfloat <a class="code" href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">radius</a>, GLfloat pass, GLfloat index);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_cactus.html#a4a302b89f9c3ff94ac749bc870728c9e">SetInitialPass</a>(GLfloat&amp; pass, GLfloat radius);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_cactus.html#ae13abc19633a73f5647fb7da08b87faa">IncrementPass</a>(GLfloat&amp; pass, GLfloat radius);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_cactus.html#a313ed9b42237dee8f91624b2fdd6de0d">~Cactus</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
+<div class="ttc" id="class_plant_html_a4f86c46865d6211636140cef8805c6ee"><div class="ttname"><a href="class_plant.html#a4f86c46865d6211636140cef8805c6ee">Plant::numberOfBranches</a></div><div class="ttdeci">int numberOfBranches</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00019">Plant.h:19</a></div></div>
+<div class="ttc" id="class_cactus_html_a4a302b89f9c3ff94ac749bc870728c9e"><div class="ttname"><a href="class_cactus.html#a4a302b89f9c3ff94ac749bc870728c9e">Cactus::SetInitialPass</a></div><div class="ttdeci">void SetInitialPass(GLfloat &amp;pass, GLfloat radius)</div><div class="ttdef"><b>Definition:</b> <a href="_cactus_8cpp_source.html#l00074">Cactus.cpp:74</a></div></div>
 <div class="ttc" id="class_world_object_html_aa4d4ce305467868cdbb17fc25759408f"><div class="ttname"><a href="class_world_object.html#aa4d4ce305467868cdbb17fc25759408f">WorldObject::width</a></div><div class="ttdeci">GLfloat width</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00108">WorldObject.h:108</a></div></div>
+<div class="ttc" id="class_cactus_html_a93bded0d899fc3b89e6be5f010d210e9"><div class="ttname"><a href="class_cactus.html#a93bded0d899fc3b89e6be5f010d210e9">Cactus::Cactus</a></div><div class="ttdeci">Cactus(double width, double height, int numberOfBranches, int level)</div><div class="ttdef"><b>Definition:</b> <a href="_cactus_8cpp_source.html#l00003">Cactus.cpp:3</a></div></div>
+<div class="ttc" id="class_plant_html_abef0f751fe6b1b43ed208966a70b4ab3"><div class="ttname"><a href="class_plant.html#abef0f751fe6b1b43ed208966a70b4ab3">Plant::radius</a></div><div class="ttdeci">GLfloat radius</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00012">Plant.h:12</a></div></div>
+<div class="ttc" id="class_cactus_html_ae13abc19633a73f5647fb7da08b87faa"><div class="ttname"><a href="class_cactus.html#ae13abc19633a73f5647fb7da08b87faa">Cactus::IncrementPass</a></div><div class="ttdeci">void IncrementPass(GLfloat &amp;pass, GLfloat radius)</div><div class="ttdef"><b>Definition:</b> <a href="_cactus_8cpp_source.html#l00079">Cactus.cpp:79</a></div></div>
+<div class="ttc" id="_plant_8h_html"><div class="ttname"><a href="_plant_8h.html">Plant.h</a></div></div>
+<div class="ttc" id="class_cactus_html_ae39a9e242e327a3f6c89126fb6d24a6b"><div class="ttname"><a href="class_cactus.html#ae39a9e242e327a3f6c89126fb6d24a6b">Cactus::SetBranchTop</a></div><div class="ttdeci">void SetBranchTop(vector&lt; Point3D &gt; base, vector&lt; Point3D &gt; &amp;top, int currentLevel, GLfloat radius, GLfloat pass, GLfloat index)</div><div class="ttdef"><b>Definition:</b> <a href="_cactus_8cpp_source.html#l00015">Cactus.cpp:15</a></div></div>
+<div class="ttc" id="class_cactus_html_a313ed9b42237dee8f91624b2fdd6de0d"><div class="ttname"><a href="class_cactus.html#a313ed9b42237dee8f91624b2fdd6de0d">Cactus::~Cactus</a></div><div class="ttdeci">~Cactus(void)</div><div class="ttdef"><b>Definition:</b> <a href="_cactus_8cpp_source.html#l00083">Cactus.cpp:83</a></div></div>
 <div class="ttc" id="class_cactus_html"><div class="ttname"><a href="class_cactus.html">Cactus</a></div><div class="ttdef"><b>Definition:</b> <a href="_cactus_8h_source.html#l00004">Cactus.h:4</a></div></div>
+<div class="ttc" id="class_plant_html_ab49e92a2ab4ecdc762b5a1711fa3d65f"><div class="ttname"><a href="class_plant.html#ab49e92a2ab4ecdc762b5a1711fa3d65f">Plant::level</a></div><div class="ttdeci">int level</div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00021">Plant.h:21</a></div></div>
 <div class="ttc" id="class_plant_html"><div class="ttname"><a href="class_plant.html">Plant</a></div><div class="ttdef"><b>Definition:</b> <a href="_plant_8h_source.html#l00009">Plant.h:9</a></div></div>
+<div class="ttc" id="class_world_object_html_a0457012633125921dd5c43e8538e8674"><div class="ttname"><a href="class_world_object.html#a0457012633125921dd5c43e8538e8674">WorldObject::height</a></div><div class="ttdeci">GLfloat height</div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00108">WorldObject.h:108</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
