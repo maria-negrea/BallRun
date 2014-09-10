@@ -1,10 +1,10 @@
 #pragma once
 #include"Textures.h"
 #include"WorldObject.h"
-/**
+
+/*! \brief
 Class used to draw the mountain
 */
-
 class Mountain:public WorldObject
 {
 private:

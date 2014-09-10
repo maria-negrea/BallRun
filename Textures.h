@@ -11,7 +11,7 @@
 
 using namespace std;
 
-/**
+/*! \brief
 	Class used to load textures for our objects. We used SOIL to load all of the textures and use them.
 */
 class Textures

@@ -10,7 +10,7 @@
 
 using namespace std;
 
-/*! @struct
+/*! \brief
 *	A 3D point
 */
 struct Point3D
@@ -89,7 +89,9 @@ struct Point3D
 	}
 };
 
-/*! A 3D object */
+/*! \brief
+*	A 3D object 
+*/
 class WorldObject
 {
 protected:

@@ -5,6 +5,9 @@
 
 using namespace std;
 
+/*! \brief
+*	A collection of all the objects on the screen and a camera for the perspective 
+*/
 class Scene
 {
 	/*!The camera from wich perspective the scene gets rendered*/

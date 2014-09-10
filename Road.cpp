@@ -1,9 +1,6 @@
 #include "Road.h"
 #include <time.h>
 
-/*!
-*	Draws a quad with the "road texture" 
-*/
 
 void Road::DrawObject()
 {

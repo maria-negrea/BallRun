@@ -1,11 +1,6 @@
 #include "Curve.h"
 #include "Textures.h"
 
-/*@class
-
-* Draws the rounded edges when we generate a turn
-
-*/
 
 /*!
 * Takes as argument the turn id :

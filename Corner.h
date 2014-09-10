@@ -2,6 +2,9 @@
 #include "WorldObject.h"
 #include "Ball.h"
 
+/*! \brief
+* A corner between two road ajacent pieces with different rotations
+*/
 class Corner
 {
 	bool left; /** <Check whether the ball can move left */

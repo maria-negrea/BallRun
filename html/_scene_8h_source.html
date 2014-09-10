@@ -78,40 +78,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_scene.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html">Scene</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_scene.html#a878011b448f85714694abf6ddeee9376">   11</a></span>&#160;        <a class="code" href="class_camera.html">Camera</a>* <a class="code" href="class_scene.html#a878011b448f85714694abf6ddeee9376">mainCamera</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_scene.html#a10480179cba116c3a7897aa8903d653a">   14</a></span>&#160;        vector&lt;WorldObject*&gt; <a class="code" href="class_scene.html#a10480179cba116c3a7897aa8903d653a">sceneObjects</a>;      </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">   16</a></span>&#160;        vector&lt;Updatable*&gt; <a class="code" href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">updateObjects</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> RemoveUpdatable(<a class="code" href="class_updatable.html">Updatable</a>* <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_scene.html">Scene</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ~<a class="code" href="class_scene.html">Scene</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> Render();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> Update();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> SetMainCamera(<a class="code" href="class_camera.html">Camera</a>* camera);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> AddObject(<a class="code" href="class_world_object.html">WorldObject</a>* <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> RemoveObject(<a class="code" href="class_world_object.html">WorldObject</a>* <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00093">WorldObject.h:93</a></div></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_scene.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html">Scene</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_scene.html#a878011b448f85714694abf6ddeee9376">   14</a></span>&#160;        <a class="code" href="class_camera.html">Camera</a>* <a class="code" href="class_scene.html#a878011b448f85714694abf6ddeee9376">mainCamera</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_scene.html#a10480179cba116c3a7897aa8903d653a">   17</a></span>&#160;        vector&lt;WorldObject*&gt; <a class="code" href="class_scene.html#a10480179cba116c3a7897aa8903d653a">sceneObjects</a>;      </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">   19</a></span>&#160;        vector&lt;Updatable*&gt; <a class="code" href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">updateObjects</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> RemoveUpdatable(<a class="code" href="class_updatable.html">Updatable</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_scene.html">Scene</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        ~<a class="code" href="class_scene.html">Scene</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> Render();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> Update();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> SetMainCamera(<a class="code" href="class_camera.html">Camera</a>* camera);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> AddObject(<a class="code" href="class_world_object.html">WorldObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> RemoveObject(<a class="code" href="class_world_object.html">WorldObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdoc">A 3D object. </div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00095">WorldObject.h:95</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="_camera_8h_source.html#l00007">Camera.h:7</a></div></div>
-<div class="ttc" id="class_scene_html_a7cc57f679a11ccf1b3381cefe8f5a22f"><div class="ttname"><a href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">Scene::updateObjects</a></div><div class="ttdeci">vector&lt; Updatable * &gt; updateObjects</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00016">Scene.h:16</a></div></div>
-<div class="ttc" id="class_updatable_html"><div class="ttname"><a href="class_updatable.html">Updatable</a></div><div class="ttdef"><b>Definition:</b> <a href="_updatable_8h_source.html#l00007">Updatable.h:7</a></div></div>
-<div class="ttc" id="class_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00008">Scene.h:8</a></div></div>
+<div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdoc">The camera used for the perspective of the view. </div><div class="ttdef"><b>Definition:</b> <a href="_camera_8h_source.html#l00010">Camera.h:10</a></div></div>
+<div class="ttc" id="class_scene_html_a7cc57f679a11ccf1b3381cefe8f5a22f"><div class="ttname"><a href="class_scene.html#a7cc57f679a11ccf1b3381cefe8f5a22f">Scene::updateObjects</a></div><div class="ttdeci">vector&lt; Updatable * &gt; updateObjects</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00019">Scene.h:19</a></div></div>
+<div class="ttc" id="class_updatable_html"><div class="ttname"><a href="class_updatable.html">Updatable</a></div><div class="ttdoc">Used for objects who need updated A WorldObject added into Scene who is also Updatable will be updata...</div><div class="ttdef"><b>Definition:</b> <a href="_updatable_8h_source.html#l00008">Updatable.h:8</a></div></div>
+<div class="ttc" id="class_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdoc">A collection of all the objects on the screen and a camera for the perspective. </div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00011">Scene.h:11</a></div></div>
 <div class="ttc" id="_world_object_8h_html"><div class="ttname"><a href="_world_object_8h.html">WorldObject.h</a></div></div>
 <div class="ttc" id="_camera_8h_html"><div class="ttname"><a href="_camera_8h.html">Camera.h</a></div></div>
-<div class="ttc" id="class_scene_html_a10480179cba116c3a7897aa8903d653a"><div class="ttname"><a href="class_scene.html#a10480179cba116c3a7897aa8903d653a">Scene::sceneObjects</a></div><div class="ttdeci">vector&lt; WorldObject * &gt; sceneObjects</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00014">Scene.h:14</a></div></div>
-<div class="ttc" id="class_scene_html_a878011b448f85714694abf6ddeee9376"><div class="ttname"><a href="class_scene.html#a878011b448f85714694abf6ddeee9376">Scene::mainCamera</a></div><div class="ttdeci">Camera * mainCamera</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00011">Scene.h:11</a></div></div>
+<div class="ttc" id="class_scene_html_a10480179cba116c3a7897aa8903d653a"><div class="ttname"><a href="class_scene.html#a10480179cba116c3a7897aa8903d653a">Scene::sceneObjects</a></div><div class="ttdeci">vector&lt; WorldObject * &gt; sceneObjects</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00017">Scene.h:17</a></div></div>
+<div class="ttc" id="class_scene_html_a878011b448f85714694abf6ddeee9376"><div class="ttname"><a href="class_scene.html#a878011b448f85714694abf6ddeee9376">Scene::mainCamera</a></div><div class="ttdeci">Camera * mainCamera</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00014">Scene.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 10:02:55 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -3,7 +3,9 @@
 #include "Ball.h"
 #include "Updatable.h"
 
-/*!	Skybox */
+/*! \brief
+* Skybox 
+*/
 class Sky : public WorldObject, public Updatable
 {
 	/*! size of the skybox*/

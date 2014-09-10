@@ -3,6 +3,9 @@
 #include "WorldObject.h"
 #include "Textures.h"
 
+/*! \brief
+*	Draws a quad with the "road texture" 
+*/
 class Road : public WorldObject
 {
 public:

@@ -3,6 +3,9 @@
 #include "Ball.h"
 #include "Updatable.h"
 
+/*! \brief
+* A quad with a digit printed on it
+*/
 class Digit : public WorldObject, public Updatable
 {
 	/**< The digit to draw */

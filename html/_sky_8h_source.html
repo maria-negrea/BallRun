@@ -76,34 +76,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_ball_8h.html">Ball.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_updatable_8h.html">Updatable.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_sky.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sky.html">Sky</a> : <span class="keyword">public</span> <a class="code" href="class_world_object.html">WorldObject</a>, <span class="keyword">public</span> <a class="code" href="class_updatable.html">Updatable</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_sky.html#a2f0c5fe368ce0ff87efa78646cf30dec">   10</a></span>&#160;        GLfloat <a class="code" href="class_sky.html#a2f0c5fe368ce0ff87efa78646cf30dec">size</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sky.html#a08835fbc3137f6546514d1a8038cf3b9">DrawObject</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_sky.html#a2918094c0e34751c50c52c0b1fb6cf12">   15</a></span>&#160;        <a class="code" href="class_ball.html">Ball</a>* <a class="code" href="class_sky.html#a2918094c0e34751c50c52c0b1fb6cf12">ball</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>: </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_sky.html#a7969328d2fcbebdd7c7d456dc2a6cccd">Sky</a>(GLfloat size);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_sky.html#a913bd9249a3137ca2de087450b346521">~Sky</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sky.html#afd761d9057943cc404448b3889e7e4f7">Follow</a>(<a class="code" href="class_ball.html">Ball</a>* ball);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sky.html#ab2e87407bf02877b5375374990320cfc">UnFollow</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">/* Goes to the followed ball&#39;s position*/</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sky.html#a93a15559c1de7e0862d248933002620b">Update</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_sky.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sky.html">Sky</a> : <span class="keyword">public</span> <a class="code" href="class_world_object.html">WorldObject</a>, <span class="keyword">public</span> <a class="code" href="class_updatable.html">Updatable</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_sky.html#a2f0c5fe368ce0ff87efa78646cf30dec">   12</a></span>&#160;        GLfloat <a class="code" href="class_sky.html#a2f0c5fe368ce0ff87efa78646cf30dec">size</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sky.html#a08835fbc3137f6546514d1a8038cf3b9">DrawObject</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_sky.html#a2918094c0e34751c50c52c0b1fb6cf12">   17</a></span>&#160;        <a class="code" href="class_ball.html">Ball</a>* <a class="code" href="class_sky.html#a2918094c0e34751c50c52c0b1fb6cf12">ball</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>: </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_sky.html#a7969328d2fcbebdd7c7d456dc2a6cccd">Sky</a>(GLfloat size);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_sky.html#a913bd9249a3137ca2de087450b346521">~Sky</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sky.html#afd761d9057943cc404448b3889e7e4f7">Follow</a>(<a class="code" href="class_ball.html">Ball</a>* ball);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sky.html#ab2e87407bf02877b5375374990320cfc">UnFollow</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">/* Goes to the followed ball&#39;s position*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_sky.html#a93a15559c1de7e0862d248933002620b">Update</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
 <div class="ttc" id="_ball_8h_html"><div class="ttname"><a href="_ball_8h.html">Ball.h</a></div></div>
-<div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00093">WorldObject.h:93</a></div></div>
+<div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdoc">A 3D object. </div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00095">WorldObject.h:95</a></div></div>
 <div class="ttc" id="_updatable_8h_html"><div class="ttname"><a href="_updatable_8h.html">Updatable.h</a></div></div>
-<div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00006">Ball.h:6</a></div></div>
+<div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdoc">The main ball of the game. </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00009">Ball.h:9</a></div></div>
 <div class="ttc" id="class_sky_html_afd761d9057943cc404448b3889e7e4f7"><div class="ttname"><a href="class_sky.html#afd761d9057943cc404448b3889e7e4f7">Sky::Follow</a></div><div class="ttdeci">void Follow(Ball *ball)</div><div class="ttdef"><b>Definition:</b> <a href="_sky_8cpp_source.html#l00049">Sky.cpp:49</a></div></div>
 <div class="ttc" id="class_sky_html_a08835fbc3137f6546514d1a8038cf3b9"><div class="ttname"><a href="class_sky.html#a08835fbc3137f6546514d1a8038cf3b9">Sky::DrawObject</a></div><div class="ttdeci">void DrawObject()</div><div class="ttdef"><b>Definition:</b> <a href="_sky_8cpp_source.html#l00013">Sky.cpp:13</a></div></div>
-<div class="ttc" id="class_sky_html"><div class="ttname"><a href="class_sky.html">Sky</a></div><div class="ttdef"><b>Definition:</b> <a href="_sky_8h_source.html#l00007">Sky.h:7</a></div></div>
-<div class="ttc" id="class_updatable_html"><div class="ttname"><a href="class_updatable.html">Updatable</a></div><div class="ttdef"><b>Definition:</b> <a href="_updatable_8h_source.html#l00007">Updatable.h:7</a></div></div>
+<div class="ttc" id="class_sky_html"><div class="ttname"><a href="class_sky.html">Sky</a></div><div class="ttdoc">Skybox. </div><div class="ttdef"><b>Definition:</b> <a href="_sky_8h_source.html#l00009">Sky.h:9</a></div></div>
+<div class="ttc" id="class_updatable_html"><div class="ttname"><a href="class_updatable.html">Updatable</a></div><div class="ttdoc">Used for objects who need updated A WorldObject added into Scene who is also Updatable will be updata...</div><div class="ttdef"><b>Definition:</b> <a href="_updatable_8h_source.html#l00008">Updatable.h:8</a></div></div>
 <div class="ttc" id="class_sky_html_a7969328d2fcbebdd7c7d456dc2a6cccd"><div class="ttname"><a href="class_sky.html#a7969328d2fcbebdd7c7d456dc2a6cccd">Sky::Sky</a></div><div class="ttdeci">Sky(GLfloat size)</div><div class="ttdef"><b>Definition:</b> <a href="_sky_8cpp_source.html#l00004">Sky.cpp:4</a></div></div>
-<div class="ttc" id="class_sky_html_a2918094c0e34751c50c52c0b1fb6cf12"><div class="ttname"><a href="class_sky.html#a2918094c0e34751c50c52c0b1fb6cf12">Sky::ball</a></div><div class="ttdeci">Ball * ball</div><div class="ttdef"><b>Definition:</b> <a href="_sky_8h_source.html#l00015">Sky.h:15</a></div></div>
-<div class="ttc" id="class_sky_html_a2f0c5fe368ce0ff87efa78646cf30dec"><div class="ttname"><a href="class_sky.html#a2f0c5fe368ce0ff87efa78646cf30dec">Sky::size</a></div><div class="ttdeci">GLfloat size</div><div class="ttdef"><b>Definition:</b> <a href="_sky_8h_source.html#l00010">Sky.h:10</a></div></div>
+<div class="ttc" id="class_sky_html_a2918094c0e34751c50c52c0b1fb6cf12"><div class="ttname"><a href="class_sky.html#a2918094c0e34751c50c52c0b1fb6cf12">Sky::ball</a></div><div class="ttdeci">Ball * ball</div><div class="ttdef"><b>Definition:</b> <a href="_sky_8h_source.html#l00017">Sky.h:17</a></div></div>
+<div class="ttc" id="class_sky_html_a2f0c5fe368ce0ff87efa78646cf30dec"><div class="ttname"><a href="class_sky.html#a2f0c5fe368ce0ff87efa78646cf30dec">Sky::size</a></div><div class="ttdeci">GLfloat size</div><div class="ttdef"><b>Definition:</b> <a href="_sky_8h_source.html#l00012">Sky.h:12</a></div></div>
 <div class="ttc" id="class_sky_html_a913bd9249a3137ca2de087450b346521"><div class="ttname"><a href="class_sky.html#a913bd9249a3137ca2de087450b346521">Sky::~Sky</a></div><div class="ttdeci">~Sky()</div><div class="ttdef"><b>Definition:</b> <a href="_sky_8cpp_source.html#l00009">Sky.cpp:9</a></div></div>
 <div class="ttc" id="class_sky_html_ab2e87407bf02877b5375374990320cfc"><div class="ttname"><a href="class_sky.html#ab2e87407bf02877b5375374990320cfc">Sky::UnFollow</a></div><div class="ttdeci">void UnFollow()</div><div class="ttdef"><b>Definition:</b> <a href="_sky_8cpp_source.html#l00062">Sky.cpp:62</a></div></div>
 <div class="ttc" id="_world_object_8h_html"><div class="ttname"><a href="_world_object_8h.html">WorldObject.h</a></div></div>
@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 09:52:22 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 10:02:55 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

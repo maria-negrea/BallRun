@@ -13,6 +13,9 @@
 
 using namespace std;
 
+/*! \brief
+* A collection of all the road pieces and the environment
+*/
 class Highway : public WorldObject, public Updatable
 {
 	Road* lastRoad; /** <The last road which has been put */

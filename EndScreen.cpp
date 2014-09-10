@@ -1,8 +1,5 @@
 #include "EndScreen.h"
 
-/*@class
-* Draws the quad which appears when the game ends
-*/
 EndScreen::EndScreen()
 {
 }

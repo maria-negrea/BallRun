@@ -2,6 +2,10 @@
 
 #include "WorldObject.h"
 
+
+/*! \brief
+* Draws the rounded edges when we generate a turn
+*/
 class Curve : public WorldObject
 {
 	private:

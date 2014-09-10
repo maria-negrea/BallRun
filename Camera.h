@@ -4,6 +4,9 @@
 #include "WorldObject.h"
 #include "Updatable.h"
 
+/*! \brief
+* The camera used for the perspective of the view
+*/
 class Camera : public WorldObject, public Updatable
 {
 protected:

@@ -3,6 +3,9 @@
 #include "WorldObject.h"
 #include "Updatable.h"
 
+/*! \brief
+* The main ball of the game
+*/
 class Ball : public WorldObject, public Updatable
 {
 private:

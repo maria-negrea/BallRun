@@ -1,12 +1,5 @@
 #include "Earth.h"
 
-/* @class
-
-* Draws a quad with earth texture  
-
-*/
-
-
 /*!
 * Draw quad large enough to always seem like there is an earth below the road
 */
