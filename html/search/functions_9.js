@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['translate',['Translate',['../class_world_object.html#a95de7162381945513e86fcf354297da9',1,'WorldObject']]]
+  ['normalize',['Normalize',['../struct_point3_d.html#a12bea3732255eceaad6bba3f3e7de179',1,'Point3D']]]
 ];

@@ -79,30 +79,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_camera.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_camera.html">Camera</a> : <span class="keyword">public</span> <a class="code" href="class_world_object.html">WorldObject</a>, <span class="keyword">public</span> <a class="code" href="class_updatable.html">Updatable</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="struct_point3_d.html">Point3D</a> direction;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_camera.html#ac8552e15d6c3eabd50ddf300520ca8a1">DrawObject</a>();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_ball.html">Ball</a> *ball;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_camera.html">Camera</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        ~<a class="code" href="class_camera.html">Camera</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">void</span> Perspective();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> Follow(<a class="code" href="class_ball.html">Ball</a> *ball);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> UnFollow();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> Update();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_camera.html#a6969c8a06de8be781e79039c560895aa">   11</a></span>&#160;        <a class="code" href="struct_point3_d.html">Point3D</a> <a class="code" href="class_camera.html#a6969c8a06de8be781e79039c560895aa">direction</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_camera.html#ac8552e15d6c3eabd50ddf300520ca8a1">DrawObject</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_camera.html#ac949c9480f9e1935fcfe31b1b88f12bb">   15</a></span>&#160;        <a class="code" href="class_ball.html">Ball</a> *<a class="code" href="class_camera.html#ac949c9480f9e1935fcfe31b1b88f12bb">ball</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_camera.html">Camera</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        ~<a class="code" href="class_camera.html">Camera</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_camera.html#aa2f1b00493b49201482e3836d8969d08">Perspective</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_camera.html#a8a49e140cb548b3fc11c61c8f48214c4">Follow</a>(<a class="code" href="class_ball.html">Ball</a>* ball);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_camera.html#a8161f7e096c69039c67d55661abb85f6">UnFollow</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_camera.html#a4a596a3ea1fdc7d244ba4268031a360b">Update</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="ttc" id="class_camera_html_a6969c8a06de8be781e79039c560895aa"><div class="ttname"><a href="class_camera.html#a6969c8a06de8be781e79039c560895aa">Camera::direction</a></div><div class="ttdeci">Point3D direction</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8h_source.html#l00011">Camera.h:11</a></div></div>
 <div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00093">WorldObject.h:93</a></div></div>
 <div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00006">Ball.h:6</a></div></div>
+<div class="ttc" id="class_camera_html_a8a49e140cb548b3fc11c61c8f48214c4"><div class="ttname"><a href="class_camera.html#a8a49e140cb548b3fc11c61c8f48214c4">Camera::Follow</a></div><div class="ttdeci">void Follow(Ball *ball)</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00026">Camera.cpp:26</a></div></div>
+<div class="ttc" id="class_camera_html_a8161f7e096c69039c67d55661abb85f6"><div class="ttname"><a href="class_camera.html#a8161f7e096c69039c67d55661abb85f6">Camera::UnFollow</a></div><div class="ttdeci">void UnFollow()</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00051">Camera.cpp:51</a></div></div>
+<div class="ttc" id="class_camera_html_aa2f1b00493b49201482e3836d8969d08"><div class="ttname"><a href="class_camera.html#aa2f1b00493b49201482e3836d8969d08">Camera::Perspective</a></div><div class="ttdeci">void Perspective()</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00020">Camera.cpp:20</a></div></div>
 <div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="_camera_8h_source.html#l00007">Camera.h:7</a></div></div>
 <div class="ttc" id="class_updatable_html"><div class="ttname"><a href="class_updatable.html">Updatable</a></div><div class="ttdef"><b>Definition:</b> <a href="_updatable_8h_source.html#l00007">Updatable.h:7</a></div></div>
+<div class="ttc" id="class_camera_html_a4a596a3ea1fdc7d244ba4268031a360b"><div class="ttname"><a href="class_camera.html#a4a596a3ea1fdc7d244ba4268031a360b">Camera::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00032">Camera.cpp:32</a></div></div>
+<div class="ttc" id="class_camera_html_ac949c9480f9e1935fcfe31b1b88f12bb"><div class="ttname"><a href="class_camera.html#ac949c9480f9e1935fcfe31b1b88f12bb">Camera::ball</a></div><div class="ttdeci">Ball * ball</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8h_source.html#l00015">Camera.h:15</a></div></div>
 <div class="ttc" id="class_camera_html_ac8552e15d6c3eabd50ddf300520ca8a1"><div class="ttname"><a href="class_camera.html#ac8552e15d6c3eabd50ddf300520ca8a1">Camera::DrawObject</a></div><div class="ttdeci">void DrawObject()</div><div class="ttdef"><b>Definition:</b> <a href="_camera_8cpp_source.html#l00015">Camera.cpp:15</a></div></div>
 <div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00016">WorldObject.h:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 08:55:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

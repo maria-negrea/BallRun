@@ -92,15 +92,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a874d3909e9453201181d1ce2707e64aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a874d3909e9453201181d1ce2707e64aa"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Digit</b> (int digit, int position, GLfloat *score)</td></tr>
 <tr class="separator:a874d3909e9453201181d1ce2707e64aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae67a2c0b0a951a31b8a618911b87f0bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae67a2c0b0a951a31b8a618911b87f0bc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Follow</b> (<a class="el" href="class_ball.html">Ball</a> *ball, <a class="el" href="struct_point3_d.html">Point3D</a> followPoint)</td></tr>
+<tr class="memitem:ae67a2c0b0a951a31b8a618911b87f0bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#ae67a2c0b0a951a31b8a618911b87f0bc">Follow</a> (<a class="el" href="class_ball.html">Ball</a> *ball, <a class="el" href="struct_point3_d.html">Point3D</a> followPoint)</td></tr>
 <tr class="separator:ae67a2c0b0a951a31b8a618911b87f0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00d932e15f940d2e1e1da94bdeaa498a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00d932e15f940d2e1e1da94bdeaa498a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
-<tr class="separator:a00d932e15f940d2e1e1da94bdeaa498a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cddec852897574becda6e3e1923ca9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cddec852897574becda6e3e1923ca9e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UnFollow</b> ()</td></tr>
+<tr class="memitem:a0cddec852897574becda6e3e1923ca9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a0cddec852897574becda6e3e1923ca9e">UnFollow</a> ()</td></tr>
 <tr class="separator:a0cddec852897574becda6e3e1923ca9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d932e15f940d2e1e1da94bdeaa498a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_digit.html#a00d932e15f940d2e1e1da94bdeaa498a">Update</a> ()</td></tr>
+<tr class="separator:a00d932e15f940d2e1e1da94bdeaa498a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_world_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_world_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_world_object.html">WorldObject</a></td></tr>
 <tr class="memitem:a464fd2e8938ae8ca4e778235819d616a inherit pub_methods_class_world_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a464fd2e8938ae8ca4e778235819d616a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>WorldObject</b> (GLfloat W=0.0, GLfloat H=0.0, GLfloat X=0.0, GLfloat Y=0.0, GLfloat Z=0.0)</td></tr>
@@ -145,14 +142,96 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_digit_8h_source.html#l00006">6</a> of file <a class="el" href="_digit_8h_source.html">Digit.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae67a2c0b0a951a31b8a618911b87f0bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Digit::Follow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_ball.html">Ball</a> *&#160;</td>
+          <td class="paramname"><em>ball</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_point3_d.html">Point3D</a>&#160;</td>
+          <td class="paramname"><em>followPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the object to follow the ball </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ball</td><td>the ball it will follow </td></tr>
+    <tr><td class="paramname">followPoint</td><td>the position of the digit relative to the ball </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_digit_8cpp_source.html#l00025">25</a> of file <a class="el" href="_digit_8cpp_source.html">Digit.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0cddec852897574becda6e3e1923ca9e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Digit::UnFollow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stops following the selected ball </p>
+
+<p>Definition at line <a class="el" href="_digit_8cpp_source.html#l00055">55</a> of file <a class="el" href="_digit_8cpp_source.html">Digit.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00d932e15f940d2e1e1da94bdeaa498a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Digit::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Moves the object to the relative position indicated by the followPoint </p>
+
+<p>Implements <a class="el" href="class_updatable.html">Updatable</a>.</p>
+
+<p>Definition at line <a class="el" href="_digit_8cpp_source.html#l00031">31</a> of file <a class="el" href="_digit_8cpp_source.html">Digit.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_digit_8h_source.html">Digit.h</a></li>
 <li><a class="el" href="_digit_8cpp_source.html">Digit.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 08:55:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

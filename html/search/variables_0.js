@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['direction',['direction',['../class_ball.html#a3b3f02341073c519b820d6fd98e54ca9',1,'Ball']]]
+  ['ball',['ball',['../class_camera.html#ac949c9480f9e1935fcfe31b1b88f12bb',1,'Camera']]]
 ];

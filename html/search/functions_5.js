@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['magnitude',['Magnitude',['../struct_point3_d.html#a39f927a68d58a323facabde9136e3319',1,'Point3D']]],
-  ['modifyperspective',['ModifyPerspective',['../class_world_object.html#a52db8a34a804e30a25043b8b118b3365',1,'WorldObject']]],
-  ['modifyperspectiveback',['ModifyPerspectiveBack',['../class_world_object.html#a4873b7b568e1ce3886092823834c16b3',1,'WorldObject']]],
-  ['mountain',['Mountain',['../class_mountain.html#a32ddb9ae59bd166cf3059fddef8061cd',1,'Mountain']]]
+  ['getendpoint',['GetEndPoint',['../class_road.html#a6e70d66fa043f061218a013a2a7c24c5',1,'Road']]],
+  ['getforward',['GetForward',['../class_world_object.html#a3a3158dc13f636eb3835e22fdc32a7b9',1,'WorldObject']]],
+  ['getinstance',['GetInstance',['../class_textures.html#a3e5839f0cee717b4c7808a49ad9cf040',1,'Textures']]],
+  ['getright',['GetRight',['../class_world_object.html#aba6fb82b134193bdcb5882a7e83e937a',1,'WorldObject']]],
+  ['gettextures',['GetTextures',['../class_textures.html#a2eccc3b8d43e96e65af1b063fe642dc0',1,'Textures']]]
 ];

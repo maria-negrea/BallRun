@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quadratic',['quadratic',['../class_ball.html#ad9feb6585ada214b485eb54abe8e050f',1,'Ball']]]
+  ['direction',['direction',['../class_camera.html#a6969c8a06de8be781e79039c560895aa',1,'Camera']]]
 ];

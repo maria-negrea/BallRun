@@ -77,32 +77,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_digit.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_digit.html">Digit</a> : <span class="keyword">public</span> <a class="code" href="class_world_object.html">WorldObject</a>, <span class="keyword">public</span> <a class="code" href="class_updatable.html">Updatable</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordtype">int</span> digit;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">void</span> DrawObject();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">int</span> position;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_ball.html">Ball</a>* ball;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        GLfloat *score;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="struct_point3_d.html">Point3D</a> followPoint;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">void</span> SetDigit(<span class="keywordtype">double</span> digit);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_digit.html">Digit</a>(<span class="keywordtype">int</span> digit,<span class="keywordtype">int</span> position,GLfloat* score);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        ~<a class="code" href="class_digit.html">Digit</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> Follow(<a class="code" href="class_ball.html">Ball</a>* ball, <a class="code" href="struct_point3_d.html">Point3D</a> followPoint);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> Update();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> UnFollow();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">int</span> digit;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">void</span> DrawObject();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="comment">/* The digit position in the score */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">int</span> position;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_ball.html">Ball</a>* ball;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">/* The score */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        GLfloat *score;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="struct_point3_d.html">Point3D</a> followPoint;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> SetDigit(<span class="keywordtype">double</span> digit);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_digit.html">Digit</a>(<span class="keywordtype">int</span> digit,<span class="keywordtype">int</span> position,GLfloat* score);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        ~<a class="code" href="class_digit.html">Digit</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_digit.html#ae67a2c0b0a951a31b8a618911b87f0bc">Follow</a>(<a class="code" href="class_ball.html">Ball</a>* ball,<a class="code" href="struct_point3_d.html">Point3D</a> followPoint);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_digit.html#a0cddec852897574becda6e3e1923ca9e">UnFollow</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_digit.html#a00d932e15f940d2e1e1da94bdeaa498a">Update</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
 <div class="ttc" id="class_world_object_html"><div class="ttname"><a href="class_world_object.html">WorldObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00093">WorldObject.h:93</a></div></div>
 <div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdef"><b>Definition:</b> <a href="_ball_8h_source.html#l00006">Ball.h:6</a></div></div>
 <div class="ttc" id="class_updatable_html"><div class="ttname"><a href="class_updatable.html">Updatable</a></div><div class="ttdef"><b>Definition:</b> <a href="_updatable_8h_source.html#l00007">Updatable.h:7</a></div></div>
+<div class="ttc" id="class_digit_html_a0cddec852897574becda6e3e1923ca9e"><div class="ttname"><a href="class_digit.html#a0cddec852897574becda6e3e1923ca9e">Digit::UnFollow</a></div><div class="ttdeci">void UnFollow()</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00055">Digit.cpp:55</a></div></div>
 <div class="ttc" id="struct_point3_d_html"><div class="ttname"><a href="struct_point3_d.html">Point3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_world_object_8h_source.html#l00016">WorldObject.h:16</a></div></div>
 <div class="ttc" id="class_digit_html"><div class="ttname"><a href="class_digit.html">Digit</a></div><div class="ttdef"><b>Definition:</b> <a href="_digit_8h_source.html#l00006">Digit.h:6</a></div></div>
+<div class="ttc" id="class_digit_html_ae67a2c0b0a951a31b8a618911b87f0bc"><div class="ttname"><a href="class_digit.html#ae67a2c0b0a951a31b8a618911b87f0bc">Digit::Follow</a></div><div class="ttdeci">void Follow(Ball *ball, Point3D followPoint)</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00025">Digit.cpp:25</a></div></div>
+<div class="ttc" id="class_digit_html_a00d932e15f940d2e1e1da94bdeaa498a"><div class="ttname"><a href="class_digit.html#a00d932e15f940d2e1e1da94bdeaa498a">Digit::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_digit_8cpp_source.html#l00031">Digit.cpp:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 10 2014 08:55:50 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 10 2014 09:45:32 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

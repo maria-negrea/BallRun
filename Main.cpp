@@ -9,6 +9,18 @@
 #include <iostream>
 #include <time.h>
 
+/**
+\mainpage Ball Run
+* Moldoveanu Florin & Maria Negrea & Bogdan Musat & Ferencz Timea & Catalin Ionescu
+* 05 / 09 / 2014 -> 10/ 09/ 2014
+* This is a game similar to temple run with the protagonist being a route66 ball. 
+* The game invites you in trying to reach a score of 66 points. 
+* Take sharper and sharper turns as your speed increasing leading to your inevitable defeat by missing a turn.
+*
+* We are using the Glut Library for using drawing methods in OpenGL.
+* In order to build this project under Windows, one must use the Visual Studio suite (v. 2008 recommended).
+* To run it under Linux (tested on Ubuntu ), we provided a Make file runnable using *make* command.
+*/
 using namespace std;
 
 Textures* Textures::instance = NULL;
